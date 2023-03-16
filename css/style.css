@@ -1,0 +1,33 @@
+:root {
+    --red: #BE1622;  /*اللون الاساسي للموقع*/
+    --greyWhite: #DDDDDD; /*سكني فاتح للحدود والفوتير*/
+    --dullBlack: #4B4B4B; /*اسود باهت للكتابة*/
+
+  }
+  body{
+    height: 2000px;
+  }
+  /*start navbar*/
+  .navbar{
+    background-color: var(--red);
+
+  }
+  .navbar .collapse i{
+    color: white;
+    font-size: 18px;
+    padding-left: 20px;
+  }
+  .navbar .collapse i:hover{
+    font-size: 20px;
+  }
+
+  .navbar img{
+    position:absolute;
+    height: 200%;
+    width: 8%;
+    padding-top: 10px;
+    margin-right: 3%;
+    box-shadow: #BE1622;
+
+  }
+  /*end navbar*/
