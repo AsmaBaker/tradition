@@ -2,31 +2,322 @@
     --red: #BE1622;  /*اللون الاساسي للموقع*/
     --greyWhite: #DDDDDD; /*سكني فاتح للحدود والفوتير*/
     --dullBlack: #4B4B4B; /*اسود باهت للكتابة*/
+    --back: #f8f6f6; /*سكني فاتح للخلفيات*/
 
   }
-  body{
-    height: 2000px;
-  }
+
+  /****************************************start home page****************************************/
   /*start navbar*/
   .navbar{
     background-color: var(--red);
-
   }
   .navbar .collapse i{
     color: white;
-    font-size: 18px;
+    font-size: 20px;
     padding-left: 20px;
+  }
+  .collapse ul{
+    margin-left: 150px;
   }
   .navbar .collapse i:hover{
     font-size: 20px;
   }
-
   .navbar img{
     position:absolute;
-    height: 240%;
-    width: 7%;
-    margin-top: 60px;
+    height: 265%;
+    width: 8%;
+    margin-top: 70px;
     margin-right: 3%;
-    box-shadow: 2px 2px 10px var(--red);
+    box-shadow: 2px 2px 10px var(--dullBlack);
   }
+   @media (max-width: 992px) { 
+    .navbar img{
+      visibility: hidden;
+    }
+    }
   /*end navbar*/
+
+  /*start header*/
+  .carousel{
+    width: 80%;
+    margin-top: 5%;
+    margin-right:15%;
+    margin-left: 30%;
+    margin-bottom: 5%;
+  }
+  .carousel img{
+    box-shadow: 2px 2px 10px var(--greyWhite);
+    width: 65%;
+    text-align: center;
+    margin-right: 12%;
+  }
+  span.carousel-control-prev-icon , span.carousel-control-next-icon{
+    background-color: var(--greyWhite);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    font-size: 15px;
+    margin-left: 60%;
+  }
+/*end header*/
+
+/*start chose*/
+.chose{
+  padding-top: 4%;
+  padding-bottom: 4%;
+  background-color: var(--back);
+}
+.chose-title{
+  background-color: var(--red);
+  height: 35px;
+  width: 150px;
+  text-align: center;
+  color: white;
+  border-radius: 50px 5px;  
+  margin-bottom: 2%;
+}
+.chose-title h2{
+  font-size: 22px;
+}
+.card{
+  margin-top: 20px;
+  border: var(--greyWhite) solid 1px;
+  margin-right: 10px;
+  color: var(--dullBlack);
+}
+.card img{
+  width: 80%;
+  height: 60%;
+  justify-content: center;
+  margin-top: 15px;
+  margin-right: 20px;
+}
+.card h5{
+  font-size: 18px;
+}
+.card button{
+  text-align: center;
+  color: white;
+  background-color: var(--red);
+}
+.card button:hover{
+  border-color: var(--red);
+  color: var(--red);
+}
+.card i{
+  color: white;
+  font-size: 25px;
+  margin-right: 5px;
+}
+.card i:hover{
+  color: var(--red);
+}
+.more{
+  border-color: white;
+  text-align: center;
+  margin-top: 20px;
+  background-color: var(--back);
+
+}
+.more:hover{
+  color: var(--red);
+}
+.more i{
+  color: var(--dullBlack);
+  margin-top: 35%;
+}
+.more-content{
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  border: solid 1px var(--greyWhite);
+  text-align: center;
+  margin-top: 40%;
+  margin-right: 35%;
+}
+.more a{
+  color: var(--dullBlack);
+  text-decoration: none;
+  margin-top: 10px;
+}
+.more a:hover{
+  color: var(--red);
+}
+@media (max-width: 768px) { 
+  .card{
+    margin-right: 20%;
+  }
+ }
+
+/*end chose*/
+
+/*start store*/
+.store{
+  margin-top: 50px;
+  color: var(--dullBlack);
+  padding-bottom: 5%;
+}
+.store-head{
+  text-align: center;
+  color: var(--red);
+  padding-bottom: 2%;
+}
+.form-check {
+  padding-left: 1px; 
+}
+.Section-name{
+  background-color: var(--red);
+  height: 35px;
+  width: 150px;
+  text-align: center;
+  color: white;
+  border-radius: 50px 5px; 
+  margin-bottom: 3%;
+  margin-top: 2%; 
+}
+.Section-name h2{
+    font-size: 24px;
+}
+.store-content{
+  margin-bottom: 65px;
+}
+.store-name{
+  position: absolute;
+  background-color: white;
+  margin-top: -40px;
+  width: 170px;
+  height: 90px;
+  border-radius: 50px 1px 1px 1px;
+  box-shadow: 2px 2px 2px rgb(189, 189, 189);
+}
+.store-name h3{
+  font-size: 18px;
+  padding: 10px;
+}
+.store-name a{
+  font-size: 18px;
+  padding: 10px;
+  color: var(--red);
+  text-decoration: none;
+  font-weight:bolder;
+}
+
+/*end store*/
+
+/*start dealer*/
+.dealer{
+  background-image: url(../img/dealer.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  background-attachment: fixed;
+}
+.dealer a{
+  background-color: var(--red);
+  color: white;
+  margin-top: 4%;
+  margin-right: 68%;
+  font-size: 25px;
+  border-color: white;
+}
+.dealer p{
+  padding-top: 9%;
+  margin-right: 65%;
+  color: white;
+  font-size: 30px;
+}
+.dealer a:hover{
+  background-color: var(--red);
+  color: white;
+  border-color: var(--red);
+}
+@media (max-width: 768px) { 
+  .dealer a{
+    background-color: var(--red);
+    color: white;
+    margin-top: 7%;
+    margin-right: 40%;
+    font-size: 15px;
+  }
+  .dealer p{
+    padding-top: 30%;
+    margin-right: 35%;
+    font-size: 20px;
+  }
+  .dealer a:hover{
+    background-color: var(--red);
+    color: white;
+    border-color: var(--red);
+  }
+}
+/*end dealer*/
+
+/*start footer*/
+.footer{
+  padding-top: 4%;
+  padding-bottom: 4%;
+  background-color: var(--back);
+}
+.footer h5{
+  padding-top: 40px;
+  padding-bottom: 20px;
+  font-size: 18px;
+  color: var(--dullBlack);
+}
+.footer .row a{
+  color: black;
+  padding-bottom: 20px;
+  display: inline-block;
+}
+.footer .row a.d{
+  display: block;
+}
+.footer .row a:hover{
+  text-decoration: none;
+  color: var(--red);
+}
+.footer .social-media{
+  text-align: center;
+  margin-top: 3%;
+}
+.footer .social-media a i{
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  padding-top: 10px;
+  background-color: var(--red);
+  color: white;
+  border-radius: 50%;
+  font-size: 20px;
+  margin-right: 15px;
+}
+.footer .fa-instagram:hover{
+  background-color: rgb(219, 28, 156);
+}
+.footer .fa-facebook-f:hover{
+  background-color: rgb(0, 0, 191);
+}
+.footer .fa-whatsapp:hover{
+  background-color: rgb(3, 202, 83);
+}
+.footer .fa-envelope:hover{
+  background-color: rgb(240, 0, 0);
+}
+/*end footer*/
+/*start copy-right*/
+.copy-right{
+  background-color: var(--red);
+  color: white;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  font-size: 14px;
+  text-align: left;
+}
+.copy-right p{
+  display: inline;
+  margin-right: 20%;
+}
+/*end copy-right*/
+
+
+/****************************************end home page****************************************/
