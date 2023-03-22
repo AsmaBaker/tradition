@@ -95,7 +95,7 @@
 .card h5{
   font-size: 18px;
 }
-.card button{
+.card  button{
   text-align: center;
   color: white;
   background-color: var(--red);
@@ -104,12 +104,12 @@
   border-color: var(--red);
   color: var(--red);
 }
-.card i{
+.card .card-body .btn i{
   color: white;
   font-size: 25px;
   margin-right: 5px;
 }
-.card i:hover{
+.card .card-body .btn i:hover{
   color: var(--red);
 }
 .more{
@@ -320,4 +320,101 @@
 /*end copy-right*/
 
 
-/****************************************end home page****************************************/
+/****************************************end home page ******************************************/
+
+/**************************************** start cart page ****************************************/
+.cart-head{
+  color: var(--red);
+  text-align: center;
+  padding-top: 4%;
+  margin-bottom: 20px;
+}
+.cart-body{
+  text-align: center;
+  color: var(--dullBlack);
+}
+/*start cart-embty*/
+/*
+.cart-embty img{
+  margin-top: 30px;
+  margin-right: 5%;
+  margin-bottom: 20px;
+}
+.cart-embty{
+  text-align: center;
+  color: var(--red);
+  font-size: 25px;
+}
+.cart-embty a{
+  background-color: var(--red);
+  color: white;
+  font-size: 20px;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+*/
+/*end cart-empty*/
+
+/*start products*/
+.product-details {
+  background-color: var(--back);
+  padding: 15px;
+  text-align: right;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.product-details ul li{
+  list-style: none;
+  margin-top: 10px;
+}
+.product-details ul{
+  margin-top: 15px;
+  padding-right: 0px;
+}
+.product-details button {
+  color: rgb(111, 111, 111);
+  border-color: var(--back);
+  border-radius: 50%;
+}
+.product-details button:hover {
+  background-color: var(--greyWhite);
+  border-color: var(--greyWhite);  
+}
+/*end products*/
+
+/*start price*/
+.cart .price{
+  text-align: right;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: var(--back);
+  padding: 15px;
+  height: 230px;
+}
+.cart .price h3{
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+.cart .price span{
+  font-size: 25px;
+  color: black;
+}
+.cart .price p{
+  font-size: 12px;
+  margin-top: 10px;
+}
+.cart .price a{
+  background-color: var(--red);
+  color: white;
+}
+.cart .price a:hover{
+  background-color: var(--red);
+  color: white;
+}
+
+
+/*end price*/
+
+/**************************************** end cart page ****************************************/
+
+
