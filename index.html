@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-
   <!-- start navbar-->
   <nav class="navbar navbar-expand-lg ">
   <div class="container-fluid">
@@ -22,15 +21,71 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarScroll">
       <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-        <li class="nav-item">
-          <a class="nav-link " aria-current="page" href="#"><i class="fa-solid fa-user"></i></a>
+        <!-- sign -->
+        <li>
+        <button type="button" class="btn nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <i class="fa-solid fa-user"></i>
+        </button>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
         </li>
         </ul>
-    </div>
-  </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+           <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+               <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">تسجيل دخول</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">انشاء حساب</button>
+              </li>
+              </ul>
+              <div class="tab-content" id="pills-tabContent">
+               <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+                <div class="form-floating mb-3">
+                 <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                 <label for="floatingInput">البريد الالكتروني</label>
+                </div>
+                <div class="form-floating">
+                 <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                 <label for="floatingPassword">كلمة المرور</label>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn">تسجيل الدخول</button>
+                <button type="button" class="btn cancel" data-bs-dismiss="modal">الغاء</button>
+                </div>
+               </div>
+               <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+                <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">اسم المستخدم</label>
+                </div>
+                <div class="form-floating mb-3">
+                 <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                 <label for="floatingInput">البريد الالكتروني</label>
+                </div>
+                <div class="form-floating">
+                 <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                 <label for="floatingPassword">كلمة المرور</label>
+                </div>
+                <div class="modal-footer">
+                 <button type="button" class="btn cancel" data-bs-dismiss="modal">الغاء</button>
+                 <button type="button" class="btn">انشاء حساب</button>
+                </div>
+               </div> 
+              </div>
+            </div>
+           </div>
+           </div>
+          </div>
+
   </nav>
   <!-- end navbar-->
 
@@ -157,38 +212,35 @@
     <div class="sort row">
       <p class="col-3">تصفية حسب<i class="fa-solid fa-filter"></i>:</p>
       <div class="btn-group col-2">
-        <button type="button" class="btn  dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-         المدينة
-        </button>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">القدس</a></li>
-          <li><a class="dropdown-item" href="#">نابلس</a></li>
-          <li><a class="dropdown-item" href="#">رام الله</a></li>
-          <li><a class="dropdown-item" href="#">رفح</a></li>
-          <li><a class="dropdown-item" href="#">غزة</a></li>
-          <li><a class="dropdown-item" href="#">بيت لحم</a></li>
-          <li><a class="dropdown-item" href="#">الخليل</a></li>
-          <li><a class="dropdown-item" href="#">خان يونس</a></li>
-          <li><a class="dropdown-item" href="#">اريحا</a></li>
-          <li><a class="dropdown-item" href="#">قلقيلية</a></li>
-          <li><a class="dropdown-item" href="#">جنين</a></li>
-          <li><a class="dropdown-item" href="#">الرملة</a></li>
-          <li><a class="dropdown-item" href="#">يافا</a></li>
-          <li><a class="dropdown-item" href="#">الناصرة</a></li>
-          <li><a class="dropdown-item" href="#">طولكرم</a></li>
-          <li><a class="dropdown-item" href="#">الجليل</a></li>
-          <li><a class="dropdown-item" href="#">اللد</a></li>
-          <li><a class="dropdown-item" href="#">بئر السبع</a></li>
-        </ul>
+        <select class="form-select" aria-label="Default select example">
+          <option value="selected">المدينة</option>
+          <option value="">نابلس </option>
+          <option value="">القدس </option>
+          <option value="">رام الله </option>
+          <option value="">رفح  </option>
+          <option value="">غزة  </option>
+         <option value=""> بيت لحم  </option>
+          <option value="">الخليل  </option>
+          <option value="">خان يونس  </option>
+          <option value="">اريحا  </option>
+          <option value="">قلقيلية  </option>
+          <option value="">جنين  </option>
+          <option value="">الرملة  </option>
+          <option value="">يافا  </option>
+          <option value="">الناصرة  </option>
+          <option value="">طولكرم  </option>
+          <option value="">الجليل  </option>
+          <option value="">اللد  </option>
+          <option value="">بئر السبع  </option>
+      </select>
       </div>
       <div class="btn-group col-2">
-        <button type="button" class="btn  dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-          التواجد
-        </button>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">متاجر الاونلاين</a></li>
-          <li><a class="dropdown-item" href="#">محال تجارية</a></li>
-        </ul>
+        <select class="form-select" aria-label="Default select example">
+          <option value="selected">التواجد</option>
+          <option value="">متاجر الاونلاين</option>
+          <option value="">المحال التجارية</option>
+         
+      </select>
       </div>
     </div>
     </form>

@@ -16,7 +16,7 @@
     font-size: 20px;
     padding-left: 20px;
   }
-  .collapse ul{
+  .navbar .collapse ul{
     margin-left: 150px;
   }
   .navbar .collapse i:hover{
@@ -30,12 +30,54 @@
     margin-right: 3%;
     box-shadow: 2px 2px 10px var(--dullBlack);
   }
+  .collapse button:hover{
+    border-color: var(--red);
+
+  }
    @media (max-width: 992px) { 
     .navbar img{
       visibility: hidden;
     }
     }
   /*end navbar*/
+  /*start sign*/
+  .modal-body button {
+    background-color: var(--red);
+    border-color: var(--red);
+    color: white;
+    margin-right: 5px;
+  }
+  .modal-body button:hover{
+    background-color: var(--red);
+    border-color: var(--red);
+    color: white;
+  }
+  .modal-body ul {
+    margin-right: 20px;
+  }
+  .modal-body .cancel{
+    background-color: grey;
+    border-color: gray;
+  }
+  .modal-body .cancel:hover{
+    background-color: rgb(100, 100, 100);
+    border-color: rgb(101, 101, 101);
+  }
+  .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: white;
+    background-color: var(--red);
+  }
+  .btn-check:focus+.btn, .btn:focus {
+    color: white;
+    background-color: var(--red);
+    border-color: var(--red);
+    outline: 0;
+  }
+  .modal-body .nav-link {
+   color: var(--red);
+  }
+  
+  /*end sign*/
 
   /*start header*/
   .carousel{
@@ -125,6 +167,7 @@
 .more i{
   color: var(--dullBlack);
   margin-top: 35%;
+  font-size: 22px;
 }
 .more-content{
   height: 80px;
@@ -362,6 +405,7 @@
   text-align: right;
   margin-top: 30px;
   margin-bottom: 30px;
+  border-radius: 8px;
 }
 .product-details ul li{
   list-style: none;
@@ -390,6 +434,8 @@
   background-color: var(--back);
   padding: 15px;
   height: 230px;
+  border-radius: 8px;
+
 }
 .cart .price h3{
   font-size: 22px;
@@ -411,10 +457,57 @@
   background-color: var(--red);
   color: white;
 }
-
-
+.cart .price .keep{
+  background-color: var(--red);
+  color: white;
+  
+}
 /*end price*/
 
 /**************************************** end cart page ****************************************/
+
+/****************************************start order-data****************************************/
+.order-data {
+  width: 40%;
+  margin-right: 30%;
+  margin-top: 30px;
+}
+.order-data .form-select{
+  height: 55px;
+}
+.order-data form{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.order-data form p{
+  margin-top: 15px;
+  margin-bottom: 25px;
+  color: var(--red);
+  font-size: 26px;
+  text-align: center;
+}
+.order-data .gender{
+  margin-bottom: 25px;
+}
+.order-data form input.submit{
+  background-color: var(--red);
+  border-color: var(--red);
+  color: white;
+  font-size: 20px;
+  width: 200px;
+  height: 50px;
+  margin-top: 30px;
+  margin-right: 30%;
+}
+@media (max-width: 1100px) { 
+  .order-data {
+    width: 80%;
+    margin-right: 10%;
+  }
+  .order-data .form-select{
+   margin-bottom: 20px;
+  }
+}
+/****************************************end order-data ****************************************/
 
 
