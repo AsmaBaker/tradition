@@ -510,4 +510,29 @@
 }
 /****************************************end order-data ****************************************/
 
+/****************************************start application-form  ****************************************/
+.application-form{
+  padding: 30px;
+}
+.application-form h3{
+  color: var(--red);
+  font-size: 24px;
+  text-align: center;
+  margin: 10px;
+  padding-bottom: 15لpx;
+}
 
+.application-form select {
+  margin-top: 15px;
+  height: 59px;
+}
+.application-form textarea{
+  margin-top: 15px;
+}
+.application-form .send{
+  margin-left: 120px;
+  width: 150px;
+  font-size: 20px;
+  margin-top: 20px;
+}
+/****************************************end application-form ****************************************/
