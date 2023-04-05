@@ -109,6 +109,9 @@
   padding-bottom: 4%;
   background-color: var(--back);
 }
+.chose a{
+  text-decoration: none;
+}
 .chose-title{
   background-color: var(--red);
   height: 35px;
@@ -134,8 +137,15 @@
   margin-top: 15px;
   margin-right: 20px;
 }
-.card h5{
+.chose a .card h5{
   font-size: 18px;
+  color: var(--dullBlack);
+}
+h5.card-title{
+  color: var(--dullBlack);
+}
+p.card-text{
+  color: var(--dullBlack);
 }
 .card  button{
   text-align: center;
@@ -521,7 +531,6 @@
   margin: 10px;
   padding-bottom: 15لpx;
 }
-
 .application-form select {
   margin-top: 15px;
   height: 59px;
@@ -536,3 +545,86 @@
   margin-top: 20px;
 }
 /****************************************end application-form ****************************************/
+
+/****************************************start product-details ****************************************/
+.product{
+  margin-top: 50px;
+  padding-bottom: 30px;
+}
+.product img{
+  width: 100%;
+  border-radius: 20px 20px;
+}
+.product .data{
+  padding-top: 7%;
+  line-height: 35px;
+  border: 2px solid var(--greyWhite);
+  padding-right: 30px;
+  border-radius: 20px 20px;
+}
+.product .name{
+  color: var(--red);
+  font-size: 30px;
+}
+.product .desc{
+  color: var(--dullBlack);
+  font-size: 16px;
+}
+.product .btn{
+  background-color: var(--red);
+  color: white;
+  margin-top: 40px;
+  font-size: 18px;
+  display: block;
+}
+.product .btn:hover{
+  background-color: var(--red);
+  color: white;
+  border-color: var(--red);
+}
+.product .quantity{
+  border-radius: 20px 20px;
+  border: var(--greyWhite) 1px solid;
+  padding-left: 10px;
+  width: 80px;
+  text-align: center;
+}
+
+@media (max-width: 768px) { 
+  .product .data{
+    line-height: 15px;
+    padding-top: 3%;
+    font-size: 12px;
+  }
+  .product .name{
+    font-size: 18px;
+  }
+  .product .desc{
+    font-size: 10px;
+  }
+  .product .btn{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 12px;
+  }
+}
+/****************************************end product-details ****************************************/
+
+/****************************************start suggestion ****************************************/
+.suggestion{
+  padding-bottom: 40px;
+}
+.suggestion h4{
+  color: var(--dullBlack);
+  padding-top: 20px;
+}
+.suggestion a{
+  text-decoration: none;
+}
+.same-store{
+  background-color: var(--back);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+/****************************************end suggestion ****************************************/
+
