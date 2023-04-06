@@ -16,7 +16,7 @@
     font-size: 20px;
     padding-left: 20px;
   }
-  .collapse ul{
+  .navbar .collapse ul{
     margin-left: 150px;
   }
   .navbar .collapse i:hover{
@@ -30,12 +30,54 @@
     margin-right: 3%;
     box-shadow: 2px 2px 10px var(--dullBlack);
   }
+  .collapse button:hover{
+    border-color: var(--red);
+
+  }
    @media (max-width: 992px) { 
     .navbar img{
       visibility: hidden;
     }
     }
   /*end navbar*/
+  /*start sign*/
+  .modal-body button {
+    background-color: var(--red);
+    border-color: var(--red);
+    color: white;
+    margin-right: 5px;
+  }
+  .modal-body button:hover{
+    background-color: var(--red);
+    border-color: var(--red);
+    color: white;
+  }
+  .modal-body ul {
+    margin-right: 20px;
+  }
+  .modal-body .cancel{
+    background-color: grey;
+    border-color: gray;
+  }
+  .modal-body .cancel:hover{
+    background-color: rgb(100, 100, 100);
+    border-color: rgb(101, 101, 101);
+  }
+  .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: white;
+    background-color: var(--red);
+  }
+  .btn-check:focus+.btn, .btn:focus {
+    color: white;
+    background-color: var(--red);
+    border-color: var(--red);
+    outline: 0;
+  }
+  .modal-body .nav-link {
+   color: var(--red);
+  }
+  
+  /*end sign*/
 
   /*start header*/
   .carousel{
@@ -67,6 +109,9 @@
   padding-bottom: 4%;
   background-color: var(--back);
 }
+.chose a{
+  text-decoration: none;
+}
 .chose-title{
   background-color: var(--red);
   height: 35px;
@@ -92,10 +137,17 @@
   margin-top: 15px;
   margin-right: 20px;
 }
-.card h5{
+.chose a .card h5{
   font-size: 18px;
+  color: var(--dullBlack);
 }
-.card button{
+h5.card-title{
+  color: var(--dullBlack);
+}
+p.card-text{
+  color: var(--dullBlack);
+}
+.card  button{
   text-align: center;
   color: white;
   background-color: var(--red);
@@ -104,12 +156,12 @@
   border-color: var(--red);
   color: var(--red);
 }
-.card i{
+.card .card-body .btn i{
   color: white;
   font-size: 25px;
   margin-right: 5px;
 }
-.card i:hover{
+.card .card-body .btn i:hover{
   color: var(--red);
 }
 .more{
@@ -125,6 +177,7 @@
 .more i{
   color: var(--dullBlack);
   margin-top: 35%;
+  font-size: 22px;
 }
 .more-content{
   height: 80px;
@@ -320,6 +373,7 @@
 /*end copy-right*/
 
 
+
 /****************************************end home page****************************************/
 
 /****************************************start join us page**********************************/
@@ -336,13 +390,13 @@
 .text{
   border: var(--greyWhite) solid 1px;
   border-radius: 15px;
- padding: 2%;
- margin: 3%;
- margin-right: 18%;
- width: 65%;
- font-size: 18px;
- color: var(--dullBlack);
-background-color: var(--back);
+  padding: 2%;
+  margin: 3%;
+  margin-right: 18%;
+  width: 65%;
+  font-size: 18px;
+  color: var(--dullBlack);
+  background-color: var(--back);
 
 
 }
@@ -361,7 +415,7 @@ background-color: var(--back);
   
   }
   
-  .info p {
+  .informations p {
    
     padding-top: 10%;
     padding-right: 5%;
@@ -371,7 +425,7 @@ background-color: var(--back);
   margin-bottom: 3%;
   
   }
-  .info a{
+  .informations a{
     background-color: var(--red);
     color: white;
    border-radius: 5px;
@@ -385,7 +439,7 @@ background-color: var(--back);
 
   }
 
-    .info a:hover{
+    .informations a:hover{
 
       box-shadow: 2px 2px 10px var(--dullBlack);
     }
@@ -407,10 +461,11 @@ background-color: var(--back);
 }
 /*******************************************end privacy and security page**********************************/
 
+
 /******************************************start about page**********************************/
 .about{
-margin-top: 10%;
-margin-bottom: 10%;
+  margin-top: 10%;
+  margin-bottom: 10%;
 }
 .about h2{
   padding-bottom: 2%;
@@ -420,40 +475,40 @@ margin-bottom: 10%;
 .about p{
   font-size: 20px;
   color: var(--dullBlack);
-width: 95%;}
+  width: 95%;
+}
 .about .titlle{
-text-align: center;
-margin-top: 4%;
-font-size: 23px;
-color: var(--red);
+  text-align: center;
+  margin-top: 4%;
+  font-size: 23px;
+  color: var(--red);
 }
 
 .founders{
   margin-top: 4%;
   margin-bottom: 5%;
-
   justify-content: space-evenly;
 }
-.box{
- width: 46%;
- height: 230px;
- margin: 20px;
- box-sizing: border-box;
- border: var(--greyWhite) solid 1px;
- border-radius: 7px;
+.boxs{
+  width: 46%;
+  height: 230px;
+  margin: 20px;
+  box-sizing: border-box;
+  border: var(--greyWhite) solid 1px;
+  border-radius: 7px;
 
 }
 .info p {
-padding-top: 10px;
-font-size: 22px;
-padding-right: 30px;
+  padding-top: 10px;
+  font-size: 22px;
+  padding-right: 30px;
 }
 .info .first-p{
   padding-top: 30px;
 }
 .contact_us{
   text-align: center;
-margin-top: 6%;
+  margin-top: 6%;
 
 }
 
@@ -471,11 +526,13 @@ margin-top: 6%;
 
 
 }
-.box:hover{
+.boxs:hover{
   box-shadow: 2px 2px 10px var(--dullBlack);
 }
+/************************************************ end about page**********/
 
-/**************************************** start pay page***********/
+
+/**************************************** start pay page******************/
 .pay{
   margin-top: 10%;
   
@@ -549,6 +606,7 @@ margin-bottom: 4%;
   box-shadow: 2px 2px 10px var(--dullBlack);
 }
 /********************************************end feedback page******************/
+/*******************************************start delivery page*****************/
 .delivery{
   margin-top: 10%;
   margin-bottom: 5%;
@@ -617,3 +675,260 @@ margin-bottom: 4%;
   margin: 7px;
 
 }
+
+
+
+/**************************************** start cart page ****************************************/
+.cart-head{
+  color: var(--red);
+  text-align: center;
+  padding-top: 4%;
+  margin-bottom: 20px;
+}
+.cart-body{
+  text-align: center;
+  color: var(--dullBlack);
+}
+/*start cart-embty*/
+/*
+.cart-embty img{
+  margin-top: 30px;
+  margin-right: 5%;
+  margin-bottom: 20px;
+}
+.cart-embty{
+  text-align: center;
+  color: var(--red);
+  font-size: 25px;
+}
+.cart-embty a{
+  background-color: var(--red);
+  color: white;
+  font-size: 20px;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+*/
+/*end cart-empty*/
+
+/*start products*/
+.product-details {
+  background-color: var(--back);
+  padding: 15px;
+  text-align: right;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+}
+.product-details ul li{
+  list-style: none;
+  margin-top: 10px;
+}
+.product-details ul{
+  margin-top: 15px;
+  padding-right: 0px;
+}
+.product-details button {
+  color: rgb(111, 111, 111);
+  border-color: var(--back);
+  border-radius: 50%;
+}
+.product-details button:hover {
+  background-color: var(--greyWhite);
+  border-color: var(--greyWhite);  
+}
+/*end products*/
+
+/*start price*/
+.cart .price{
+  text-align: right;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: var(--back);
+  padding: 15px;
+  height: 230px;
+  border-radius: 8px;
+
+}
+.cart .price h3{
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+.cart .price span{
+  font-size: 25px;
+  color: black;
+}
+.cart .price p{
+  font-size: 12px;
+  margin-top: 10px;
+}
+.cart .price a{
+  background-color: var(--red);
+  color: white;
+}
+.cart .price a:hover{
+  background-color: var(--red);
+  color: white;
+}
+.cart .price .keep{
+  background-color: var(--red);
+  color: white;
+  
+}
+/*end price*/
+
+/**************************************** end cart page ****************************************/
+
+/****************************************start order-data****************************************/
+.order-data {
+  width: 40%;
+  margin-right: 30%;
+  margin-top: 30px;
+}
+.order-data .form-select{
+  height: 55px;
+}
+.order-data form{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.order-data form p{
+  margin-top: 15px;
+  margin-bottom: 25px;
+  color: var(--red);
+  font-size: 26px;
+  text-align: center;
+}
+.order-data .gender{
+  margin-bottom: 25px;
+}
+.order-data form input.submit{
+  background-color: var(--red);
+  border-color: var(--red);
+  color: white;
+  font-size: 20px;
+  width: 200px;
+  height: 50px;
+  margin-top: 30px;
+  margin-right: 30%;
+}
+@media (max-width: 1100px) { 
+  .order-data {
+    width: 80%;
+    margin-right: 10%;
+  }
+  .order-data .form-select{
+   margin-bottom: 20px;
+  }
+}
+/****************************************end order-data ****************************************/
+
+/****************************************start application-form  ****************************************/
+.application-form{
+  padding: 30px;
+}
+.application-form h3{
+  color: var(--red);
+  font-size: 24px;
+  text-align: center;
+  margin: 10px;
+  padding-bottom: 15لpx;
+}
+.application-form select {
+  margin-top: 15px;
+  height: 59px;
+}
+.application-form textarea{
+  margin-top: 15px;
+}
+.application-form .send{
+  margin-left: 120px;
+  width: 150px;
+  font-size: 20px;
+  margin-top: 20px;
+}
+/****************************************end application-form ****************************************/
+
+/****************************************start product-details ****************************************/
+.product{
+  margin-top: 50px;
+  padding-bottom: 30px;
+}
+.product img{
+  width: 100%;
+  border-radius: 20px 20px;
+}
+.product .data{
+  padding-top: 7%;
+  line-height: 35px;
+  border: 2px solid var(--greyWhite);
+  padding-right: 30px;
+  border-radius: 20px 20px;
+}
+.product .name{
+  color: var(--red);
+  font-size: 30px;
+}
+.product .desc{
+  color: var(--dullBlack);
+  font-size: 16px;
+}
+.product .btn{
+  background-color: var(--red);
+  color: white;
+  margin-top: 40px;
+  font-size: 18px;
+  display: block;
+}
+.product .btn:hover{
+  background-color: var(--red);
+  color: white;
+  border-color: var(--red);
+}
+.product .quantity{
+  border-radius: 20px 20px;
+  border: var(--greyWhite) 1px solid;
+  padding-left: 10px;
+  width: 80px;
+  text-align: center;
+}
+
+@media (max-width: 768px) { 
+  .product .data{
+    line-height: 15px;
+    padding-top: 3%;
+    font-size: 12px;
+  }
+  .product .name{
+    font-size: 18px;
+  }
+  .product .desc{
+    font-size: 10px;
+  }
+  .product .btn{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 12px;
+  }
+}
+/****************************************end product-details ****************************************/
+
+/****************************************start suggestion ****************************************/
+.suggestion{
+  padding-bottom: 40px;
+}
+.suggestion h4{
+  color: var(--dullBlack);
+  padding-top: 20px;
+}
+.suggestion a{
+  text-decoration: none;
+}
+.same-store{
+  background-color: var(--back);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+/****************************************end suggestion ****************************************/
+
+
