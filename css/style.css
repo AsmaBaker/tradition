@@ -254,7 +254,6 @@ p.card-text{
   text-decoration: none;
   font-weight:bolder;
 }
-
 /*end store*/
 
 /*start dealer*/
@@ -376,11 +375,10 @@ p.card-text{
 
 /****************************************end home page****************************************/
 
-/****************************************start join us page**********************************/
+/****************************************start marchant page**********************************/
 .definition{
   margin-top: 10%;
   margin-bottom: 8%;
-
 }
 .definition h3{
   padding-bottom: 30px;
@@ -397,25 +395,17 @@ p.card-text{
   font-size: 18px;
   color: var(--dullBlack);
   background-color: var(--back);
-
-
 }
 .text:hover{
   box-shadow: 2px 2px 10px var(--dullBlack);
-
 }
-
 .img_store{
-
   background-image: url(../img/المتجر.jpeg);
   background-size: cover;
   height: 420px;
- 
-
+}
   
-  }
-  
-  .informations p {
+.informations p {
    
     padding-top: 10%;
     padding-right: 5%;
@@ -425,7 +415,7 @@ p.card-text{
   margin-bottom: 3%;
   
   }
-  .informations a{
+  .informations button{
     background-color: var(--red);
     color: white;
    border-radius: 5px;
@@ -439,11 +429,13 @@ p.card-text{
 
   }
 
-    .informations a:hover{
-
+    .informations button:hover{
+      background-color: var(--red);
       box-shadow: 2px 2px 10px var(--dullBlack);
+      border-color: var(--red);
+      color: white;
     }
-/****************************************end join us page**********************************/
+/****************************************end marchant page**********************************/
 
 
 /***************************************start privacy and security page**********************************/
@@ -675,8 +667,6 @@ margin-bottom: 4%;
   margin: 7px;
 
 }
-
-
 
 /**************************************** start cart page ****************************************/
 .cart-head{
