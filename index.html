@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+    
   <!-- start navbar-->
   <nav class="navbar navbar-expand-lg ">
   <div class="container-fluid">
@@ -83,31 +84,52 @@
               </div>
             </div>
            </div>
-           </div>
-          </div>
-
   </nav>
   <!-- end navbar-->
 
+  <!--start menu-bar-->
+ <div class="menu-bar" dir="rtl">
+      <ul>
+        <li><a href="#store">   الاقسام والمتاجر<i class="fas fa-caret-down"></i> </a>
+            <div class="dropdown-menu">
+                <ul>
+                  <li>
+                    <a href="#">اسم القسم<i class="fa-solid fa-caret-left"></i></a>
+                    <div class="dropdown-menu-1">
+                      <ul>
+                        <li><a href="#">اسم المتجر</a></li>
+                        <li><a href="#">اسم المتجر</a></li>
+                        <li><a href="#">اسم المتجر</a></li>
+                        <li><a href="#">اسم المتجر</a></li>
+                        <li><a href="#">اسم المتجر</a></li>
+                      </ul>
+                    </div>
+                  </li>            
+                  <li>
+                    <a href="#">اسم القسم<i class="fa-solid fa-caret-left"></i></a>
+                    <div class="dropdown-menu-1">
+                      <ul>
+                        <li><a href="#">اسم المتجر</a></li>
+                        <li><a href="#">اسم المتجر</a></li>
+                        <li><a href="#">اسم المتجر</a></li>
+                        <li><a href="#">اسم المتجر</a></li>
+                        <li><a href="#">اسم المتجر</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+        </li>
+        <li><a href="#dealer">انشئ متجرك </a>
+        </li>
+        <li><a href="#footer">روابط اخرى</a></li>
+      </ul>
+    
+  <!--end menu-bar-->
+</div>
   <!--start header-->
   <div id="carouselExample" class="carousel slide">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="img/all2.png" class="d-block" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="img/all.png" class="d-block" alt="...">
-      </div>
-     
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
+    
   </div>
   <!--end  header-->
 
@@ -218,13 +240,12 @@
           </div>
         </div>
       </div>
-
     </div>
   </div>
   <!--end chose-->
 
   <!--start store-->
-  <div class="store">
+  <div class="store" id="store">
     <div class="store-head">
       <h3>المتــــــــــــاجر</h3>
     </div>
@@ -240,7 +261,7 @@
           <option value="">رام الله </option>
           <option value="">رفح  </option>
           <option value="">غزة  </option>
-         <option value=""> بيت لحم  </option>
+          <option value=""> بيت لحم  </option>
           <option value="">الخليل  </option>
           <option value="">خان يونس  </option>
           <option value="">اريحا  </option>
@@ -271,15 +292,12 @@
     </div>
     <div class="row">
 
-    
-
       <div class="store-content col-md-3">
         <img src="img/فلاحي.jpg" width="90%" alt="">
         <div class="store-name">
           <h3>فلاحي</h3>
           <a href="stores.html">تسوق الان</a>
         </div>
-
       </div>
       <div class="store-content col-md-3">
         <img src="img/فلاحي.jpg" width="90%" alt="">
@@ -342,14 +360,14 @@
   <!--end store-->
 
   <!--start dealer "تاجر"-->
-  <div class="dealer">
+  <div class="dealer" id="dealer">
     <p>هل تود الانضمام ك تاجر؟</p>
     <a class="btn" href="merchant.html">معرفة التفاصيل</a>
   </div>
   <!--end dealer-->
 
   <!--start footer-->
-  <div class="footer">
+  <div class="footer" id="footer">
     <div class="container">
       <div class="row">
         <div class="col-md-2">
@@ -391,7 +409,27 @@
   </div>
   <!--end copy-right-->
 
+  <div class="up">
+    <button class="btn" onclick="upFunction()" id="up"><i class="fa-solid fa-arrow-up"></i></button>
+  </div>
+  <script>
+    let up= document.getElementById("up");
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+       up.style.display = "block";
+       } else {
+       up.style.display = "none";
+       }
+     }
+     function upFunction(){
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+     }
+  </script>
     <!-- bootstrap 5 -->
     <script src="js/bootstrap.bundle.min.js"></script>
+
+   
   </body>
 </html>
