@@ -417,8 +417,8 @@ p.card-text i{
 .footer .row a{
   color: black;
   padding-bottom: 20px;
-  display: inline-block;
-  font-size: 20px;
+  display: block;
+  font-size: 18px;
 }
 
 .footer .row a:hover{
