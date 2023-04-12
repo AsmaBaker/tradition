@@ -4,8 +4,9 @@
     --dullBlack: #4B4B4B; /*اسود باهت للكتابة*/
     --back: #f8f6f6; /*سكني فاتح للخلفيات*/
   }
-
-  
+*{
+  font-family: 'Markazi Text', serif;
+ }
   /****************************************start home page****************************************/
   /*start navbar*/
   
@@ -46,7 +47,6 @@
  
 .menu-bar {
   background-color: var(--back);
-  padding-top: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,11 +56,12 @@
   display: flex;
 }
 .menu-bar ul li {
-  padding: 10px 30px;
+  padding: 15px 30px 5px 30px;
+
   position: relative;
 }
 .menu-bar ul li a {
-  font-size: 17px;
+  font-size: 19px;
   color: var(--dullBlack);
   text-decoration: none;
   transition: all 0.5s;
@@ -115,6 +116,7 @@
     color: white;
     margin-right: 5px;
     transition: all 0.5s;
+    font-size: 19px;
   }
   .modal-body button:hover{
     background-color: var(--red);
@@ -192,13 +194,14 @@
   margin-bottom: 2%;
 }
 .chose-title h2{
-  font-size: 22px;
+  font-size: 30px;
 }
 .card{
   margin-top: 20px;
   border: var(--greyWhite) solid 1px;
   margin-right: 10px;
   color: var(--dullBlack);
+  padding-bottom: 12px;
 }
 .card img{
   width: 80%;
@@ -208,14 +211,19 @@
   margin-right: 20px;
 }
 .chose a .card h5{
-  font-size: 18px;
+  font-size: 20px;
   color: var(--dullBlack);
 }
 h5.card-title{
   color: var(--dullBlack);
+  font-size: 20px;
 }
 p.card-text{
   color: var(--dullBlack);
+  font-size: 25px;
+}
+p.card-text i{
+  font-size: 16px;
 }
 .card  button{
   text-align: center;
@@ -223,16 +231,17 @@ p.card-text{
   background-color: white;
   transition: all 0.5s;
   border-color: var(--red);
-  margin-bottom: 10px;
+  font-size: 20px;
 }
 .card button:hover{
   border-color: var(--red);
-  color: var(--red); 
+  background-color: var(--red);
+  color: white; 
  
 }
 .card .card-body .btn i{
   color: var(--red);
-  font-size: 25px;
+  font-size: 22px;
   margin-right: 5px;
 }
 .card .card-body .btn i:hover{
@@ -290,9 +299,16 @@ p.card-text{
   text-align: center;
   color: var(--red);
   padding-bottom: 2%;
+  font-size: 25px;
+}
+.store-head h3{
+  font-weight: 600;
 }
 .form-check {
   padding-left: 1px; 
+}
+.sort{
+  font-size: 20px;
 }
 .Section-name{
   background-color: var(--red);
@@ -305,7 +321,7 @@ p.card-text{
   margin-top: 2%; 
 }
 .Section-name h2{
-    font-size: 24px;
+    font-size: 26px;
 }
 .store-content{
   margin-bottom: 55px;
@@ -318,19 +334,19 @@ p.card-text{
 .store-name{
   position: absolute;
   background-color: white;
-  margin-top: -40px;
-  width: 170px;
-  height: 90px;
+  margin-top: -25px;
+  width: 140px;
+  height: 70px;
   border-radius: 50px 1px 1px 1px;
   box-shadow: 2px 2px 2px rgb(189, 189, 189);
 }
 .store-name h3{
-  font-size: 18px;
-  padding: 10px;
+  font-size: 19px;
+  padding: 5px;
 }
 .store-name a{
-  font-size: 18px;
-  padding: 10px;
+  font-size: 20px;
+  padding: 5px;
   color: var(--red);
   text-decoration: none;
   font-weight:bolder;
@@ -395,17 +411,16 @@ p.card-text{
 .footer h5{
   padding-top: 40px;
   padding-bottom: 20px;
-  font-size: 18px;
+  font-size: 20px;
   color: var(--dullBlack);
 }
 .footer .row a{
   color: black;
   padding-bottom: 20px;
   display: inline-block;
+  font-size: 20px;
 }
-.footer .row a.d{
-  display: block;
-}
+
 .footer .row a:hover{
   text-decoration: none;
   color: var(--red);
@@ -447,7 +462,7 @@ p.card-text{
   color: white;
   padding-top: 1%;
   padding-bottom: 1%;
-  font-size: 14px;
+  font-size: 17px;
   text-align: left;
 }
 .copy-right p{
@@ -949,7 +964,7 @@ margin-bottom: 4%;
 }
 /****************************************end application-form ****************************************/
 
-/****************************************start product-details ****************************************/
+/****************************************start product ****************************************/
 .product{
   margin-top: 50px;
   padding-bottom: 30px;
@@ -979,6 +994,7 @@ margin-bottom: 4%;
   margin-top: 40px;
   font-size: 18px;
   display: block;
+  width: 200px;
 }
 .product .btn:hover{
   background-color: var(--red);
