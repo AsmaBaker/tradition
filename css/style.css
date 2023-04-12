@@ -607,10 +607,23 @@ p.card-text i{
   box-sizing: border-box;
   border: var(--greyWhite) solid 1px;
   border-radius: 7px;
-  transition: all 0.5s;
+
+  
+
 
 
 }
+.boxs-two{
+  width: 46%;
+  height: 230px;
+  margin: 20px;
+  box-sizing: border-box;
+  border: var(--greyWhite) solid 1px;
+  border-radius: 7px;
+
+
+}
+
 .info p {
   padding-top: 10px;
   font-size: 22px;
@@ -623,6 +636,18 @@ p.card-text i{
   text-align: center;
   margin-top: 6%;
 
+}
+
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 2s ease;
+}
+.active{
+
+  transform: translateY(0px);
+  opacity: 1;
 }
 
 .contact_us a i{
@@ -774,8 +799,14 @@ margin-bottom: 4%;
   margin-right: 20%;
   border-radius: 50%;
   border: 5px solid var(--red);
+  animation-name: up-and-down;
+  animation-duration: 0.7s;
+
 
 }
+
+
+
 .links a i{
    
   background-color: var(--red);
