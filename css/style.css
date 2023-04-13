@@ -294,6 +294,7 @@ p.card-text i{
   margin-top: 50px;
   color: var(--dullBlack);
   padding-bottom: 5%;
+  width: 100%;
 }
 .store-head{
   text-align: center;
@@ -308,7 +309,13 @@ p.card-text i{
   padding-left: 1px; 
 }
 .sort{
-  font-size: 20px;
+  font-size: 17px;
+  margin-top: 5%;
+  border: var(--greyWhite) solid 2px;
+  position: fixed;
+}
+.sort h5{
+  margin-top: 50px;
 }
 .Section-name{
   background-color: var(--red);
@@ -473,6 +480,7 @@ p.card-text i{
 
 /*start up*/
 .up .btn{
+  display: none;
   position: fixed;
   background-color: var(--red);
   border-color: var(--red);
@@ -607,11 +615,7 @@ p.card-text i{
   box-sizing: border-box;
   border: var(--greyWhite) solid 1px;
   border-radius: 7px;
-
-  
-
-
-
+  transition: all 0.5s;
 }
 .boxs-two{
   width: 46%;
@@ -620,8 +624,6 @@ p.card-text i{
   box-sizing: border-box;
   border: var(--greyWhite) solid 1px;
   border-radius: 7px;
-
-
 }
 
 .info p {
@@ -635,7 +637,6 @@ p.card-text i{
 .contact_us{
   text-align: center;
   margin-top: 6%;
-
 }
 
 .reveal{
@@ -867,6 +868,11 @@ margin-bottom: 4%;
 .product-details ul li{
   list-style: none;
   margin-top: 10px;
+  font-size: 20px;
+}
+.product-details ul li i.fa-shekel-sign{
+ 
+  font-size: 15px;
 }
 .product-details ul{
   margin-top: 15px;
@@ -897,15 +903,19 @@ margin-bottom: 4%;
 
 }
 .cart .price h3{
-  font-size: 22px;
+  font-size: 25px;
   margin-bottom: 20px;
 }
 .cart .price span{
-  font-size: 25px;
+  font-size: 28px;
   color: black;
 }
+.cart .price span i{
+  font-size: 17px;
+}
+
 .cart .price p{
-  font-size: 12px;
+  font-size: 15px;
   margin-top: 10px;
 }
 .cart .price a{
@@ -1032,7 +1042,7 @@ margin-bottom: 4%;
   color: white;
   border-color: var(--red);
 }
-.product .quantity{
+.quantity{
   border-radius: 20px 20px;
   border: var(--greyWhite) 1px solid;
   padding-left: 10px;
