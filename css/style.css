@@ -315,7 +315,7 @@ p.card-text i{
   height: 1000px;
 }
 .store-sc{
-  overflow: scroll;
+  overflow: auto;
   height: 100vh;
   }
 .store-head{
