@@ -26,7 +26,7 @@
   }
   .navbar img{
     position:absolute;
-    height: 265%;
+    height: 240%;
     width: 8%;
     margin-top: 70px;
     margin-right: 3%;
@@ -110,7 +110,7 @@
 
   /*start sign*/
   
-  .modal-body button {
+ .modal-body button {
     background-color: var(--red);
     border-color: var(--red);
     color: white;
@@ -152,32 +152,47 @@
 
   /*start header*/
   .carousel{
-    width: 80%;
+    padding-top: 18px;
+    /*
     margin-top: 5%;
     margin-right:15%;
     margin-left: 30%;
     margin-bottom: 5%;
-    height:300px;
+   
+    */
   }
   .carousel img{
+    width: 50%;
+    height:450px;
+    /*
     box-shadow: 2px 2px 10px var(--greyWhite);
     width: 65%;
     text-align: center;
     margin-right: 12%;
+    */
   }
+  
   span.carousel-control-prev-icon , span.carousel-control-next-icon{
+    /*
     background-color: var(--greyWhite);
     height: 40px;
     width: 40px;
     border-radius: 50%;
     font-size: 15px;
     margin-left: 60%;
+    
+    */
+    background-color: var(--red);
+    
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
   }
 /*end header*/
 
 /*start chose*/
 .chose{
-  padding-top: 4%;
+  padding-top: 3%;
   padding-bottom: 4%;
   background-color: var(--back);
 }
@@ -191,7 +206,7 @@
   text-align: center;
   color: white;
   border-radius: 50px 5px;  
-  margin-bottom: 2%;
+  margin-bottom: 1%;
 }
 .chose-title h2{
   font-size: 30px;
@@ -290,12 +305,19 @@ p.card-text i{
 /*end chose*/
 
 /*start store*/
+
+
 .store{
   margin-top: 50px;
   color: var(--dullBlack);
   padding-bottom: 5%;
-  width: 100%;
+  width: 99%;
+  height: 1000px;
 }
+.store-sc{
+  overflow: scroll;
+  height: 100vh;
+  }
 .store-head{
   text-align: center;
   color: var(--red);
@@ -310,17 +332,20 @@ p.card-text i{
 }
 .sort{
   font-size: 17px;
-  margin-top: 5%;
-  border: var(--greyWhite) solid 2px;
-  position: fixed;
+  border-left: var(--greyWhite) solid 2px;
+  border-radius: 15px;
+  height: 100vh;
 }
 .sort h5{
-  margin-top: 50px;
+  margin-top: 10px;
+}
+.sort a{
+  color: var(--dullBlack);
 }
 .Section-name{
   background-color: var(--red);
-  height: 35px;
-  width: 150px;
+  height: 40px;
+  width: 200px;
   text-align: center;
   color: white;
   border-radius: 50px 5px; 
@@ -328,7 +353,8 @@ p.card-text i{
   margin-top: 2%; 
 }
 .Section-name h2{
-    font-size: 26px;
+    font-size: 22px;
+    padding-top: 5px;
 }
 .store-content{
   margin-bottom: 55px;
@@ -339,7 +365,7 @@ p.card-text i{
   padding-top: 0px;
 }
 .store-name{
-  position: absolute;
+  position: relative;
   background-color: white;
   margin-top: -25px;
   width: 140px;
@@ -421,6 +447,7 @@ p.card-text i{
   font-size: 20px;
   color: var(--dullBlack);
 }
+
 .footer .row a{
   color: black;
   padding-bottom: 20px;
@@ -508,6 +535,7 @@ p.card-text i{
   padding-bottom: 30px;
   text-align: center;
   color:  var(--red);
+  font-size: 32px;
 }
 .text{
   border: var(--greyWhite) solid 1px;
@@ -516,7 +544,7 @@ p.card-text i{
   margin: 3%;
   margin-right: 18%;
   width: 65%;
-  font-size: 18px;
+  font-size: 22px;
   color: var(--dullBlack);
   background-color: var(--back);
   transition: all 0.5s;
@@ -535,7 +563,7 @@ p.card-text i{
    
     padding-top: 10%;
     padding-right: 5%;
-    font-size: 20px;
+    font-size: 24px;
     color: var(--red);
     width: 45%;
   margin-bottom: 3%;
@@ -548,7 +576,7 @@ p.card-text i{
    padding: 8px;
    padding-left: 20px;
    padding-right: 20px;
-  font-size: 25px;
+  font-size: 26px;
   margin-right: 5%;
 
   text-decoration: none;
@@ -573,9 +601,10 @@ p.card-text i{
 .priv_sec h3{
   color: var(--red);
   padding-bottom: 2%;
+  font-size: 30px;
 }
 .priv_sec p{
-  font-size: 20px;
+  font-size: 23px;
   color: var(--dullBlack);
 }
 /*******************************************end privacy and security page**********************************/
@@ -589,17 +618,17 @@ p.card-text i{
 .about h2{
   padding-bottom: 2%;
   color: var(--red);
-  font-size: 36px;
+  font-size: 38px;
 }
 .about p{
-  font-size: 20px;
+  font-size: 23px;
   color: var(--dullBlack);
   width: 95%;
 }
 .about .titlle{
   text-align: center;
   margin-top: 4%;
-  font-size: 23px;
+  font-size: 30px;
   color: var(--red);
 }
 
@@ -625,10 +654,9 @@ p.card-text i{
   border: var(--greyWhite) solid 1px;
   border-radius: 7px;
 }
-
 .info p {
   padding-top: 10px;
-  font-size: 22px;
+  font-size: 23px;
   padding-right: 30px;
 }
 .info .first-p{
@@ -679,6 +707,7 @@ p.card-text i{
 .ways-pay h3{
   color: var(--red);
   padding-bottom:2%;
+  font-size: 35px;
 }
 .ways-pay  p{
   font-size: 25px;
@@ -689,7 +718,7 @@ p.card-text i{
 list-style-type: none;
 color: var(--dullBlack);
 padding-bottom: 12px;
-font-size: 19x;
+font-size: 25x;
 
 
 }
@@ -711,13 +740,14 @@ margin-bottom: 4%;
 .feedback h3{
   color: var(--red);
   text-align: center;
+  font-size: 33px;
 }
 .text_box{
   text-align: center;
   margin-top: 9%;
 }
 .text_box p{
- font-size: 20px;
+ font-size: 25px;
  padding-bottom: 1%;
  color: var(--dullBlack);
 
@@ -732,7 +762,7 @@ margin-bottom: 4%;
   margin-top: 2%;
   padding-left: 3%;
   padding-right: 3%;
-  font-size: 18px;
+  font-size: 22px;
   background-color: var(--red);
   color: white;
   border-radius: 6px;
@@ -755,10 +785,11 @@ margin-bottom: 4%;
 .delivery h3{
   color: var(--red);
   padding-bottom: 1%;
+  font-size: 38px;
 }
 .delivery p{
   color: var(--dullBlack);
-  font-size: 20px;
+  font-size: 24px;
 }
 .deliv{
   margin-top: 3%;
@@ -771,7 +802,7 @@ margin-bottom: 4%;
 }
 .del ul {
   list-style-type: none;
-  font-size: 18px;
+  font-size: 22px;
  
 }
 .del ul li{
@@ -784,7 +815,7 @@ margin-bottom: 4%;
 }
 .description{
   padding: 2%;
-  font-size: 20px;
+  font-size: 24px;
   color: var(--dullBlack);
   margin-bottom: 8%;
   background-color: var(--back);
@@ -794,7 +825,7 @@ margin-bottom: 4%;
 }
 .description .name-store{
   color: var(--red);
-  font-size: 23px;
+  font-size: 28px;
 }
  .img-descr img{
   margin-right: 20%;

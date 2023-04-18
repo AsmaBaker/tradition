@@ -133,8 +133,26 @@
   <!--end menu-bar-->
 </div>
   <!--start header-->
-  <div id="carouselExample" class="carousel slide">
-    
+  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="img/all.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="img/all2.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="..." class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
   <!--end  header-->
 
@@ -248,240 +266,356 @@
     </div>
   </div>
   <!--end chose-->
-
-  <!--start store-->
-  <div class="store row" id="store">
-    <div class="col-2 sort d-flex">
-      <div class="">
-        <form action="">
-        <div>
-          <h5>عرض المتاجر الموجودة في :</h5>
-          <div class="form-check form-check-reverse form-check-inline">
-            <input class="form-check-input" type="checkbox" value="" id="reverseCheck1">
-            <label class="form-check-label" for="reverseCheck1">
-              نابلس
-            </label>
-          </div>
-          <div class="form-check form-check-reverse form-check-inline">
-            <input class="form-check-input" type="checkbox" value="" id="reverseCheck1">
-            <label class="form-check-label" for="reverseCheck1">
-              جنين
-            </label>
-          </div>
-          <div class="form-check form-check-reverse form-check-inline">
-            <input class="form-check-input" type="checkbox" value="" id="reverseCheck1">
-            <label class="form-check-label" for="reverseCheck1">
-              طولكرم
-            </label>
-          </div>
-          <div class="form-check form-check-reverse form-check-inline">
-            <input class="form-check-input" type="checkbox" value="" id="reverseCheck1">
-            <label class="form-check-label" for="reverseCheck1">
-              نابلس
-            </label>
-          </div>
-          <div class="form-check form-check-reverse form-check-inline">
-            <input class="form-check-input" type="checkbox" value="" id="reverseCheck1">
-            <label class="form-check-label" for="reverseCheck1">
-              جنين
-            </label>
-          </div>
-          <div class="form-check form-check-reverse form-check-inline">
-            <input class="form-check-input" type="checkbox" value="" id="reverseCheck1">
-            <label class="form-check-label" for="reverseCheck1">
-              طولكرم
-            </label>
-          </div>
-          <div class="form-check form-check-reverse form-check-inline">
-            <input class="form-check-input" type="checkbox" value="" id="reverseCheck1">
-            <label class="form-check-label" for="reverseCheck1">
-              نابلس
-            </label>
-          </div>
-          <div class="form-check form-check-reverse form-check-inline">
-            <input class="form-check-input" type="checkbox" value="" id="reverseCheck1">
-            <label class="form-check-label" for="reverseCheck1">
-              جنين
-            </label>
-          </div>
-          <div class="form-check form-check-reverse form-check-inline">
-            <input class="form-check-input" type="checkbox" value="" id="reverseCheck1">
-            <label class="form-check-label" for="reverseCheck1">
-              طولكرم
-            </label>
-          </div>
-
-          <h5>عرض :</h5>
-          <div class="form-check form-check-reverse form-check-inline">
-            <input class="form-check-input" type="checkbox" value="" id="reverseCheck1">
-            <label class="form-check-label" for="reverseCheck1">
-           متاجر   الاونلاين
-            </label>
-          </div>
-          <div class="form-check form-check-reverse form-check-inline">
-            <input class="form-check-input" type="checkbox" value="" id="reverseCheck1">
-            <label class="form-check-label" for="reverseCheck1">
-              المحال التجارية
-            </label>
-          </div>
-        </div>
-        </form>
-      </div>
-    </div>
-    <div class="col-10 ">
-      <div data-bs-spy="scroll" data-bs-target="#simple-list-example" data-bs-offset="0" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+  <!--srart store-->
+  <div class="store">
     <div class="store-head ">
       <h3>الاقسام والمتــــــــــــاجر </h3>
     </div>
-    <div class="Section-name ">
-      <h2 id="2">ماكولات</h2>
+  <div class="row">
+    <div class="col-2 sort">
+      <nav id="navbar-example3" class="h-100 flex-column align-items-stretch pe-4 border-end">
+        <nav class="nav nav-pills flex-column">  
+          <h5>اقسام تراثيات:</h5>       
+          <a class="nav-link" href="#item-1">المطرزات</a>
+          <a class="nav-link" href="#item-2">الخزف والفخار</a> 
+          <a class="nav-link" href="#item-3">النحاس والانتيك</a>
+          <a class="nav-link" href="#item-4">الماكولات الفلسطينية</a>
+          <a class="nav-link" href="#item-5">القش</a>
+          <a class="nav-link" href="#item-6">لوازم جبل الحناء</a>
+          <a class="nav-link" href="#item-7">المتاجر متعددة الاصناف</a>
+        </nav>
+        <div class="">
+          <form action="">
+          <div>
+            <h5>عرض المتاجر الموجودة في :</h5>
+            <div class="form-check form-check-reverse form-check-inline">
+              <input class="form-check-input" type="checkbox" value="" id="reverseCheck1">
+              <label class="form-check-label" for="reverseCheck1">
+                نابلس
+              </label>
+            </div>
+            <div class="form-check form-check-reverse form-check-inline">
+              <input class="form-check-input" type="checkbox" value="" id="reverseCheck1">
+              <label class="form-check-label" for="reverseCheck1">
+                جنين
+              </label>
+            </div>
+            <div class="form-check form-check-reverse form-check-inline">
+              <input class="form-check-input" type="checkbox" value="" id="reverseCheck1">
+              <label class="form-check-label" for="reverseCheck1">
+                طولكرم
+              </label>
+            </div>
+            <div class="form-check form-check-reverse form-check-inline">
+              <input class="form-check-input" type="checkbox" value="" id="reverseCheck1">
+              <label class="form-check-label" for="reverseCheck1">
+                نابلس
+              </label>
+            </div>
+            <div class="form-check form-check-reverse form-check-inline">
+              <input class="form-check-input" type="checkbox" value="" id="reverseCheck1">
+              <label class="form-check-label" for="reverseCheck1">
+                جنين
+              </label>
+            </div>
+            <div class="form-check form-check-reverse form-check-inline">
+              <input class="form-check-input" type="checkbox" value="" id="reverseCheck1">
+              <label class="form-check-label" for="reverseCheck1">
+                طولكرم
+              </label>
+            </div>
+            <div class="form-check form-check-reverse form-check-inline">
+              <input class="form-check-input" type="checkbox" value="" id="reverseCheck1">
+              <label class="form-check-label" for="reverseCheck1">
+                نابلس
+              </label>
+            </div>
+            <div class="form-check form-check-reverse form-check-inline">
+              <input class="form-check-input" type="checkbox" value="" id="reverseCheck1">
+              <label class="form-check-label" for="reverseCheck1">
+                جنين
+              </label>
+            </div>
+            <div class="form-check form-check-reverse form-check-inline">
+              <input class="form-check-input" type="checkbox" value="" id="reverseCheck1">
+              <label class="form-check-label" for="reverseCheck1">
+                طولكرم
+              </label>
+            </div>
+  
+            <h5>عرض :</h5>
+            <div class="form-check form-check-reverse form-check-inline">
+              <input class="form-check-input" type="checkbox" value="" id="reverseCheck1">
+              <label class="form-check-label" for="reverseCheck1">
+             متاجر   الاونلاين
+              </label>
+            </div>
+            <div class="form-check form-check-reverse form-check-inline">
+              <input class="form-check-input" type="checkbox" value="" id="reverseCheck1">
+              <label class="form-check-label" for="reverseCheck1">
+                المحال التجارية
+              </label>
+            </div>
+          </div>
+          </form>
+        </div>
+      </nav>
     </div>
-    <div class="row">
-      <div class="store-content  col-md-2">
-        <img src="img/فلاحي.jpg" width="90%" alt="">
-        <div class="store-name">
-          <h3>فلاحي</h3>
-          <a href="stores.html">تسوق الان</a>
+    <div class="col-10 store-sc">
+      <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy-example-2" tabindex="0">
+        <div id="item-1">
+          <div class="Section-name ">
+            <h2 id="2">المطرزات</h2>
+          </div>
+          <div class="row">
+            <div class="store-content  col-md-2">
+              <img src="img/فلاحي.jpg" width="90%" alt="">
+              <div class="store-name">
+                <h3>فلاحي</h3>
+                <a href="stores.html">تسوق الان</a>
+              </div>
+            </div>
+            <div class="store-content  col-md-2">
+              <img src="img/فلاحي.jpg" width="90%" alt="">
+              <div class="store-name">
+                <h3>فلاحي</h3>
+                <a href="stores.html">تسوق الان</a>
+              </div>
+            </div>
+            <div class="store-content col-md-2">
+              <img src="img/فلاحي.jpg" width="90%" alt="">
+              <div class="store-name">
+                <h3>فلاحي</h3>
+                <a href="stores.html">تسوق الان</a>
+              </div>
+            </div>
+            <div class="store-content col-md-2">
+              <img src="img/فلاحي.jpg" width="90%" alt="">
+              <div class="store-name">
+                <h3>فلاحي</h3>
+                <a href="stores.html">تسوق الان</a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="store-content  col-md-2">
-        <img src="img/فلاحي.jpg" width="90%" alt="">
-        <div class="store-name">
-          <h3>فلاحي</h3>
-          <a href="stores.html">تسوق الان</a>
+        <div id="item-2">
+          <div class="Section-name ">
+            <h2 id="2">الخزف والفخار</h2>
+          </div>
+          <div class="row">
+            <div class="store-content  col-md-2">
+              <img src="img/فلاحي.jpg" width="90%" alt="">
+              <div class="store-name">
+                <h3>فلاحي</h3>
+                <a href="stores.html">تسوق الان</a>
+              </div>
+            </div>
+            <div class="store-content  col-md-2">
+              <img src="img/فلاحي.jpg" width="90%" alt="">
+              <div class="store-name">
+                <h3>فلاحي</h3>
+                <a href="stores.html">تسوق الان</a>
+              </div>
+            </div>
+            <div class="store-content col-md-2">
+              <img src="img/فلاحي.jpg" width="90%" alt="">
+              <div class="store-name">
+                <h3>فلاحي</h3>
+                <a href="stores.html">تسوق الان</a>
+              </div>
+            </div>
+            <div class="store-content col-md-2">
+              <img src="img/فلاحي.jpg" width="90%" alt="">
+              <div class="store-name">
+                <h3>فلاحي</h3>
+                <a href="stores.html">تسوق الان</a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="store-content col-md-2">
-        <img src="img/فلاحي.jpg" width="90%" alt="">
-        <div class="store-name">
-          <h3>فلاحي</h3>
-          <a href="stores.html">تسوق الان</a>
+        <div id="item-3">
+          <div class="Section-name ">
+            <h2 id="2">النحاس والانتيك</h2>
+          </div>
+          <div class="row">
+            <div class="store-content  col-md-2">
+              <img src="img/فلاحي.jpg" width="90%" alt="">
+              <div class="store-name">
+                <h3>فلاحي</h3>
+                <a href="stores.html">تسوق الان</a>
+              </div>
+            </div>
+            <div class="store-content  col-md-2">
+              <img src="img/فلاحي.jpg" width="90%" alt="">
+              <div class="store-name">
+                <h3>فلاحي</h3>
+                <a href="stores.html">تسوق الان</a>
+              </div>
+            </div>
+            <div class="store-content col-md-2">
+              <img src="img/فلاحي.jpg" width="90%" alt="">
+              <div class="store-name">
+                <h3>فلاحي</h3>
+                <a href="stores.html">تسوق الان</a>
+              </div>
+            </div>
+            <div class="store-content col-md-2">
+              <img src="img/فلاحي.jpg" width="90%" alt="">
+              <div class="store-name">
+                <h3>فلاحي</h3>
+                <a href="stores.html">تسوق الان</a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="store-content col-md-2">
-        <img src="img/فلاحي.jpg" width="90%" alt="">
-        <div class="store-name">
-          <h3>فلاحي</h3>
-          <a href="stores.html">تسوق الان</a>
+        <div id="item-4">
+          <div class="Section-name ">
+            <h2 id="2">الماكولات الفلسطينية</h2>
+          </div>
+          <div class="row">
+            <div class="store-content  col-md-2">
+              <img src="img/فلاحي.jpg" width="90%" alt="">
+              <div class="store-name">
+                <h3>فلاحي</h3>
+                <a href="stores.html">تسوق الان</a>
+              </div>
+            </div>
+            <div class="store-content  col-md-2">
+              <img src="img/فلاحي.jpg" width="90%" alt="">
+              <div class="store-name">
+                <h3>فلاحي</h3>
+                <a href="stores.html">تسوق الان</a>
+              </div>
+            </div>
+            <div class="store-content col-md-2">
+              <img src="img/فلاحي.jpg" width="90%" alt="">
+              <div class="store-name">
+                <h3>فلاحي</h3>
+                <a href="stores.html">تسوق الان</a>
+              </div>
+            </div>
+            <div class="store-content col-md-2">
+              <img src="img/فلاحي.jpg" width="90%" alt="">
+              <div class="store-name">
+                <h3>فلاحي</h3>
+                <a href="stores.html">تسوق الان</a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="Section-name ">
-      <h2 id="3">ماكولات</h2>
-    </div>
-    <div class="row">
-      <div class="store-content  col-md-2">
-        <img src="img/فلاحي.jpg" width="90%" alt="">
-        <div class="store-name">
-          <h3>فلاحي</h3>
-          <a href="stores.html">تسوق الان</a>
+        <div id="item-5">
+          <div class="Section-name ">
+            <h2 id="2">القش</h2>
+          </div>
+          <div class="row">
+            <div class="store-content  col-md-2">
+              <img src="img/فلاحي.jpg" width="90%" alt="">
+              <div class="store-name">
+                <h3>فلاحي</h3>
+                <a href="stores.html">تسوق الان</a>
+              </div>
+            </div>
+            <div class="store-content  col-md-2">
+              <img src="img/فلاحي.jpg" width="90%" alt="">
+              <div class="store-name">
+                <h3>فلاحي</h3>
+                <a href="stores.html">تسوق الان</a>
+              </div>
+            </div>
+            <div class="store-content col-md-2">
+              <img src="img/فلاحي.jpg" width="90%" alt="">
+              <div class="store-name">
+                <h3>فلاحي</h3>
+                <a href="stores.html">تسوق الان</a>
+              </div>
+            </div>
+            <div class="store-content col-md-2">
+              <img src="img/فلاحي.jpg" width="90%" alt="">
+              <div class="store-name">
+                <h3>فلاحي</h3>
+                <a href="stores.html">تسوق الان</a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="store-content  col-md-2">
-        <img src="img/فلاحي.jpg" width="90%" alt="">
-        <div class="store-name">
-          <h3>فلاحي</h3>
-          <a href="stores.html">تسوق الان</a>
+        <div id="item-6">
+          <div class="Section-name ">
+            <h2 id="2">لوازم جبل الحناء</h2>
+          </div>
+          <div class="row">
+            <div class="store-content  col-md-2">
+              <img src="img/فلاحي.jpg" width="90%" alt="">
+              <div class="store-name">
+                <h3>فلاحي</h3>
+                <a href="stores.html">تسوق الان</a>
+              </div>
+            </div>
+            <div class="store-content  col-md-2">
+              <img src="img/فلاحي.jpg" width="90%" alt="">
+              <div class="store-name">
+                <h3>فلاحي</h3>
+                <a href="stores.html">تسوق الان</a>
+              </div>
+            </div>
+            <div class="store-content col-md-2">
+              <img src="img/فلاحي.jpg" width="90%" alt="">
+              <div class="store-name">
+                <h3>فلاحي</h3>
+                <a href="stores.html">تسوق الان</a>
+              </div>
+            </div>
+            <div class="store-content col-md-2">
+              <img src="img/فلاحي.jpg" width="90%" alt="">
+              <div class="store-name">
+                <h3>فلاحي</h3>
+                <a href="stores.html">تسوق الان</a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="store-content col-md-2">
-        <img src="img/فلاحي.jpg" width="90%" alt="">
-        <div class="store-name">
-          <h3>فلاحي</h3>
-          <a href="stores.html">تسوق الان</a>
+        <div id="item-7">
+          <div class="Section-name ">
+            <h2 id="2">المتاجر متعددة الاصناف</h2>
+          </div>
+          <div class="row">
+            <div class="store-content  col-md-2">
+              <img src="img/فلاحي.jpg" width="90%" alt="">
+              <div class="store-name">
+                <h3>فلاحي</h3>
+                <a href="stores.html">تسوق الان</a>
+              </div>
+            </div>
+            <div class="store-content  col-md-2">
+              <img src="img/فلاحي.jpg" width="90%" alt="">
+              <div class="store-name">
+                <h3>فلاحي</h3>
+                <a href="stores.html">تسوق الان</a>
+              </div>
+            </div>
+            <div class="store-content col-md-2">
+              <img src="img/فلاحي.jpg" width="90%" alt="">
+              <div class="store-name">
+                <h3>فلاحي</h3>
+                <a href="stores.html">تسوق الان</a>
+              </div>
+            </div>
+            <div class="store-content col-md-2">
+              <img src="img/فلاحي.jpg" width="90%" alt="">
+              <div class="store-name">
+                <h3>فلاحي</h3>
+                <a href="stores.html">تسوق الان</a>
+              </div>
+            </div>
+          </div>
         </div>
+  
+       
       </div>
-    </div>
-    <div class="Section-name ">
-      <h2 id="4">ماكولات</h2>
-    </div>
-    <div class="row">
-      <div class="store-content  col-md-2">
-        <img src="img/فلاحي.jpg" width="90%" alt="">
-        <div class="store-name">
-          <h3>فلاحي</h3>
-          <a href="stores.html">تسوق الان</a>
-        </div>
-      </div>
-      <div class="store-content  col-md-2">
-        <img src="img/فلاحي.jpg" width="90%" alt="">
-        <div class="store-name">
-          <h3>فلاحي</h3>
-          <a href="stores.html">تسوق الان</a>
-        </div>
-      </div>
-      <div class="store-content col-md-2">
-        <img src="img/فلاحي.jpg" width="90%" alt="">
-        <div class="store-name">
-          <h3>فلاحي</h3>
-          <a href="stores.html">تسوق الان</a>
-        </div>
-      </div>
-    </div>
-    <div class="Section-name ">
-      <h2 id="5">ماكولات</h2>
-    </div>
-    <div class="row">
-      <div class="store-content  col-md-2">
-        <img src="img/فلاحي.jpg" width="90%" alt="">
-        <div class="store-name">
-          <h3>فلاحي</h3>
-          <a href="stores.html">تسوق الان</a>
-        </div>
-      </div>
-      <div class="store-content  col-md-2">
-        <img src="img/فلاحي.jpg" width="90%" alt="">
-        <div class="store-name">
-          <h3>فلاحي</h3>
-          <a href="stores.html">تسوق الان</a>
-        </div>
-      </div>
-      <div class="store-content col-md-2">
-        <img src="img/فلاحي.jpg" width="90%" alt="">
-        <div class="store-name">
-          <h3>فلاحي</h3>
-          <a href="stores.html">تسوق الان</a>
-        </div>
-      </div>
-    </div>
-    <div class="Section-name">
-      <h2 id="6">ماكولات</h2>
-    </div>
-    <div class="row">
-      <div class="store-content col-md-2">
-        <img src="img/فلاحي.jpg" width="90%" alt="">
-        <div class="store-name">
-          <h3>فلاحي</h3>
-          <a href="stores.html">تسوق الان</a>
-        </div>
-      </div>
-      <div class="store-content col-md-2">
-        <img src="img/فلاحي.jpg" width="90%" alt="">
-        <div class="store-name">
-          <h3>فلاحي</h3>
-          <a href="stores.html">تسوق الان</a>
-        </div>
-      </div>
-      <div class="store-content col-md-2">
-        <img src="img/فلاحي.jpg" width="90%" alt="">
-        <div class="store-name">
-          <h3>فلاحي</h3>
-          <a href="stores.html">تسوق الان</a>
-        </div>
-      </div>
-      
-      <div class="store-content col-md-2">
-        <img src="img/فلاحي.jpg" width="90%" alt="">
-        <div class="store-name">
-          <h3>فلاحي</h3>
-          <a href="stores.html">تسوق الان</a>
-        </div>
-      </div>
-    </div>
     </div>
   </div>
   </div>
   <!--end store-->
+
 
   <!--start dealer "تاجر"-->
   <div class="dealer" id="dealer">

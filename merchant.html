@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> الشروط والتفاصيل</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Markazi+Text&display=swap');
+    </style>
     <!-- font awesome 6 -->
     <link rel="stylesheet" href="css/all.min.css">
     <!-- bootstrap 5 -->
@@ -22,6 +25,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarScroll">
         <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+          
           <li class="nav-item">
             <a class="nav-link" href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
           </li>
@@ -119,13 +123,15 @@
     </div>
 
     <div class="container">
-        <div class="definition">
+        <div class="definition ">
     
             <h3> عند انضمامك لمتجر تراثيات كتاجر نقدم لك العديد من الامتيازات: </h3>
-            <div class="text"><p> موقع فلسطيني فريد من نوعه يضم العديد من المتاجر التراثية الفلسطينية في مكان واحد.</p></div>
-            <div class="text"><p>يتم توقيع عقد لضمان حقك كتاجر من خلال عدة بنود، ويكون لفترة محددة قابلة للتجديد. </p></div>
-            <div class="text"><p> يتم استلام البضاعة منك وحفظها في المخازن وبدورنا نقوم بتصويرها وعرضها وتجهيز الطلبيات وارسالها للزبون.</p></div>
-            <div class="text"><p> يتم ارسال الارباح شهرياً أو حسب الاتفاق.</p></div>
+            
+            <div class="text reveal"><p> موقع فلسطيني فريد من نوعه يضم العديد من المتاجر التراثية الفلسطينية في مكان واحد.</p></div>
+            <div class="text reveal"><p>يتم توقيع عقد لضمان حقك كتاجر من خلال عدة بنود، ويكون لفترة محددة قابلة للتجديد. </p></div>
+            <div class="text reveal"><p> يتم استلام البضاعة منك وحفظها في المخازن وبدورنا نقوم بتصويرها وعرضها وتجهيز الطلبيات وارسالها للزبون.</p></div>
+            <div class="text reveal"><p> يتم ارسال الارباح شهرياً أو حسب الاتفاق.</p></div>
+        
         </div>
     </div>
  
@@ -194,5 +200,24 @@
   </script>
     <!-- bootstrap 5 -->
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript">
+      window.addEventListener('scroll',reveal);
+
+      function reveal(){
+          var reveals=document.querySelectorAll('.reveal');
+          for(var i=0;i<reveals.length;i++){
+              var windowheight=window.innerHeight;
+              var revealtop=reveals[i].getBoundingClientRect().top;
+              var revealpoint=150;
+              if(revealtop < windowheight-revealpoint){
+                  reveals[i].classList.add('active');
+              }
+              else{
+                  reveals[i].classList.remove('active');
+              }
+
+          }
+      }
+  </script>
   </body>
 </html>
