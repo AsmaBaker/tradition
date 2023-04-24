@@ -1,3 +1,4 @@
+
 :root {
     --red: #BE1622;  /*اللون الاساسي للموقع*/
     --greyWhite: #DDDDDD; /*سكني فاتح للحدود والفوتير*/
@@ -9,20 +10,21 @@
  }
   /****************************************start home page****************************************/
   /*start navbar*/
-  
+
   .navbar{
     background-color: var(--red);
+    padding-top: 10px;
   }
   .navbar .collapse i{
     color: white;
-    font-size: 20px;
-    padding-left: 20px;
+    font-size: 25px;
+    padding-left: 30px;
   }
   .navbar .collapse ul{
     margin-left: 150px;
   }
   .navbar .collapse i:hover{
-    font-size: 20px;
+    font-size: 25px;
   }
   .navbar img{
     position:absolute;
@@ -216,11 +218,10 @@
   border: var(--greyWhite) solid 1px;
   margin-right: 10px;
   color: var(--dullBlack);
-  padding-bottom: 12px;
 }
 .card img{
-  width: 80%;
-  height: 60%;
+  width: 85%;
+  height: 50%;
   justify-content: center;
   margin-top: 15px;
   margin-right: 20px;
@@ -312,16 +313,22 @@ p.card-text i{
   color: var(--dullBlack);
   padding-bottom: 5%;
   width: 99%;
-  height: 1000px;
+}
+.store h5{
+  background-color: var(--back);
+  text-align: center;
+  padding: 5px;
+  border-radius: 10px;
 }
 .store-sc{
   overflow: auto;
   height: 100vh;
-  }
+  padding-right: 35px;
+}
 .store-head{
   text-align: center;
   color: var(--red);
-  padding-bottom: 2%;
+  padding-bottom: 1%;
   font-size: 25px;
 }
 .store-head h3{
@@ -333,7 +340,6 @@ p.card-text i{
 .sort{
   font-size: 17px;
   border-left: var(--greyWhite) solid 2px;
-  border-radius: 15px;
   height: 100vh;
 }
 .sort h5{
@@ -350,11 +356,10 @@ p.card-text i{
   color: white;
   border-radius: 50px 5px; 
   margin-bottom: 3%;
-  margin-top: 2%; 
 }
 .Section-name h2{
-    font-size: 22px;
-    padding-top: 5px;
+  font-size: 22px;
+  padding-top: 5px;
 }
 .store-content{
   margin-bottom: 55px;

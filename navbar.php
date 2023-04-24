@@ -1,23 +1,3 @@
-<!doctype html>
-<html dir="rtl">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>الخصوصية والأمان</title>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Markazi+Text&display=swap');
-    </style>
-    <!-- font awesome 6 -->
-    <link rel="stylesheet" href="css/all.min.css">
-    <!-- bootstrap 5 -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" >
-    <!-- custom css -->
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-
-  <!-- start navbar-->
-  <nav class="navbar navbar-expand-lg ">
   <div class="container-fluid">
     <img src="img/logo.png" alt="logo">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,17 +5,21 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarScroll">
       <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+      <li class="nav-item">
+          <a class="nav-link" href="index.php"><i class="fa-solid fa-house"></i></a>
+        </li>
         <!-- sign -->
         <li>
         <button type="button" class="btn nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal">
           <i class="fa-solid fa-user"></i>
         </button>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="index.html"><i class="fa-solid fa-house"></i></a>
+        <li class="nav-item position-relative">
+            <a class="nav-link position-relative" href="cart.php"><i class="fa-solid fa-cart-shopping"></i></a>
+            <span class="position-absolute  translate-middle badge rounded-pill " style="background-color: #dddd; color: #BE1622; left: 42%; top: 3px;">
+              99+
+              <span class="visually-hidden">unread messages</span>
+            </span>
         </li>
         </ul>
         <!-- Modal -->
@@ -90,85 +74,3 @@
               </div>
             </div>
            </div>
-           </div>
-          </div>
-    </div>
-  </div>
-  </nav>
-  <!-- end navbar-->
-  
-  <!--start privecy page-->
-  <div class="container">
-  <div class="priv_sec">
-    <h3>الخصوصية والأمان:</h3>
-    <p>- في موقع تراثيات نضمن لك سرية بياناتك ومعلوماتك بحيث لا يمكن لاحد الاطلاع عليها غيرك.</p>
-    <p>- تعتبر الصور والمعلومات في موقعنا ملكية خاصة له وللمتاجر التي يحتويها الموقع وإن اي عملية سرقة او نسب لهذه المنتجات لك سيعرضك للمسائلة القانونية.</p>
-  </div>
-</div>
-    <!--end privecy page-->
-
-
-        <!--start footer-->
-  <div class="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-2">
-          <h5>تراثيات</h5>
-          <a href="about.html">عن الموقع</a>
-        </div>
-        <div class="col-md-2">
-          <h5>المساعدة</h5>
-          <a href="feedback.html">الاراء والشكاوي</a>
-        </div>
-        <div class="col-md-2">
-          <h5>الخدمات</h5>
-          <a href="pay.html">الدفع</a>
-          <a class="d" href="delivery.html">التوصيل</a>
-        </div>
-        <div class="col-2">
-        </div>
-        <div class="col-md-4">
-          <img src="img/kkkkkkkkkkk.png" width="90%" alt="">
-        </div>
-      </div>
-      <div class="social-media">
-        <a href=""><i class="fa-brands fa-instagram"></i></a>
-        <a href=""><i class="fa-regular fa-envelope"></i></a>
-        <a href=""><i class="fa-brands fa-whatsapp"></i></a>
-        <a href=""><i class="fa-brands fa-facebook-f"></i></a>
-      </div>
-    </div>
-  </div>
-  <!--end footer-->
-
-  <!--start copy-right-->
-  <div class="copy-right">
-    <div class="container">
-      <p>صمم وبرمج بواسطة: اسماء بكر سلمان ولمى منصور حشاش</p>
-      <p><i class="fa-regular fa-copyright"></i> حقوق النشر محفوظة لدى تراثيات</p>
-    </div>
-  </div>
-  <!--end copy-right-->
-  <div class="up">
-    <button class="btn" onclick="upFunction()" id="up"><i class="fa-solid fa-arrow-up"></i></button>
-  </div>
-  <script>
-    let up= document.getElementById("up");
-    window.onscroll = function() {scrollFunction()};
-    function scrollFunction() {
-     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-       up.style.display = "block";
-       } else {
-       up.style.display = "none";
-       }
-     }
-     function upFunction(){
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
-     }
-  </script>
-
-    <!-- bootstrap 5 -->
-    <script src="js/bootstrap.bundle.min.js"></script>
-  </body>
-</html>

@@ -1,51 +1,26 @@
 <!doctype html>
 <html dir="rtl">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> الشروط والتفاصيل</title>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Markazi+Text&display=swap');
-    </style>
-    <!-- font awesome 6 -->
-    <link rel="stylesheet" href="css/all.min.css">
-    <!-- bootstrap 5 -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" >
-    <!-- custom css -->
-    <link rel="stylesheet" href="css/style.css">
+    <title> تراثيات |الشروط والتفاصيل</title>
+    <?php include('head.php')?>
   </head>
 
   <body>
-      <!-- start navbar-->
-  <nav class="navbar navbar-expand-lg ">
-    <div class="container-fluid">
-      <img src="img/logo.png" alt="logo">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarScroll">
-        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-          
-          <li class="nav-item">
-            <a class="nav-link" href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="index.html"><i class="fa-solid fa-house"></i></a>
-          </li>
-          </ul>
-      </div>
-    </div>
-    </nav>
-    <!-- end navbar-->
+   <!-- start navbar-->
+   <nav class="navbar navbar-expand-lg ">
+    <?php include('navbar.php') ?>
+  </nav>
+  <!-- end navbar-->
+
     <!-- start join us page-->
     <div class="img_store">
       <div class="informations">
       <p>سعيدون جداً برغبتك بالانضمام الى عائلتنا، يمكنك الاطلاع على التفاصيل ومن ثم تعبئة الطلب.</p>
-      <button type="button" class="btn butt nav-link"  data-bs-target="#exampleModal" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      <button type="button" class="btn butt nav-link"  data-bs-target="#mer" data-bs-toggle="modal" data-bs-target="#exampleModal">
         تقديم طلب
       </button>
       <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade" id="mer" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
        <div class="modal-content">
         <div class="modal-header">
@@ -138,50 +113,18 @@
     <!--end join us page-->
     
   <!--start footer-->
-  <div class="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-2">
-          <h5>تراثيات</h5>
-          <a href="about.html">عن الموقع</a>
-        </div>
-        <div class="col-md-2">
-          <h5>المساعدة</h5>
-          <a href="feedback.html">الاراء والشكاوي</a>
-          <a href="privacy_security.html">الخصوصية والامان</a>
-        </div>
-        <div class="col-md-2">
-          <h5>الخدمات</h5>
-          <a href="pay.html">الدفع</a>
-          <a class="d" href="delivery.html">التوصيل</a>
-        </div>
-        <div class="col-2">
-        </div>
-        <div class="col-md-4">
-          <img src="img/kkkkkkkkkkk.png" width="90%" alt="">
-        </div>
-      </div>
-      <div class="social-media">
-        <a href=""><i class="fa-brands fa-instagram"></i></a>
-        <a href=""><i class="fa-regular fa-envelope"></i></a>
-        <a href=""><i class="fa-brands fa-whatsapp"></i></a>
-        <a href=""><i class="fa-brands fa-facebook-f"></i></a>
-      </div>
-    </div>
+  <div class="footer" id="footer">
+   <?php include('footer.php')?>
   </div>
   <!--end footer-->
 
   <!--start copy-right-->
   <div class="copy-right">
-    <div class="container">
-      <p>صمم وبرمج بواسطة: اسماء بكر سلمان ولمى منصور حشاش</p>
-      <p><i class="fa-regular fa-copyright"></i> حقوق النشر محفوظة لدى تراثيات</p>
-    </div>
+  <?php include('copy_right.php')?>
   </div>
   <!--end copy-right-->
-
   <div class="up">
-    <button class="btn" onclick="upFunction()" id="up"><i class="fa-solid fa-arrow-up"></i></button>
+    <?php include('up.php')?>
   </div>
   <script>
     let up= document.getElementById("up");
