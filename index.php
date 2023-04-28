@@ -13,25 +13,25 @@
 
   <!--start menu-bar-->
  <div class="menu-bar" dir="rtl">
-      <ul>
-        <li><a href="#store">   الاقسام والمتاجر </a></li>
-        <li><a href="#dealer">انشئ متجرك </a></li>
-        <li><a href="#footer">روابط مهمة</a></li>
-      </ul>
-    
+    <ul>
+      <li><a href="#store">الاقسام والمتاجر </a></li>
+      <li><a href="#dealer">انشئ متجرك </a></li>
+      <li><a href="#footer">روابط مهمة</a></li>
+    </ul>
+  </div>  
   <!--end menu-bar-->
-</div>
+
   <!--start header-->
   <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="img/all.png" class="d-block w-100" alt="...">
+        <img src="img/all.jpg" class="d-block w-100" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="img/all2.png" class="d-block w-100" alt="...">
+        <img src="" class="d-block w-100" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="..." class="d-block w-100" alt="...">
+        <img src="" class="d-block w-100" alt="...">
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
@@ -157,6 +157,7 @@
     </div>
   </div>
   <!--end chose-->
+
   <!--srart store-->
   <div class="store" id="store">
     <div class="store-head ">
@@ -507,7 +508,6 @@
   </div>
   <!--end store-->
 
-
   <!--start dealer "تاجر"-->
   <div class="dealer" id="dealer">
     <p>هل تود الانضمام ك تاجر؟</p>
@@ -523,7 +523,7 @@
 
   <!--start copy-right-->
   <div class="copy-right">
-  <?php include('copy_right.php')?>
+    <?php include('copy_right.php')?>
   </div>
   <!--end copy-right-->
 

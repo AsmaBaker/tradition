@@ -134,7 +134,7 @@
         <button type="button" class="btn keep" data-bs-toggle="modal" data-bs-target="#exampleModal">
           اتمام عملية الشراء
         </button>
-        <a href="order-data.html">الخطوة التالية بعد تسجيل الحساب</a>
+        <a href="order_data.php">الخطوة التالية بعد تسجيل الحساب</a>
         <!-- Modal -->
           <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
            <div class="modal-dialog">

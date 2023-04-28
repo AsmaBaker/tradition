@@ -17,7 +17,7 @@
         <li class="nav-item position-relative">
             <a class="nav-link position-relative" href="cart.php"><i class="fa-solid fa-cart-shopping"></i></a>
             <span class="position-absolute  translate-middle badge rounded-pill " style="background-color: #dddd; color: #BE1622; left: 100%; top: 3px;">
-              99+
+              4
               <span class="visually-hidden">unread messages</span>
             </span>
         </li>
@@ -72,5 +72,5 @@
                 </div>
                </div> 
               </div>
-            </div>
-           </div>
+    </div>
+  </div>
