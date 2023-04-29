@@ -25,16 +25,19 @@
   <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="img/1.svg" class="d-block w-100 " alt="...">
+        <img src="img/4.png" class="d-block " alt="...">
       </div>
       <div class="carousel-item">
-        <img src="img/2.svg" class="d-block w-100" alt="...">
+        <img src="img/5.png" class="d-block" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="img/3.svg" class="d-block w-100" alt="...">
+        <img src="img/1.png" class="d-block " alt="...">
       </div>
       <div class="carousel-item">
-        <img src="img/4.svg" class="d-block w-100" alt="...">
+        <img src="img/2.png" class="d-block" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="img/3.png" class="d-block" alt="...">
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
@@ -46,6 +49,19 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
+  <div class="main-page">
+      <div class="row imgs ">
+        <div class=" img-1 col-md-2" style="width: 250px;">
+          <img src="img/55.png">
+        </div>
+        <div class="img-2 col-md-2">
+          <img src="img/المطرزات (2).png">
+        </div>
+        <div class="img-3 col-md-3">
+          <img src="img/الصنع المحلي.png">
+        </div>
+      </div>
+    </div>
   <!--end  header-->
 
   <!--start chose-->

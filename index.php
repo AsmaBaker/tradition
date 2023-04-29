@@ -54,7 +54,7 @@
       
       <div class="row">
         <div class="col-md-3 card" style="width: 15rem;">
-          <a href="product.html">
+          <a href="product.php">
           <img src="img/22201/222011.jpg" class="card-img-top" alt="...">
           <div class="card-body row">
             <h5 class="card-title">صحن بيضاوي مقطع</h5>
@@ -64,7 +64,7 @@
           </a>
         </div>
         <div class="col-md-3 card" style="width: 15rem;">
-          <a href="product.html">
+          <a href="product.php">
           <img src="img/22201/222011.jpg" class="card-img-top" alt="...">
           <div class="card-body row">
             <h5 class="card-title">صحن بيضاوي مقطع</h5>
@@ -72,9 +72,62 @@
             <button type="button" class="btn ">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
           </div>
           </a>
-        </div>       
-        <div class="col-md-3 card" style="width: 15rem;">
-          <a href="product.html">
+        </div>   <div class="col-md-3 card" style="width: 15rem;">
+          <a href="product.php">
+          <img src="img/22201/222011.jpg" class="card-img-top" alt="...">
+          <div class="card-body row">
+            <h5 class="card-title">صحن بيضاوي مقطع</h5>
+            <p class="card-text"> 50 <i class="fa-solid fa-shekel-sign"></i></p>
+            <button type="button" class="btn ">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
+          </div>
+          </a>
+        </div>   <div class="col-md-3 card" style="width: 15rem;">
+          <a href="product.php">
+          <img src="img/22201/222011.jpg" class="card-img-top" alt="...">
+          <div class="card-body row">
+            <h5 class="card-title">صحن بيضاوي مقطع</h5>
+            <p class="card-text"> 50 <i class="fa-solid fa-shekel-sign"></i></p>
+            <button type="button" class="btn ">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
+          </div>
+          </a>
+        </div>   <div class="col-md-3 card" style="width: 15rem;">
+          <a href="product.php">
+          <img src="img/22201/222011.jpg" class="card-img-top" alt="...">
+          <div class="card-body row">
+            <h5 class="card-title">صحن بيضاوي مقطع</h5>
+            <p class="card-text"> 50 <i class="fa-solid fa-shekel-sign"></i></p>
+            <button type="button" class="btn ">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
+          </div>
+          </a>
+        </div>   <div class="col-md-3 card" style="width: 15rem;">
+          <a href="product.php">
+          <img src="img/22201/222011.jpg" class="card-img-top" alt="...">
+          <div class="card-body row">
+            <h5 class="card-title">صحن بيضاوي مقطع</h5>
+            <p class="card-text"> 50 <i class="fa-solid fa-shekel-sign"></i></p>
+            <button type="button" class="btn ">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
+          </div>
+          </a>
+        </div>   <div class="col-md-3 card" style="width: 15rem;">
+          <a href="product.php">
+          <img src="img/22201/222011.jpg" class="card-img-top" alt="...">
+          <div class="card-body row">
+            <h5 class="card-title">صحن بيضاوي مقطع</h5>
+            <p class="card-text"> 50 <i class="fa-solid fa-shekel-sign"></i></p>
+            <button type="button" class="btn ">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
+          </div>
+          </a>
+        </div>   <div class="col-md-3 card" style="width: 15rem;">
+          <a href="product.php">
+          <img src="img/22201/222011.jpg" class="card-img-top" alt="...">
+          <div class="card-body row">
+            <h5 class="card-title">صحن بيضاوي مقطع</h5>
+            <p class="card-text"> 50 <i class="fa-solid fa-shekel-sign"></i></p>
+            <button type="button" class="btn ">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
+          </div>
+          </a>
+        </div>   <div class="col-md-3 card" style="width: 15rem;">
+          <a href="product.php">
           <img src="img/22201/222011.jpg" class="card-img-top" alt="...">
           <div class="card-body row">
             <h5 class="card-title">صحن بيضاوي مقطع</h5>
@@ -83,70 +136,9 @@
           </div>
           </a>
         </div>
-        <div class="col-md-3 card" style="width: 15rem;">
-          <a href="product.html">
-          <img src="img/22201/222011.jpg" class="card-img-top" alt="...">
-          <div class="card-body row">
-            <h5 class="card-title">صحن بيضاوي مقطع</h5>
-            <p class="card-text"> 50 <i class="fa-solid fa-shekel-sign"></i></p>
-            <button type="button" class="btn ">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
-          </div>
-          </a>
-        </div>
-        <div class="col-md-3 card" style="width: 15rem;">
-          <a href="product.html">
-          <img src="img/22201/222011.jpg" class="card-img-top" alt="...">
-          <div class="card-body row">
-            <h5 class="card-title">صحن بيضاوي مقطع</h5>
-            <p class="card-text"> 50 <i class="fa-solid fa-shekel-sign"></i></p>
-            <button type="button" class="btn ">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
-          </div>
-          </a>
-        </div>
-        <div class="col-md-3 card" style="width: 15rem;">
-          <a href="product.html">
-          <img src="img/22201/222011.jpg" class="card-img-top" alt="...">
-          <div class="card-body row">
-            <h5 class="card-title">صحن بيضاوي مقطع</h5>
-            <p class="card-text"> 50 <i class="fa-solid fa-shekel-sign"></i></p>
-            <button type="button" class="btn ">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
-          </div>
-          </a>
-        </div>
-        <div class="col-md-3 card" style="width: 15rem;">
-          <a href="product.html">
-          <img src="img/22201/222011.jpg" class="card-img-top" alt="...">
-          <div class="card-body row">
-            <h5 class="card-title">صحن بيضاوي مقطع</h5>
-            <p class="card-text"> 50 <i class="fa-solid fa-shekel-sign"></i></p>
-            <button type="button" class="btn ">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
-          </div>
-          </a>
-        </div>
-        <div class="col-md-3 card" style="width: 15rem;">
-          <a href="product.html">
-          <img src="img/22201/222011.jpg" class="card-img-top" alt="...">
-          <div class="card-body row">
-            <h5 class="card-title">صحن بيضاوي مقطع</h5>
-            <p class="card-text"> 50 <i class="fa-solid fa-shekel-sign"></i></p>
-            <button type="button" class="btn ">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
-          </div>
-          </a>
-        </div>
-        <div class="col-md-3 card" style="width: 15rem;">
-          <a href="product.html">
-          <img src="img/22201/222011.jpg" class="card-img-top" alt="...">
-          <div class="card-body row">
-            <h5 class="card-title">صحن بيضاوي مقطع</h5>
-            <p class="card-text"> 50 <i class="fa-solid fa-shekel-sign"></i></p>
-            <button type="button" class="btn ">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
-          </div>
-          </a>
-        </div>
-        
 
         <div class="col-md-2 card more" style="width: 15rem;">
-          <a href="more.html">
+          <a href="more.php">
           <div class="more-content">
           <i class="fa-solid fa-arrow-left"></i>
           </div>
@@ -264,31 +256,30 @@
               <img src="img/فلاحي.jpg" width="90%" alt="">
               <div class="store-name">
                 <h3>فلاحي</h3>
-                <a href="stores.html">تسوق الان</a>
+                <a href="stores.php">تسوق الان</a>
               </div>
             </div>
             <div class="store-content  col-md-2">
               <img src="img/فلاحي.jpg" width="90%" alt="">
               <div class="store-name">
                 <h3>فلاحي</h3>
-                <a href="stores.html">تسوق الان</a>
+                <a href="stores.php">تسوق الان</a>
               </div>
-            </div>
-            <div class="store-content col-md-2">
+            </div>   <div class="store-content  col-md-2">
               <img src="img/فلاحي.jpg" width="90%" alt="">
               <div class="store-name">
                 <h3>فلاحي</h3>
-                <a href="stores.html">تسوق الان</a>
+                <a href="stores.php">تسوق الان</a>
               </div>
             </div>
-            <div class="store-content col-md-2">
+            <div class="store-content  col-md-2">
               <img src="img/فلاحي.jpg" width="90%" alt="">
               <div class="store-name">
                 <h3>فلاحي</h3>
-                <a href="stores.html">تسوق الان</a>
+                <a href="stores.php">تسوق الان</a>
               </div>
             </div>
-    
+           
           </div>
         </div>
         <div id="item-2">
@@ -296,32 +287,32 @@
             <h2 id="2">الخزف والفخار</h2>
           </div>
           <div class="row">
-            <div class="store-content  col-md-2">
+          <div class="store-content  col-md-2">
               <img src="img/فلاحي.jpg" width="90%" alt="">
               <div class="store-name">
                 <h3>فلاحي</h3>
-                <a href="stores.html">تسوق الان</a>
+                <a href="stores.php">تسوق الان</a>
               </div>
             </div>
             <div class="store-content  col-md-2">
               <img src="img/فلاحي.jpg" width="90%" alt="">
               <div class="store-name">
                 <h3>فلاحي</h3>
-                <a href="stores.html">تسوق الان</a>
+                <a href="stores.php">تسوق الان</a>
               </div>
-            </div>
-            <div class="store-content col-md-2">
+            </div>   
+            <div class="store-content  col-md-2">
               <img src="img/فلاحي.jpg" width="90%" alt="">
               <div class="store-name">
                 <h3>فلاحي</h3>
-                <a href="stores.html">تسوق الان</a>
+                <a href="stores.php">تسوق الان</a>
               </div>
             </div>
-            <div class="store-content col-md-2">
+            <div class="store-content  col-md-2">
               <img src="img/فلاحي.jpg" width="90%" alt="">
               <div class="store-name">
                 <h3>فلاحي</h3>
-                <a href="stores.html">تسوق الان</a>
+                <a href="stores.php">تسوق الان</a>
               </div>
             </div>
           </div>
@@ -331,32 +322,24 @@
             <h2 id="2">النحاس والانتيك</h2>
           </div>
           <div class="row">
-            <div class="store-content  col-md-2">
+          <div class="store-content  col-md-2">
               <img src="img/فلاحي.jpg" width="90%" alt="">
               <div class="store-name">
                 <h3>فلاحي</h3>
-                <a href="stores.html">تسوق الان</a>
+                <a href="stores.php">تسوق الان</a>
               </div>
             </div>
             <div class="store-content  col-md-2">
               <img src="img/فلاحي.jpg" width="90%" alt="">
               <div class="store-name">
                 <h3>فلاحي</h3>
-                <a href="stores.html">تسوق الان</a>
+                <a href="stores.php">تسوق الان</a>
               </div>
-            </div>
-            <div class="store-content col-md-2">
+            </div>   <div class="store-content  col-md-2">
               <img src="img/فلاحي.jpg" width="90%" alt="">
               <div class="store-name">
                 <h3>فلاحي</h3>
-                <a href="stores.html">تسوق الان</a>
-              </div>
-            </div>
-            <div class="store-content col-md-2">
-              <img src="img/فلاحي.jpg" width="90%" alt="">
-              <div class="store-name">
-                <h3>فلاحي</h3>
-                <a href="stores.html">تسوق الان</a>
+                <a href="stores.php">تسوق الان</a>
               </div>
             </div>
           </div>
@@ -366,32 +349,24 @@
             <h2 id="2">الماكولات الفلسطينية</h2>
           </div>
           <div class="row">
-            <div class="store-content  col-md-2">
+          <div class="store-content  col-md-2">
               <img src="img/فلاحي.jpg" width="90%" alt="">
               <div class="store-name">
                 <h3>فلاحي</h3>
-                <a href="stores.html">تسوق الان</a>
+                <a href="stores.php">تسوق الان</a>
               </div>
             </div>
             <div class="store-content  col-md-2">
               <img src="img/فلاحي.jpg" width="90%" alt="">
               <div class="store-name">
                 <h3>فلاحي</h3>
-                <a href="stores.html">تسوق الان</a>
+                <a href="stores.php">تسوق الان</a>
               </div>
-            </div>
-            <div class="store-content col-md-2">
+            </div>   <div class="store-content  col-md-2">
               <img src="img/فلاحي.jpg" width="90%" alt="">
               <div class="store-name">
                 <h3>فلاحي</h3>
-                <a href="stores.html">تسوق الان</a>
-              </div>
-            </div>
-            <div class="store-content col-md-2">
-              <img src="img/فلاحي.jpg" width="90%" alt="">
-              <div class="store-name">
-                <h3>فلاحي</h3>
-                <a href="stores.html">تسوق الان</a>
+                <a href="stores.php">تسوق الان</a>
               </div>
             </div>
           </div>
@@ -401,32 +376,24 @@
             <h2 id="2">القش</h2>
           </div>
           <div class="row">
-            <div class="store-content  col-md-2">
+          <div class="store-content  col-md-2">
               <img src="img/فلاحي.jpg" width="90%" alt="">
               <div class="store-name">
                 <h3>فلاحي</h3>
-                <a href="stores.html">تسوق الان</a>
+                <a href="stores.php">تسوق الان</a>
               </div>
             </div>
             <div class="store-content  col-md-2">
               <img src="img/فلاحي.jpg" width="90%" alt="">
               <div class="store-name">
                 <h3>فلاحي</h3>
-                <a href="stores.html">تسوق الان</a>
+                <a href="stores.php">تسوق الان</a>
               </div>
-            </div>
-            <div class="store-content col-md-2">
+            </div>   <div class="store-content  col-md-2">
               <img src="img/فلاحي.jpg" width="90%" alt="">
               <div class="store-name">
                 <h3>فلاحي</h3>
-                <a href="stores.html">تسوق الان</a>
-              </div>
-            </div>
-            <div class="store-content col-md-2">
-              <img src="img/فلاحي.jpg" width="90%" alt="">
-              <div class="store-name">
-                <h3>فلاحي</h3>
-                <a href="stores.html">تسوق الان</a>
+                <a href="stores.php">تسوق الان</a>
               </div>
             </div>
           </div>
@@ -436,32 +403,24 @@
             <h2 id="2">لوازم جبل الحناء</h2>
           </div>
           <div class="row">
-            <div class="store-content  col-md-2">
+          <div class="store-content  col-md-2">
               <img src="img/فلاحي.jpg" width="90%" alt="">
               <div class="store-name">
                 <h3>فلاحي</h3>
-                <a href="stores.html">تسوق الان</a>
+                <a href="stores.php">تسوق الان</a>
               </div>
             </div>
             <div class="store-content  col-md-2">
               <img src="img/فلاحي.jpg" width="90%" alt="">
               <div class="store-name">
                 <h3>فلاحي</h3>
-                <a href="stores.html">تسوق الان</a>
+                <a href="stores.php">تسوق الان</a>
               </div>
-            </div>
-            <div class="store-content col-md-2">
+            </div>   <div class="store-content  col-md-2">
               <img src="img/فلاحي.jpg" width="90%" alt="">
               <div class="store-name">
                 <h3>فلاحي</h3>
-                <a href="stores.html">تسوق الان</a>
-              </div>
-            </div>
-            <div class="store-content col-md-2">
-              <img src="img/فلاحي.jpg" width="90%" alt="">
-              <div class="store-name">
-                <h3>فلاحي</h3>
-                <a href="stores.html">تسوق الان</a>
+                <a href="stores.php">تسوق الان</a>
               </div>
             </div>
           </div>
@@ -471,34 +430,21 @@
             <h2 id="2">المتاجر متعددة الاصناف</h2>
           </div>
           <div class="row">
-            <div class="store-content  col-md-2">
+          <div class="store-content  col-md-2">
               <img src="img/فلاحي.jpg" width="90%" alt="">
               <div class="store-name">
                 <h3>فلاحي</h3>
-                <a href="stores.html">تسوق الان</a>
+                <a href="stores.php">تسوق الان</a>
               </div>
             </div>
             <div class="store-content  col-md-2">
               <img src="img/فلاحي.jpg" width="90%" alt="">
               <div class="store-name">
                 <h3>فلاحي</h3>
-                <a href="stores.html">تسوق الان</a>
+                <a href="stores.php">تسوق الان</a>
               </div>
-            </div>
-            <div class="store-content col-md-2">
-              <img src="img/فلاحي.jpg" width="90%" alt="">
-              <div class="store-name">
-                <h3>فلاحي</h3>
-                <a href="stores.html">تسوق الان</a>
-              </div>
-            </div>
-            <div class="store-content col-md-2">
-              <img src="img/فلاحي.jpg" width="90%" alt="">
-              <div class="store-name">
-                <h3>فلاحي</h3>
-                <a href="stores.html">تسوق الان</a>
-              </div>
-            </div>
+            </div>   
+        
           </div>
         </div>
         
@@ -511,7 +457,7 @@
   <!--start dealer "تاجر"-->
   <div class="dealer" id="dealer">
     <p>هل تود الانضمام ك تاجر؟</p>
-    <a class="btn" href="merchant.html">معرفة التفاصيل</a>
+    <a class="btn" href="merchant.php">معرفة التفاصيل</a>
   </div>
   <!--end dealer-->
 
