@@ -13,11 +13,17 @@
 
   <!--start menu-bar-->
  <div class="menu-bar" dir="rtl">
-    <ul>
-      <li><a href="#store">الاقسام والمتاجر </a></li>
-      <li><a href="#dealer">انشئ متجرك </a></li>
-      <li><a href="#footer">روابط مهمة</a></li>
-    </ul>
+     <ul>
+        <li>
+          <a href="#store">الاقسام والمتاجر </a>
+        </li>
+        <li>
+          <a href="#dealer">انشئ متجرك </a>
+        </li>
+        <li>
+          <a href="#footer">روابط مهمة</a>
+        </li>
+     </ul>
   </div>  
   <!--end menu-bar-->
 
@@ -565,7 +571,7 @@
      }
   </script>
     <!-- bootstrap 5 -->
-    <script src="js/bootstrap.bundle.min.js"></script>
+ <script src="js/bootstrap.bundle.min.js"></script>
 
   </body>
 </html>

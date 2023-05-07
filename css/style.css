@@ -9,6 +9,62 @@
   font-family: 'Markazi Text', serif;
  }
   /****************************************start home page****************************************/
+  /*start sign*/
+  .sign{
+    height: 100vh;
+  }
+  .sign_content{
+    width: 40%;
+    margin-right: 30%;
+    margin-top: 3%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgb(204, 204, 204);
+    padding: 50px;
+    margin-bottom: 5%;
+  }
+ .sign button {
+    background-color: var(--red);
+    border-color: var(--red);
+    color: white;
+    margin-right: 50px;
+    margin-top: 20px;
+    transition: all 0.5s;
+    font-size: 19px;
+  }
+  .sign input{
+    margin-top: 20px;
+  }
+  .modal-footer{
+    margin-left:200px;
+    margin-top: 20px;
+  }
+  .sign button:hover{
+    background-color: var(--red);
+    border-color: var(--red);
+    color: white;
+  }
+  .sign ul {
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+  }
+
+  .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: white;
+    background-color: var(--red);
+  }
+  .btn-check:focus+.btn, .btn:focus {
+    color: white;
+    background-color: var(--red);
+    border-color: var(--red);
+    outline: 0;
+  }
+  .sign .nav-link {
+    color: var(--red);
+    margin-bottom: 30px;
+    margin-right: 50px;
+  }
+  /*end sign*/
   /*start navbar*/
 
   .navbar{
@@ -42,7 +98,7 @@
     .navbar img{
       visibility: hidden;
     }
-    }
+  }
   /*end navbar*/
 
   /*start menu-bar*/
@@ -97,47 +153,7 @@
 
   /*end menu-bar*/
 
-  /*start sign*/
   
- .modal-body button {
-    background-color: var(--red);
-    border-color: var(--red);
-    color: white;
-    margin-right: 5px;
-    transition: all 0.5s;
-    font-size: 19px;
-  }
-  .modal-body button:hover{
-    background-color: var(--red);
-    border-color: var(--red);
-    color: white;
-  }
-  .modal-body ul {
-    margin-right: 20px;
-  }
-  .modal-body .cancel{
-    background-color: grey;
-    border-color: gray;
-    transition: all 0.5s;
-  }
-  .modal-body .cancel:hover{
-    background-color: rgb(100, 100, 100);
-    border-color: rgb(101, 101, 101);
-  }
-  .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-    color: white;
-    background-color: var(--red);
-  }
-  .btn-check:focus+.btn, .btn:focus {
-    color: white;
-    background-color: var(--red);
-    border-color: var(--red);
-    outline: 0;
-  }
-  .modal-body .nav-link {
-   color: var(--red);
-  }
-  /*end sign*/
 
   /*start header*/
   .carousel {
@@ -165,23 +181,23 @@
     margin-bottom: 2%;
   }
   .imgs img{
-    box-shadow: 6px 6px 10px var(--greyWhite);
+    box-shadow: 0px 0px 20px rgb(204, 204, 204);
+    border-radius: 20px;
   }
-  .img-1 img{
+  .img-1 img ,.img-2 img{
     width: 230px;
-    height: 200x;
+    height: 230px;
     margin-top: 17px;
     margin-right: 50px;
     margin-bottom: 6px;
+    transition: all 0.5s;
   }
-  .img-2 img{
-    width: 230px;
-    height: 200x;
-    margin-top: 17px;
-    margin-right: 50px;
-    margin-bottom: 6px;
+  .img-1 img:hover ,.img-2 img:hover{
+    width: 240px;
+    height: 240px;
+    margin-top: 7px;
+    box-shadow: 0px 0px 24px rgb(158, 157, 157);
   }
-  
   .img-3 img{
     width: 667px;
     height: 230px;
@@ -191,15 +207,6 @@
   }
   
   span.carousel-control-prev-icon , span.carousel-control-next-icon{
-    /*
-    background-color: var(--greyWhite);
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    font-size: 15px;
-    margin-left: 60%;
-    
-    */
     background-color: var(--back);
     border-radius: 50%;
     height: 40px;
@@ -213,7 +220,7 @@
   padding-bottom: 4%;
   background-color: var(--back);
 }
-.chose a{
+.card a{
   text-decoration: none;
 }
 .chose-title{
@@ -321,19 +328,21 @@ p.card-text i{
 /*end chose*/
 
 /*start store*/
-
-
 .store{
   margin-top: 50px;
   color: var(--dullBlack);
   padding-bottom: 5%;
   width: 99%;
 }
+.store .card a{
+  text-decoration: none;
+}
 .store h5{
   background-color: var(--back);
   text-align: center;
   padding: 5px;
   border-radius: 10px;
+  text-decoration: none;
 }
 .store-sc{
   overflow: auto;
@@ -362,6 +371,11 @@ p.card-text i{
 }
 .sort a{
   color: var(--dullBlack);
+}
+.sort .btn{
+  background-color: var(--back);
+  margin-right: 60px;
+  margin-top: 5px;
 }
 .Section-name{
   background-color: var(--red);
@@ -604,12 +618,12 @@ p.card-text i{
 
   }
 
-    .informations button:hover{
-      background-color: var(--red);
-      box-shadow: 2px 2px 10px var(--dullBlack);
-      border-color: var(--red);
-      color: white;
-    }
+  .informations button:hover{
+    background-color: var(--red);
+    box-shadow: 2px 2px 10px var(--dullBlack);
+    border-color: var(--red);
+    color: white;
+  }
 /****************************************end marchant page**********************************/
 
 
@@ -694,13 +708,11 @@ p.card-text i{
   transition: all 2s ease;
 }
 .active{
-
   transform: translateY(0px);
   opacity: 1;
 }
 
 .contact_us a i{
- 
   background-color: var(--red);
   color: white;
   height: 30px;
@@ -710,14 +722,11 @@ p.card-text i{
   font-size: 15px;
   margin-left: 8px;
   margin: 10px;
-
-
 }
 .boxs:hover{
   box-shadow: 2px 2px 10px var(--dullBlack);
 }
 /************************************************ end about page**********/
-
 
 /**************************************** start pay page******************/
 .pay{
@@ -830,8 +839,9 @@ margin-bottom: 4%;
 }
 /***********************************************start stores page******************/
 .stores{
-  margin-top: 10%;
+  margin-top: 5%;
   margin-bottom: 8%;
+  width: 99%;
 }
 .description{
   padding: 2%;
@@ -840,8 +850,6 @@ margin-bottom: 4%;
   margin-bottom: 8%;
   background-color: var(--back);
   border-radius: 7px;
-
-
 }
 .description .name-store{
   color: var(--red);
@@ -853,14 +861,8 @@ margin-bottom: 4%;
   border: 5px solid var(--red);
   animation-name: up-and-down;
   animation-duration: 0.7s;
-
-
 }
-
-
-
 .links a i{
-   
   background-color: var(--red);
   color: white;
   height: 30px;
@@ -871,9 +873,24 @@ margin-bottom: 4%;
   margin-left: 8px;
   text-align: center;
   margin: 7px;
-
 }
-
+.store_product{
+  overflow: auto;
+  height: 100vh;
+  padding-right: 35px;
+}
+.stores .sort{
+  padding-right: 20px;
+}
+.stores .sort .btn{
+  background-color: var(--back);
+  margin-right: 1%;
+  margin-top: 5px;
+  width: 150px;
+}
+.stores .sort select , .stors .btn{
+  display: inline;
+}
 /**************************************** start cart page ****************************************/
 .cart-head{
   color: var(--red);
@@ -919,11 +936,11 @@ margin-bottom: 4%;
 .product-details ul li{
   list-style: none;
   margin-top: 10px;
-  font-size: 20px;
+  font-size: 30px;
 }
 .product-details ul li i.fa-shekel-sign{
  
-  font-size: 15px;
+  font-size: 30px;
 }
 .product-details ul{
   margin-top: 15px;

@@ -17,7 +17,7 @@
         <div class="col-2">
         </div>
         <div class="col-md-4">
-          <img src="img/kkkkkkkkkkk.png" width="90%" alt="">
+          <img src="img/footer.png" width="90%" alt="">
         </div>
       </div>
       <div class="social-media">

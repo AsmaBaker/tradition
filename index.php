@@ -1,3 +1,7 @@
+<?php
+  session_start();
+  include("connection_db.php");
+?>
 <!doctype html>
 <html dir="rtl">
   <head>
@@ -12,7 +16,7 @@
   <!-- end navbar-->
 
   <!--start menu-bar-->
- <div class="menu-bar" dir="rtl">
+  <div class="menu-bar" dir="rtl">
     <ul>
       <li><a href="#store">الاقسام والمتاجر </a></li>
       <li><a href="#dealer">انشئ متجرك </a></li>
@@ -22,26 +26,53 @@
   <!--end menu-bar-->
 
   <!--start header-->
-  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+  <div class="header">
+   <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="img/all.jpg" class="d-block w-100" alt="...">
+        <img src="img/header/1.png" class="d-block " alt="...">
       </div>
       <div class="carousel-item">
-        <img src="" class="d-block w-100" alt="...">
+        <img src="img/header/2.png" class="d-block" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="" class="d-block w-100" alt="...">
+        <img src="img/header/3.png" class="d-block " alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="img/header/4.png" class="d-block" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="img/header/5.png" class="d-block" alt="...">
       </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
+   </div>
+   <div class="main-page">
+      <div class="row imgs ">
+        <div class="img-1 h-img col-md-2" style="width: 250px;">
+        <a href="stores.php">
+          <img src="img/header/6.jpeg">
+        </a>
+        </div>
+        <div class="img-2 h-img col-md-2">
+          <a href="stores.php?id=22201">
+          <img src="img/header/7.png">
+          </a>
+        </div>
+        <div class="img-3 h-img col-md-3">
+          <a href="">
+          <img src="img/header/8.png">
+          </a>
+        </div>
+      </div>
+   </div>
   </div>
   <!--end  header-->
 
@@ -50,94 +81,28 @@
     <div class="container">
       <div class="chose-title">
         <h2>اخترنا لك</h2>
-      </div>
-      
-      <div class="row">
+        <?php
+         $getChose = "SELECT * FROM products  where id=111028  or id=222018 or id =7770126 or id=333017";
+         $getAllChose = mysqli_query($conn,$getChose);
+         $chose=mysqli_fetch_all($getAllChose,MYSQLI_ASSOC);
+        ?>
+       </div>
+       <div class="row">
+        <?php
+        foreach($chose as $index=>$chosen):
+        ?>
         <div class="col-md-3 card" style="width: 15rem;">
-          <a href="product.php">
-          <img src="img/22201/222011.jpg" class="card-img-top" alt="...">
+          <a href="product.php?pro_id=<?=$chosen['id']?>&sto_id=<?=$chosen['sto_id']?>">
+          <img src="img/<?=$chosen['sto_id']?>/<?=$chosen['img']?>" class="card-img-top" alt="...">
           <div class="card-body row">
-            <h5 class="card-title">صحن بيضاوي مقطع</h5>
-            <p class="card-text"> 50 <i class="fa-solid fa-shekel-sign"></i></p>
-            <button type="button" class="btn ">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
+            <h5 class="card-title"><?=$chosen['name']?></h5>
+            <p class="card-text"> <?=$chosen['price']?><i class="fa-solid fa-shekel-sign"></i></p>
+            <button type="button" class="btn">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
           </div>
           </a>
         </div>
-        <div class="col-md-3 card" style="width: 15rem;">
-          <a href="product.php">
-          <img src="img/22201/222011.jpg" class="card-img-top" alt="...">
-          <div class="card-body row">
-            <h5 class="card-title">صحن بيضاوي مقطع</h5>
-            <p class="card-text"> 50 <i class="fa-solid fa-shekel-sign"></i></p>
-            <button type="button" class="btn ">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
-          </div>
-          </a>
-        </div>   <div class="col-md-3 card" style="width: 15rem;">
-          <a href="product.php">
-          <img src="img/22201/222011.jpg" class="card-img-top" alt="...">
-          <div class="card-body row">
-            <h5 class="card-title">صحن بيضاوي مقطع</h5>
-            <p class="card-text"> 50 <i class="fa-solid fa-shekel-sign"></i></p>
-            <button type="button" class="btn ">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
-          </div>
-          </a>
-        </div>   <div class="col-md-3 card" style="width: 15rem;">
-          <a href="product.php">
-          <img src="img/22201/222011.jpg" class="card-img-top" alt="...">
-          <div class="card-body row">
-            <h5 class="card-title">صحن بيضاوي مقطع</h5>
-            <p class="card-text"> 50 <i class="fa-solid fa-shekel-sign"></i></p>
-            <button type="button" class="btn ">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
-          </div>
-          </a>
-        </div>   <div class="col-md-3 card" style="width: 15rem;">
-          <a href="product.php">
-          <img src="img/22201/222011.jpg" class="card-img-top" alt="...">
-          <div class="card-body row">
-            <h5 class="card-title">صحن بيضاوي مقطع</h5>
-            <p class="card-text"> 50 <i class="fa-solid fa-shekel-sign"></i></p>
-            <button type="button" class="btn ">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
-          </div>
-          </a>
-        </div>   <div class="col-md-3 card" style="width: 15rem;">
-          <a href="product.php">
-          <img src="img/22201/222011.jpg" class="card-img-top" alt="...">
-          <div class="card-body row">
-            <h5 class="card-title">صحن بيضاوي مقطع</h5>
-            <p class="card-text"> 50 <i class="fa-solid fa-shekel-sign"></i></p>
-            <button type="button" class="btn ">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
-          </div>
-          </a>
-        </div>   <div class="col-md-3 card" style="width: 15rem;">
-          <a href="product.php">
-          <img src="img/22201/222011.jpg" class="card-img-top" alt="...">
-          <div class="card-body row">
-            <h5 class="card-title">صحن بيضاوي مقطع</h5>
-            <p class="card-text"> 50 <i class="fa-solid fa-shekel-sign"></i></p>
-            <button type="button" class="btn ">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
-          </div>
-          </a>
-        </div>   <div class="col-md-3 card" style="width: 15rem;">
-          <a href="product.php">
-          <img src="img/22201/222011.jpg" class="card-img-top" alt="...">
-          <div class="card-body row">
-            <h5 class="card-title">صحن بيضاوي مقطع</h5>
-            <p class="card-text"> 50 <i class="fa-solid fa-shekel-sign"></i></p>
-            <button type="button" class="btn ">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
-          </div>
-          </a>
-        </div>   <div class="col-md-3 card" style="width: 15rem;">
-          <a href="product.php">
-          <img src="img/22201/222011.jpg" class="card-img-top" alt="...">
-          <div class="card-body row">
-            <h5 class="card-title">صحن بيضاوي مقطع</h5>
-            <p class="card-text"> 50 <i class="fa-solid fa-shekel-sign"></i></p>
-            <button type="button" class="btn ">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
-          </div>
-          </a>
-        </div>
-
-        <div class="col-md-2 card more" style="width: 15rem;">
+       <?php endforeach ?>
+       <div class="col-md-2 card more" style="width: 15rem;">
           <a href="more.php">
           <div class="more-content">
           <i class="fa-solid fa-arrow-left"></i>
@@ -151,305 +116,112 @@
   <!--end chose-->
 
   <!--srart store-->
+
   <div class="store" id="store">
+    <?php
+    $getCats = "SELECT * FROM categories";
+    $getAllCats = mysqli_query($conn,$getCats);
+    $cats=mysqli_fetch_all($getAllCats,MYSQLI_ASSOC);
+    ?>
     <div class="store-head ">
       <h3>الاقسام والمتــــــــــــاجر </h3>
     </div>
     <div class="row">
-    <div class="col-2 sort">
+     <div class="col-2 sort">
       <nav id="navbar-example3" class="h-100 flex-column align-items-stretch pe-4 border-end">
         <nav class="nav nav-pills flex-column">  
           <h5>اقسام تراثيات:</h5>       
-          <a class="nav-link" href="#item-1">المطرزات</a>
-          <a class="nav-link" href="#item-2">الخزف والفخار</a> 
-          <a class="nav-link" href="#item-3">النحاس والانتيك</a>
-          <a class="nav-link" href="#item-4">الماكولات الفلسطينية</a>
-          <a class="nav-link" href="#item-5">القش</a>
-          <a class="nav-link" href="#item-6">لوازم جبل الحناء</a>
-          <a class="nav-link" href="#item-7">المتاجر متعددة الاصناف</a>
+          <?php
+          foreach($cats as $index=>$cat):
+          ?>
+          <a class="nav-link" href="#item-<?=$index?>"><?=$cat['name']?></a>
+          <?php endforeach ?>
         </nav>
         <div class="">
-          <form action="">
+
+          <form action="index.php#store" method="post">
           <div>
             <h5>تصفية حسب المدينة:</h5>
+            <?php
+            $getCities = "SELECT * FROM cities where is_exists ";
+            $getAllCities = mysqli_query($conn,$getCities);
+            $cities=mysqli_fetch_all($getAllCities,MYSQLI_ASSOC);
+            ?>
+            <?php
+            foreach($cities as $index=>$city):
+            ?>
             <div class="form-check form-check-reverse form-check-inline">
-              <input class="form-check-input" type="checkbox" value="" id="reverseCheck1">
+              <input class="form-check-input" type="radio" value="<?=$city['id']?>" id="reverseCheck1" name="city">
               <label class="form-check-label" for="reverseCheck1">
-                نابلس
+               <?=$city['name']?>
               </label>
             </div>
-            <div class="form-check form-check-reverse form-check-inline">
-              <input class="form-check-input" type="checkbox" value="" id="reverseCheck1">
-              <label class="form-check-label" for="reverseCheck1">
-                جنين
-              </label>
-            </div>
-            <div class="form-check form-check-reverse form-check-inline">
-              <input class="form-check-input" type="checkbox" value="" id="reverseCheck1">
-              <label class="form-check-label" for="reverseCheck1">
-                طولكرم
-              </label>
-            </div>
-            <div class="form-check form-check-reverse form-check-inline">
-              <input class="form-check-input" type="checkbox" value="" id="reverseCheck1">
-              <label class="form-check-label" for="reverseCheck1">
-                نابلس
-              </label>
-            </div>
-            <div class="form-check form-check-reverse form-check-inline">
-              <input class="form-check-input" type="checkbox" value="" id="reverseCheck1">
-              <label class="form-check-label" for="reverseCheck1">
-                جنين
-              </label>
-            </div>
-            <div class="form-check form-check-reverse form-check-inline">
-              <input class="form-check-input" type="checkbox" value="" id="reverseCheck1">
-              <label class="form-check-label" for="reverseCheck1">
-                طولكرم
-              </label>
-            </div>
-            <div class="form-check form-check-reverse form-check-inline">
-              <input class="form-check-input" type="checkbox" value="" id="reverseCheck1">
-              <label class="form-check-label" for="reverseCheck1">
-                نابلس
-              </label>
-            </div>
-            <div class="form-check form-check-reverse form-check-inline">
-              <input class="form-check-input" type="checkbox" value="" id="reverseCheck1">
-              <label class="form-check-label" for="reverseCheck1">
-                جنين
-              </label>
-            </div>
-            <div class="form-check form-check-reverse form-check-inline">
-              <input class="form-check-input" type="checkbox" value="" id="reverseCheck1">
-              <label class="form-check-label" for="reverseCheck1">
-                طولكرم
-              </label>
-            </div>
-  
+            <?php endforeach?>
+            <input class="btn d-block sort_btn"  type="submit" value="تنفيذ" name="citySort">
+          </div>
+          </form>
+          <form action="index.php" method="post">
+           <div>
             <h5>تصفية حسب طبيعة التواجد:</h5>
             <div class="form-check form-check-reverse form-check-inline">
-              <input class="form-check-input" type="radio" name="on" value="" id="reverseCheck1">
+              <input class="form-check-input" type="radio" name="on" value="online" id="reverseCheck1">
               <label class="form-check-label" for="reverseCheck1">
              متاجر   الاونلاين
               </label>
             </div>
             <div class="form-check form-check-reverse form-check-inline">
-              <input class="form-check-input" type="radio" name="on" value="" id="reverseCheck1">
+              <input class="form-check-input" type="radio" name="on" value="market" id="reverseCheck1">
               <label class="form-check-label" for="reverseCheck1">
-                المحال التجارية
+              المحال التجارية
               </label>             
-            </div>     
-          </div>
+            </div>    
+            <input class="btn d-block sort_btn"  type="submit" value="تنفيذ" name="online"> 
+           </div>
           </form>
         </div>
       </nav>
-    </div>
-    <div class="col-10 store-sc">
+     </div>
+     <div class="col-10 store-sc">
       <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy-example-2" tabindex="0">
-        <div id="item-1">
+          <?php
+          foreach($cats as $index=>$cat):
+          ?>
+          <div id="item-<?php echo $index; ?>">
           <div class="Section-name ">
-            <h2 id="2">المطرزات</h2>
+            <h2 id="2"><?= $cat['name'] ?></h2>
           </div>
-          <div class="row">
-            <div class="store-content  col-md-2">
-              <img src="img/فلاحي.jpg" width="90%" alt="">
+           <div class="row">
+          <?php
+          $catId=$cat['id'];
+          if(isset($_POST['citySort'])){
+             if($_POST['citySort'] != null){
+             $city_id=$_POST['city'];
+             $getStores = "SELECT * FROM stores where cat_id = $catId and city = $city_id";
+             $getAllStores = mysqli_query($conn,$getStores);
+             $stores=mysqli_fetch_all($getAllStores,MYSQLI_ASSOC);
+             }
+          }else{
+            $getStores = "SELECT * FROM stores where cat_id = $catId";
+            $getAllStores = mysqli_query($conn,$getStores);
+            $stores=mysqli_fetch_all($getAllStores,MYSQLI_ASSOC);
+          }
+          foreach($stores as $index=>$store):
+           ?>
+            <div class="store-content  col-2">
+              <img src="img/store/<?=$store['img']?>" width="90%" alt="">
               <div class="store-name">
-                <h3>فلاحي</h3>
-                <a href="stores.php">تسوق الان</a>
+                <h3><?=$store['name']?></h3>
+                <a href="stores.php?id=<?=$store['id']?>">تسوق الان</a>
               </div>
             </div>
-            <div class="store-content  col-md-2">
-              <img src="img/فلاحي.jpg" width="90%" alt="">
-              <div class="store-name">
-                <h3>فلاحي</h3>
-                <a href="stores.php">تسوق الان</a>
-              </div>
-            </div>   <div class="store-content  col-md-2">
-              <img src="img/فلاحي.jpg" width="90%" alt="">
-              <div class="store-name">
-                <h3>فلاحي</h3>
-                <a href="stores.php">تسوق الان</a>
-              </div>
-            </div>
-            <div class="store-content  col-md-2">
-              <img src="img/فلاحي.jpg" width="90%" alt="">
-              <div class="store-name">
-                <h3>فلاحي</h3>
-                <a href="stores.php">تسوق الان</a>
-              </div>
-            </div>
-           
+           <?php 
+           endforeach ;
+           ?>
           </div>
         </div>
-        <div id="item-2">
-          <div class="Section-name ">
-            <h2 id="2">الخزف والفخار</h2>
-          </div>
-          <div class="row">
-          <div class="store-content  col-md-2">
-              <img src="img/فلاحي.jpg" width="90%" alt="">
-              <div class="store-name">
-                <h3>فلاحي</h3>
-                <a href="stores.php">تسوق الان</a>
-              </div>
-            </div>
-            <div class="store-content  col-md-2">
-              <img src="img/فلاحي.jpg" width="90%" alt="">
-              <div class="store-name">
-                <h3>فلاحي</h3>
-                <a href="stores.php">تسوق الان</a>
-              </div>
-            </div>   
-            <div class="store-content  col-md-2">
-              <img src="img/فلاحي.jpg" width="90%" alt="">
-              <div class="store-name">
-                <h3>فلاحي</h3>
-                <a href="stores.php">تسوق الان</a>
-              </div>
-            </div>
-            <div class="store-content  col-md-2">
-              <img src="img/فلاحي.jpg" width="90%" alt="">
-              <div class="store-name">
-                <h3>فلاحي</h3>
-                <a href="stores.php">تسوق الان</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="item-3">
-          <div class="Section-name ">
-            <h2 id="2">النحاس والانتيك</h2>
-          </div>
-          <div class="row">
-          <div class="store-content  col-md-2">
-              <img src="img/فلاحي.jpg" width="90%" alt="">
-              <div class="store-name">
-                <h3>فلاحي</h3>
-                <a href="stores.php">تسوق الان</a>
-              </div>
-            </div>
-            <div class="store-content  col-md-2">
-              <img src="img/فلاحي.jpg" width="90%" alt="">
-              <div class="store-name">
-                <h3>فلاحي</h3>
-                <a href="stores.php">تسوق الان</a>
-              </div>
-            </div>   <div class="store-content  col-md-2">
-              <img src="img/فلاحي.jpg" width="90%" alt="">
-              <div class="store-name">
-                <h3>فلاحي</h3>
-                <a href="stores.php">تسوق الان</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="item-4">
-          <div class="Section-name ">
-            <h2 id="2">الماكولات الفلسطينية</h2>
-          </div>
-          <div class="row">
-          <div class="store-content  col-md-2">
-              <img src="img/فلاحي.jpg" width="90%" alt="">
-              <div class="store-name">
-                <h3>فلاحي</h3>
-                <a href="stores.php">تسوق الان</a>
-              </div>
-            </div>
-            <div class="store-content  col-md-2">
-              <img src="img/فلاحي.jpg" width="90%" alt="">
-              <div class="store-name">
-                <h3>فلاحي</h3>
-                <a href="stores.php">تسوق الان</a>
-              </div>
-            </div>   <div class="store-content  col-md-2">
-              <img src="img/فلاحي.jpg" width="90%" alt="">
-              <div class="store-name">
-                <h3>فلاحي</h3>
-                <a href="stores.php">تسوق الان</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="item-5">
-          <div class="Section-name ">
-            <h2 id="2">القش</h2>
-          </div>
-          <div class="row">
-          <div class="store-content  col-md-2">
-              <img src="img/فلاحي.jpg" width="90%" alt="">
-              <div class="store-name">
-                <h3>فلاحي</h3>
-                <a href="stores.php">تسوق الان</a>
-              </div>
-            </div>
-            <div class="store-content  col-md-2">
-              <img src="img/فلاحي.jpg" width="90%" alt="">
-              <div class="store-name">
-                <h3>فلاحي</h3>
-                <a href="stores.php">تسوق الان</a>
-              </div>
-            </div>   <div class="store-content  col-md-2">
-              <img src="img/فلاحي.jpg" width="90%" alt="">
-              <div class="store-name">
-                <h3>فلاحي</h3>
-                <a href="stores.php">تسوق الان</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="item-6">
-          <div class="Section-name ">
-            <h2 id="2">لوازم جبل الحناء</h2>
-          </div>
-          <div class="row">
-          <div class="store-content  col-md-2">
-              <img src="img/فلاحي.jpg" width="90%" alt="">
-              <div class="store-name">
-                <h3>فلاحي</h3>
-                <a href="stores.php">تسوق الان</a>
-              </div>
-            </div>
-            <div class="store-content  col-md-2">
-              <img src="img/فلاحي.jpg" width="90%" alt="">
-              <div class="store-name">
-                <h3>فلاحي</h3>
-                <a href="stores.php">تسوق الان</a>
-              </div>
-            </div>   <div class="store-content  col-md-2">
-              <img src="img/فلاحي.jpg" width="90%" alt="">
-              <div class="store-name">
-                <h3>فلاحي</h3>
-                <a href="stores.php">تسوق الان</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="item-7">
-          <div class="Section-name ">
-            <h2 id="2">المتاجر متعددة الاصناف</h2>
-          </div>
-          <div class="row">
-          <div class="store-content  col-md-2">
-              <img src="img/فلاحي.jpg" width="90%" alt="">
-              <div class="store-name">
-                <h3>فلاحي</h3>
-                <a href="stores.php">تسوق الان</a>
-              </div>
-            </div>
-            <div class="store-content  col-md-2">
-              <img src="img/فلاحي.jpg" width="90%" alt="">
-              <div class="store-name">
-                <h3>فلاحي</h3>
-                <a href="stores.php">تسوق الان</a>
-              </div>
-            </div>   
-        
-          </div>
-        </div>
-        
+        <?php endforeach ?>
       </div>
-    </div>
+     </div>
     </div>
   </div>
   <!--end store-->
@@ -492,7 +264,6 @@
      }
   </script>
     <!-- bootstrap 5 -->
-    <script src="js/bootstrap.bundle.min.js"></script>
-
+  <script src="js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

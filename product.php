@@ -1,3 +1,6 @@
+<?php
+   include("connection_db.php");
+?>
 <!doctype html>
 <html dir="rtl">
   <head>
@@ -14,20 +17,31 @@
 
   <!-- start product-->
   <div class="product">
+    <?php
+    $pro_id=$_GET['pro_id'];
+    
+    $getProduct = "SELECT * FROM products  where id=$pro_id";
+    $getProductData = mysqli_query($conn,$getProduct);
+    $product=mysqli_fetch_all($getProductData,MYSQLI_ASSOC);
+    ?>
     <div class="container">
         <div class="row">
+          <?php
+           foreach($product as $product):
+           ?>
             <div class="col-md-1"></div>
             <div class="col-md-4 pic">
-                <img src="img/صحن بيضاوي مقطع .jpg" alt="">
+                <img src="img/<?=$product['sto_id']?>/<?=$product['img']?>" alt="">
             </div>
             <div class="col-md-6 data">
-                <p class="name">صحن بيضاوي مقطع</p>
-                <p class="desc">صحن خزف مصنوع يدويا بايدي فلسطينية بزخرفات خزفية فلسطينية اصيلة</p>
-                <p class="price">50<i class="fa-solid fa-shekel-sign"></i></p>
+                <p class="name"><?=$product['name']?></p>
+                <p class="desc"><?=$product['desc']?></p>
+                <p class="price"><?=$product['price']?><i class="fa-solid fa-shekel-sign"></i></p>
                 <label for="quantity">الكمية:</label>
-                <input class="quantity" type="number" id="quantity" min="1" max="10" value="1">
+                <input class="quantity" type="number" id="quantity" min="1" max="<?=$product['total']?>" value="1">
                 <button type="button" class="btn ">اضافة الى السلة  <i class="fa-solid fa-cart-shopping"></i></button>
             </div>
+            <?php endforeach ?>
         </div>
     </div>
   </div>
@@ -35,115 +49,35 @@
 
   <!--start suggestion-->
   <div class="suggestion">
-   
+    
     <div class="same-store">
         <div class="container">
-     <h4>منتجات مشابهة لدى خزف فلسطين :</h4>
+        <?php 
+        $sto_id=$_GET['sto_id'];
+            $getProducts = "SELECT * FROM products  where sto_id=$sto_id limit 10";
+            $getProductsData = mysqli_query($conn,$getProducts);
+            $products=mysqli_fetch_all($getProductsData,MYSQLI_ASSOC);
+        ?>
+      <h4>منتجات مشابهة لدى:</h4>
       <div class="row">
+    
+        <?php
+        foreach($products as $index=>$product):
+        ?>
         <div class="col-md-3 card" style="width: 15rem;">
-            <a href="product.html">
-            <img src="img/صحن بيضاوي مقطع .jpg" class="card-img-top" alt="...">
-            <div class="card-body row">
-              <h5 class="card-title">صحن بيضاوي مقطع</h5>
-              <p class="card-text"> 50 <i class="fa-solid fa-shekel-sign"></i></p>
-              <button type="button" class="btn ">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
-            </div>
-            </a>
+        <a href="product.php?pro_id=<?=$product['id']?>&sto_id=<?=$product['sto_id']?>">
+          <img src="img/<?=$sto_id?>/<?=$product['img']?>" class="card-img-top" alt="...">
+          <div class="card-body row">
+            <h5 class="card-title"><?=$product['name']?></h5>
+            <p class="card-text"> <?=$product['price']?><i class="fa-solid fa-shekel-sign"></i></p>
+            <button type="button" class="btn">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
           </div>
-          <div class="col-md-3 card" style="width: 15rem;">
-            <a href="product.html">
-            <img src="img/صحن بيضاوي مقطع .jpg" class="card-img-top" alt="...">
-            <div class="card-body row">
-              <h5 class="card-title">صحن بيضاوي مقطع</h5>
-              <p class="card-text"> 50 <i class="fa-solid fa-shekel-sign"></i></p>
-              <button type="button" class="btn ">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
-            </div>
-            </a>
+          </a>
           </div>
-          <div class="col-md-3 card" style="width: 15rem;">
-            <a href="product.html">
-            <img src="img/صحن بيضاوي مقطع .jpg" class="card-img-top" alt="...">
-            <div class="card-body row">
-              <h5 class="card-title">صحن بيضاوي مقطع</h5>
-              <p class="card-text"> 50 <i class="fa-solid fa-shekel-sign"></i></p>
-              <button type="button" class="btn ">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
-            </div>
-            </a>
-          </div>
-          <div class="col-md-3 card" style="width: 15rem;">
-            <a href="product.html">
-            <img src="img/صحن بيضاوي مقطع .jpg" class="card-img-top" alt="...">
-            <div class="card-body row">
-              <h5 class="card-title">صحن بيضاوي مقطع</h5>
-              <p class="card-text"> 50 <i class="fa-solid fa-shekel-sign"></i></p>
-              <button type="button" class="btn ">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
-            </div>
-            </a>
-          </div>
-          <div class="col-md-3 card" style="width: 15rem;">
-            <a href="product.html">
-            <img src="img/صحن بيضاوي مقطع .jpg" class="card-img-top" alt="...">
-            <div class="card-body row">
-              <h5 class="card-title">صحن بيضاوي مقطع</h5>
-              <p class="card-text"> 50 <i class="fa-solid fa-shekel-sign"></i></p>
-              <button type="button" class="btn ">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
-            </div>
-            </a>
-          </div>
-          <div class="col-md-3 card" style="width: 15rem;">
-            <a href="product.html">
-            <img src="img/صحن بيضاوي مقطع .jpg" class="card-img-top" alt="...">
-            <div class="card-body row">
-              <h5 class="card-title">صحن بيضاوي مقطع</h5>
-              <p class="card-text"> 50 <i class="fa-solid fa-shekel-sign"></i></p>
-              <button type="button" class="btn ">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
-            </div>
-            </a>
-          </div>
-          <div class="col-md-3 card" style="width: 15rem;">
-            <a href="product.html">
-            <img src="img/صحن بيضاوي مقطع .jpg" class="card-img-top" alt="...">
-            <div class="card-body row">
-              <h5 class="card-title">صحن بيضاوي مقطع</h5>
-              <p class="card-text"> 50 <i class="fa-solid fa-shekel-sign"></i></p>
-              <button type="button" class="btn ">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
-            </div>
-            </a>
-          </div>
-          <div class="col-md-3 card" style="width: 15rem;">
-            <a href="product.html">
-            <img src="img/صحن بيضاوي مقطع .jpg" class="card-img-top" alt="...">
-            <div class="card-body row">
-              <h5 class="card-title">صحن بيضاوي مقطع</h5>
-              <p class="card-text"> 50 <i class="fa-solid fa-shekel-sign"></i></p>
-              <button type="button" class="btn ">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
-            </div>
-            </a>
-          </div>
-          <div class="col-md-3 card" style="width: 15rem;">
-            <a href="product.html">
-            <img src="img/صحن بيضاوي مقطع .jpg" class="card-img-top" alt="...">
-            <div class="card-body row">
-              <h5 class="card-title">صحن بيضاوي مقطع</h5>
-              <p class="card-text"> 50 <i class="fa-solid fa-shekel-sign"></i></p>
-              <button type="button" class="btn ">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
-            </div>
-            </a>
-          </div>
-          <div class="col-md-3 card" style="width: 15rem;">
-            <a href="product.html">
-            <img src="img/صحن بيضاوي مقطع .jpg" class="card-img-top" alt="...">
-            <div class="card-body row">
-              <h5 class="card-title">صحن بيضاوي مقطع</h5>
-              <p class="card-text"> 50 <i class="fa-solid fa-shekel-sign"></i></p>
-              <button type="button" class="btn ">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
-            </div>
-            </a>
-          </div>
+          <?php endforeach ?>
+      </div>
     </div>
     </div>
-    </div>
-
   </div>
   <!--end suggestion-->
 
