@@ -18,7 +18,6 @@ if($submit=="signIn"){
      } else if($passwordLen <8 or $passwordLen > 30){
         $errors[]="يجي ان تتكون من 8 الى 30 حرف";
      }
-
 //التحقق من صحة بيانات الحساب
 if(!empty($errors)){
     $_SESSION['errors']=$errors;
@@ -42,27 +41,57 @@ else{
        $_SESSION['errors']=$errors;
        header("location:sign.php");
     }
-}}else if($submit=="signUp"){
+ }}else if($submit=="signUp"){
      //userName validation
      if(empty($userName)){
-        $errors[]="البريد الالكتروني مطلوب";
-     } 
+        $errors[]="اسم المستخدم مطلوب";
+        
+     }else if(strlen($userName) <3 or strlen($userName) > 30 ){
+        $errors[]="يجب ان يتكون اسم المستخدم من 3الى 10 حروف";
+     }
       //email validation
       if(empty($email)){
         $errors[]="البريد الالكتروني مطلوب";
-     } else if(!filter_var($email,FILTER_VALIDATE_EMAIL)){
+      }else if(!filter_var($email,FILTER_VALIDATE_EMAIL)){
         $errors[]="يجب ان يكون ايميل حقيقي";
-     } 
+      } 
      //password validation
      if(empty($password)){
         $errors[]="كلمة المرور مطلوبة";
      } else if($passwordLen <8 or $passwordLen > 30){
         $errors[]="يجي ان تتكون من 8 الى 30 حرف";
      }
+     
      //التحقق من صحة بيانات الحساب
-if(!empty($errors)){
-    $_SESSION['errors']=$errors;
-    header("location:sign.php");
-}
-}
+     if(!empty($errors)){
+      $_SESSION['errors']=$errors;
+      header("location:sign.php");
+     }else{
+      $getUser="SELECT * FROM users where email='$email'";
+      $userData = mysqli_query($conn, $getUser);
+      $user=mysqli_fetch_all($userData,MYSQLI_ASSOC);
+  
+      if(!empty($user)){
+          $errors[]="الايميل الذي تحاول ادخاله يملك حساب بالفعل";
+          header("location:sign.php");
+      }else{
+         $newUser = "INSERT INTO users (user_name, email, password)
+         VALUES ('$userName', '$email', '$password')";
+          
+         if ($conn->query($newUser) === TRUE) {
+            echo"done";
+         } else {
+          $errors[]="حدث خطا ما , حاول مرة اخرى";
+         } 
+      }
+      if(!empty($errors)){
+         $_SESSION['errors']=$errors;
+         header("location:sign.php");
+      }else{
+         $_SESSION['sign']="done";
+         header("location:index.php");
+      }
+      
+     }
+    }
 ?>

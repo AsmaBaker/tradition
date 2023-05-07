@@ -9,6 +9,7 @@
     <?php include('head.php')?>
   </head>
   <body>
+   
   <!-- start navbar-->
   <nav class="navbar navbar-expand-lg ">
     <?php include('navbar.php') ?>
@@ -57,7 +58,7 @@
    <div class="main-page">
       <div class="row imgs ">
         <div class="img-1 h-img col-md-2" style="width: 250px;">
-        <a href="stores.php">
+        <a href="stores.php?id=11103">
           <img src="img/header/6.jpeg">
         </a>
         </div>
@@ -82,7 +83,7 @@
       <div class="chose-title">
         <h2>اخترنا لك</h2>
         <?php
-         $getChose = "SELECT * FROM products  where id=111028  or id=222018 or id =7770126 or id=333017";
+         $getChose = "SELECT * FROM products  where id=111028  or id=222018 or id =444011 or id=333014 or id=666011";
          $getAllChose = mysqli_query($conn,$getChose);
          $chose=mysqli_fetch_all($getAllChose,MYSQLI_ASSOC);
         ?>
@@ -102,6 +103,7 @@
           </a>
         </div>
        <?php endforeach ?>
+       <!--
        <div class="col-md-2 card more" style="width: 15rem;">
           <a href="more.php">
           <div class="more-content">
@@ -110,13 +112,13 @@
           <a href="">عرض المزيد</a>
           </div>
         </div>
-      </div>
+        -->
     </div>
+  </div>
   </div>
   <!--end chose-->
 
   <!--srart store-->
-
   <div class="store" id="store">
     <?php
     $getCats = "SELECT * FROM categories";
@@ -157,7 +159,7 @@
               </label>
             </div>
             <?php endforeach?>
-            <input class="btn d-block sort_btn"  type="submit" value="تنفيذ" name="citySort">
+            <input class="btn d-block sort_btn btn_index"  type="submit" value="تنفيذ" name="citySort">
           </div>
           </form>
           <form action="index.php" method="post">
@@ -175,7 +177,7 @@
               المحال التجارية
               </label>             
             </div>    
-            <input class="btn d-block sort_btn"  type="submit" value="تنفيذ" name="online"> 
+            <input class="btn_index d-block sort_btn"  type="submit" value="تنفيذ" name="online"> 
            </div>
           </form>
         </div>
@@ -248,6 +250,7 @@
   <div class="up">
     <?php include('up.php')?>
   </div>
+ 
   <script>
     let up= document.getElementById("up");
     window.onscroll = function() {scrollFunction()};

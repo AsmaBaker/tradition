@@ -80,20 +80,20 @@
     </p>
     
   <form action="sign_handel.php" method="post">     
-      <div class="form-floating mb-3">
+     <div class="form-floating">
        <input type="text" class="form-control" id="userName" name="userName" >
        <label for="userName">اسم المستخدم</label>
-      </div>
-     <div class="form-floating">
-      <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
-      <label for="email">البريد الالكتروني</label>
      </div>
      <div class="form-floating">
-      <input type="password" class="form-control" id="Password" name="password " placeholder="Password">
-      <label for="Password">كلمة المرور</label>
+       <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
+       <label for="email">البريد الالكتروني</label>
+     </div>
+     <div class="form-floating">
+       <input type="password" class="form-control" id="Password" name="password" placeholder="Password">
+       <label for="Password">كلمة المرور</label>
      </div>
      <div class="modal-footer">
-      <button type="submit" class="btn" id="click" name="submit" value="signUp">انشاء حساب</button>
+       <button type="submit" class="btn" id="click" name="submit" value="signUp">انشاء حساب</button>
      </div>
   </form>
   </div>
