@@ -1117,14 +1117,17 @@ margin-bottom: 4%;
 }
 .product .name{
   color: var(--red);
-  font-size: 30px;
+  font-size: 40px;
 }
 .product .desc{
   color: var(--dullBlack);
-  font-size: 16px;
+  font-size: 20px;
 }
 .product p.price{
-  font-size: 25px;
+  font-size: 35px;
+}
+.product p.price i{
+  font-size: 20px;
 }
 .product .btn{
   background-color: var(--red);

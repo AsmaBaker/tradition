@@ -58,7 +58,7 @@
             $getProductsData = mysqli_query($conn,$getProducts);
             $products=mysqli_fetch_all($getProductsData,MYSQLI_ASSOC);
         ?>
-      <h4>منتجات مشابهة لدى:</h4>
+      <h4>منتجات مشابهة لدى فلاحي:</h4>
       <div class="row">
     
         <?php

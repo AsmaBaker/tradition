@@ -72,11 +72,8 @@
         </div>
         <div class="pay">
           <select class="form-select" aria-label="Default select example">
-            <option value="selected">تحديد طريقة الدفع</option>
-            <option value="">الدفع عند الاستلام</option>
-            <option value="">jawwal pay</option>
-            <option value="">pal pay</option>
-            <option value="">visa card </option>      
+            <option value="selected">الدفع عند الاستلام</option>
+      
         </select>
         </div>
         <input type="submit" class="btn submit" value="الشراء الان">

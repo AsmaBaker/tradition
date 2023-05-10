@@ -18,14 +18,9 @@
   <div class=" row pay">
     <div class="ways-pay col-md-6">
     <h3>الدفع:</h3>
-    <p>في موقع تراثيات نضمن لك سرية تامة في عمليات الدفع في حالة استخدام اسلوب دفع الكتروني.</p>
+    <p>نوفر لك في تراثيات الية الدفع عند الاستلام , ليمكنك  من تفحص طلبك ومعاينته قبل الدفع والاستلام , ونطمح الى توفير اليات دفع الكتروني في المستقبل</p>
    
-      <p>كما ونوفر لك العديد من خيارات الدفع :</p>
-      <ul>
-        <li ><i class="fa-regular fa-money-bill-1" style="color: rgb(4, 96, 4);"></i> الدفع عند الاستلام</li>
-        <li>  <i class="fa-solid fa-credit-card" style="color: rgb(200, 48, 48);"></i>فيزا كارد</li>
-        <li> <i class="fa-solid fa-wallet" style="color: rgb(41, 2, 80);"></i> محفظة جوال باي</li>
-      </ul>
+      
     </div>
   <div class="img-pay col-md-3">
       <img src="img/التوصيل/الدفع-removebg-preview.png" width="480px">

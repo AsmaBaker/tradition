@@ -9,14 +9,10 @@ if($submit=="signIn"){
     //email validation
      if(empty($email)){
         $errors[]="البريد الالكتروني مطلوب";
-     } else if(!filter_var($email,FILTER_VALIDATE_EMAIL)){
-        $errors[]="يجب ان يكون ايميل حقيقي";
-     } 
+     }
      //password validation
      if(empty($password)){
         $errors[]="كلمة المرور مطلوبة";
-     } else if($passwordLen <8 or $passwordLen > 30){
-        $errors[]="يجي ان تتكون من 8 الى 30 حرف";
      }
 //التحقق من صحة بيانات الحساب
 if(!empty($errors)){
@@ -35,7 +31,7 @@ else{
         $errors[]="البريد الاكتروني او كلمة المرور خطأ";
         header("location:sign.php");
     }else{
-        header("location:index.php");
+        header("location:order_data.php");
     }
     if(!empty($errors)){
        $_SESSION['errors']=$errors;
@@ -89,7 +85,7 @@ else{
          header("location:sign.php");
       }else{
          $_SESSION['sign']="done";
-         header("location:index.php");
+         header("location:order_data.php");
       }
       
      }

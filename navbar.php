@@ -8,9 +8,6 @@
       <li class="nav-item">
           <a class="nav-link" href="index.php"><i class="fa-solid fa-house"></i></a>
         </li>
-        <li class="nav-item">
-         <a class="nav-link" href="sign.php"><i class="fa-solid fa-user"></i></a>
-        </li>
         <li class="nav-item position-relative">
             <a class="nav-link position-relative" href="cart.php"><i class="fa-solid fa-cart-shopping"></i></a>
             <span class="position-absolute  translate-middle badge rounded-pill " style="background-color: #dddd; color: #BE1622; left: 100%; top: 3px;">
