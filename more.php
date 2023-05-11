@@ -17,7 +17,7 @@
     <div class="container">  
       <div class="row py-2">
         <div class="col-md-3 card" style="width: 15rem;">
-          <a href="product.html">
+          <a href="product.php">
           <img src="img/صحن بيضاوي مقطع .jpg" class="card-img-top" alt="...">
           <div class="card-body row">
             <h5 class="card-title">صحن بيضاوي مقطع</h5>
@@ -27,7 +27,7 @@
           </a>
         </div>
         <div class="col-md-3 card" style="width: 15rem;">
-          <a href="product.html">
+          <a href="product.php">
           <img src="img/صحن بيضاوي مقطع .jpg" class="card-img-top" alt="...">
           <div class="card-body row">
             <h5 class="card-title">صحن بيضاوي مقطع</h5>
@@ -37,7 +37,7 @@
           </a>
         </div>
         <div class="col-md-3 card" style="width: 15rem;">
-          <a href="product.html">
+          <a href="product.php">
           <img src="img/صحن بيضاوي مقطع .jpg" class="card-img-top" alt="...">
           <div class="card-body row">
             <h5 class="card-title">صحن بيضاوي مقطع</h5>
@@ -47,7 +47,7 @@
           </a>
         </div>
         <div class="col-md-3 card" style="width: 15rem;">
-          <a href="product.html">
+          <a href="product.php">
           <img src="img/صحن بيضاوي مقطع .jpg" class="card-img-top" alt="...">
           <div class="card-body row">
             <h5 class="card-title">صحن بيضاوي مقطع</h5>
@@ -57,7 +57,7 @@
           </a>
         </div>
         <div class="col-md-3 card" style="width: 15rem;">
-          <a href="product.html">
+          <a href="product.php">
           <img src="img/صحن بيضاوي مقطع .jpg" class="card-img-top" alt="...">
           <div class="card-body row">
             <h5 class="card-title">صحن بيضاوي مقطع</h5>
@@ -67,7 +67,7 @@
           </a>
         </div>
         <div class="col-md-3 card" style="width: 15rem;">
-          <a href="product.html">
+          <a href="product.php">
           <img src="img/صحن بيضاوي مقطع .jpg" class="card-img-top" alt="...">
           <div class="card-body row">
             <h5 class="card-title">صحن بيضاوي مقطع</h5>
@@ -77,7 +77,7 @@
           </a>
         </div>
         <div class="col-md-3 card" style="width: 15rem;">
-          <a href="product.html">
+          <a href="product.php">
           <img src="img/صحن بيضاوي مقطع .jpg" class="card-img-top" alt="...">
           <div class="card-body row">
             <h5 class="card-title">صحن بيضاوي مقطع</h5>
@@ -87,7 +87,7 @@
           </a>
         </div>
         <div class="col-md-3 card" style="width: 15rem;">
-          <a href="product.html">
+          <a href="product.php">
           <img src="img/صحن بيضاوي مقطع .jpg" class="card-img-top" alt="...">
           <div class="card-body row">
             <h5 class="card-title">صحن بيضاوي مقطع</h5>
@@ -97,7 +97,7 @@
           </a>
         </div>
         <div class="col-md-3 card" style="width: 15rem;">
-          <a href="product.html">
+          <a href="product.php">
           <img src="img/صحن بيضاوي مقطع .jpg" class="card-img-top" alt="...">
           <div class="card-body row">
             <h5 class="card-title">صحن بيضاوي مقطع</h5>
@@ -107,7 +107,7 @@
           </a>
         </div>
         <div class="col-md-3 card" style="width: 15rem;">
-          <a href="product.html">
+          <a href="product.php">
           <img src="img/صحن بيضاوي مقطع .jpg" class="card-img-top" alt="...">
           <div class="card-body row">
             <h5 class="card-title">صحن بيضاوي مقطع</h5>
@@ -117,7 +117,7 @@
           </a>
         </div>
         <div class="col-md-3 card" style="width: 15rem;">
-          <a href="product.html">
+          <a href="product.php">
           <img src="img/صحن بيضاوي مقطع .jpg" class="card-img-top" alt="...">
           <div class="card-body row">
             <h5 class="card-title">صحن بيضاوي مقطع</h5>
@@ -127,7 +127,7 @@
           </a>
         </div>
         <div class="col-md-3 card" style="width: 15rem;">
-          <a href="product.html">
+          <a href="product.php">
           <img src="img/صحن بيضاوي مقطع .jpg" class="card-img-top" alt="...">
           <div class="card-body row">
             <h5 class="card-title">صحن بيضاوي مقطع</h5>
@@ -137,7 +137,7 @@
           </a>
         </div>
         <div class="col-md-3 card" style="width: 15rem;">
-          <a href="product.html">
+          <a href="product.php">
           <img src="img/صحن بيضاوي مقطع .jpg" class="card-img-top" alt="...">
           <div class="card-body row">
             <h5 class="card-title">صحن بيضاوي مقطع</h5>
@@ -147,7 +147,7 @@
           </a>
         </div>
         <div class="col-md-3 card" style="width: 15rem;">
-          <a href="product.html">
+          <a href="product.php">
           <img src="img/صحن بيضاوي مقطع .jpg" class="card-img-top" alt="...">
           <div class="card-body row">
             <h5 class="card-title">صحن بيضاوي مقطع</h5>
@@ -157,7 +157,7 @@
           </a>
         </div>
         <div class="col-md-3 card" style="width: 15rem;">
-          <a href="product.html">
+          <a href="product.php">
           <img src="img/صحن بيضاوي مقطع .jpg" class="card-img-top" alt="...">
           <div class="card-body row">
             <h5 class="card-title">صحن بيضاوي مقطع</h5>
@@ -167,7 +167,16 @@
           </a>
         </div>
         <div class="col-md-3 card" style="width: 15rem;">
-          <a href="product.html">
+          <a href="product.php">
+          <img src="img/صحن بيضاوي مقطع .jpg" class="card-img-top" alt="...">
+          <div class="card-body row">
+            <h5 class="card-title">صحن بيضاوي مقطع</h5>
+            <p class="card-text"> 50 <i class="fa-solid fa-shekel-sign"></i></p>
+            <button type="button" class="btn ">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
+          </div>
+          </a>
+        </div>7        <div class="col-md-3 card" style="width: 15rem;">
+          <a href="product.php">
           <img src="img/صحن بيضاوي مقطع .jpg" class="card-img-top" alt="...">
           <div class="card-body row">
             <h5 class="card-title">صحن بيضاوي مقطع</h5>
@@ -177,7 +186,7 @@
           </a>
         </div>
         <div class="col-md-3 card" style="width: 15rem;">
-          <a href="product.html">
+          <a href="product.php">
           <img src="img/صحن بيضاوي مقطع .jpg" class="card-img-top" alt="...">
           <div class="card-body row">
             <h5 class="card-title">صحن بيضاوي مقطع</h5>
@@ -187,7 +196,7 @@
           </a>
         </div>
         <div class="col-md-3 card" style="width: 15rem;">
-          <a href="product.html">
+          <a href="product.php">
           <img src="img/صحن بيضاوي مقطع .jpg" class="card-img-top" alt="...">
           <div class="card-body row">
             <h5 class="card-title">صحن بيضاوي مقطع</h5>
@@ -197,7 +206,7 @@
           </a>
         </div>
         <div class="col-md-3 card" style="width: 15rem;">
-          <a href="product.html">
+          <a href="product.php">
           <img src="img/صحن بيضاوي مقطع .jpg" class="card-img-top" alt="...">
           <div class="card-body row">
             <h5 class="card-title">صحن بيضاوي مقطع</h5>
@@ -207,7 +216,7 @@
           </a>
         </div>
         <div class="col-md-3 card" style="width: 15rem;">
-          <a href="product.html">
+          <a href="product.php">
           <img src="img/صحن بيضاوي مقطع .jpg" class="card-img-top" alt="...">
           <div class="card-body row">
             <h5 class="card-title">صحن بيضاوي مقطع</h5>
@@ -217,7 +226,7 @@
           </a>
         </div>
         <div class="col-md-3 card" style="width: 15rem;">
-          <a href="product.html">
+          <a href="product.php">
           <img src="img/صحن بيضاوي مقطع .jpg" class="card-img-top" alt="...">
           <div class="card-body row">
             <h5 class="card-title">صحن بيضاوي مقطع</h5>
@@ -227,7 +236,7 @@
           </a>
         </div>
         <div class="col-md-3 card" style="width: 15rem;">
-          <a href="product.html">
+          <a href="product.php">
           <img src="img/صحن بيضاوي مقطع .jpg" class="card-img-top" alt="...">
           <div class="card-body row">
             <h5 class="card-title">صحن بيضاوي مقطع</h5>
@@ -237,7 +246,7 @@
           </a>
         </div>
         <div class="col-md-3 card" style="width: 15rem;">
-          <a href="product.html">
+          <a href="product.php">
           <img src="img/صحن بيضاوي مقطع .jpg" class="card-img-top" alt="...">
           <div class="card-body row">
             <h5 class="card-title">صحن بيضاوي مقطع</h5>
@@ -247,67 +256,7 @@
           </a>
         </div>
         <div class="col-md-3 card" style="width: 15rem;">
-          <a href="product.html">
-          <img src="img/صحن بيضاوي مقطع .jpg" class="card-img-top" alt="...">
-          <div class="card-body row">
-            <h5 class="card-title">صحن بيضاوي مقطع</h5>
-            <p class="card-text"> 50 <i class="fa-solid fa-shekel-sign"></i></p>
-            <button type="button" class="btn ">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
-          </div>
-          </a>
-        </div>
-        <div class="col-md-3 card" style="width: 15rem;">
-          <a href="product.html">
-          <img src="img/صحن بيضاوي مقطع .jpg" class="card-img-top" alt="...">
-          <div class="card-body row">
-            <h5 class="card-title">صحن بيضاوي مقطع</h5>
-            <p class="card-text"> 50 <i class="fa-solid fa-shekel-sign"></i></p>
-            <button type="button" class="btn ">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
-          </div>
-          </a>
-        </div>
-        <div class="col-md-3 card" style="width: 15rem;">
-          <a href="product.html">
-          <img src="img/صحن بيضاوي مقطع .jpg" class="card-img-top" alt="...">
-          <div class="card-body row">
-            <h5 class="card-title">صحن بيضاوي مقطع</h5>
-            <p class="card-text"> 50 <i class="fa-solid fa-shekel-sign"></i></p>
-            <button type="button" class="btn ">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
-          </div>
-          </a>
-        </div>
-        <div class="col-md-3 card" style="width: 15rem;">
-          <a href="product.html">
-          <img src="img/صحن بيضاوي مقطع .jpg" class="card-img-top" alt="...">
-          <div class="card-body row">
-            <h5 class="card-title">صحن بيضاوي مقطع</h5>
-            <p class="card-text"> 50 <i class="fa-solid fa-shekel-sign"></i></p>
-            <button type="button" class="btn ">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
-          </div>
-          </a>
-        </div>
-        <div class="col-md-3 card" style="width: 15rem;">
-          <a href="product.html">
-          <img src="img/صحن بيضاوي مقطع .jpg" class="card-img-top" alt="...">
-          <div class="card-body row">
-            <h5 class="card-title">صحن بيضاوي مقطع</h5>
-            <p class="card-text"> 50 <i class="fa-solid fa-shekel-sign"></i></p>
-            <button type="button" class="btn ">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
-          </div>
-          </a>
-        </div>
-        <div class="col-md-3 card" style="width: 15rem;">
-          <a href="product.html">
-          <img src="img/صحن بيضاوي مقطع .jpg" class="card-img-top" alt="...">
-          <div class="card-body row">
-            <h5 class="card-title">صحن بيضاوي مقطع</h5>
-            <p class="card-text"> 50 <i class="fa-solid fa-shekel-sign"></i></p>
-            <button type="button" class="btn ">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
-          </div>
-          </a>
-        </div>
-        <div class="col-md-3 card" style="width: 15rem;">
-          <a href="product.html">
+          <a href="product.php">
           <img src="img/صحن بيضاوي مقطع .jpg" class="card-img-top" alt="...">
           <div class="card-body row">
             <h5 class="card-title">صحن بيضاوي مقطع</h5>

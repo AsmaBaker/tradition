@@ -1,13 +1,13 @@
+<?php
+   include("connection_db.php");
+?>
 <!doctype html>
 <html dir="rtl">
   <head>
-
     <title>  المتجر</title>
     <?php include('head.php')?>
-
-    
   </head>
-
+  
   <body>
   <!-- start navbar-->
   <nav class="navbar navbar-expand-lg ">
@@ -16,157 +16,98 @@
   <!-- end navbar-->
 
     <!--start stores page-->
-    <div class="container">
-      <div class="stores">
-            <div class="row description ">
-              
-              <div class="img-descr col-md-3 "> <img src="img/فلاحي.jpg" width="200px"> </div>
-                <div class=" descr col-md-8 " >
-                    <p class="name-store">متجر فلاحي</p>
-                    <p> متجر  يقدم منتجات طبيعية بنكهة فلسطينية أصيلة ودون أي اضافات كيماوية وفق أعلى معايير الجودة. </p>
-                    <p>العنوان : متجر اونلاين</p>
-                  </div>
-                
-                    <div class="links col-md-1">
-                      <ul>
-                      <a href=""><i class="fa-brands fa-whatsapp"></i></a>
-                      <a href=""><i class="fa-brands fa-instagram"></i></a>
-                      <a href="" ><i class="fa-brands fa-facebook-f"></i></a>
-                      <a href=""><i class="fa-sharp fa-solid fa-phone"></i></a> </ul>
-                    </div>
-                    </div>
-                  
-               
-            
-                <div class="row">
-                  <div class="col-md-3 card" style="width: 15rem;">
-                    <img src="img/صحن بيضاوي مقطع .jpg" class="card-img-top" alt="...">
-                    <div class="card-body row">
-                      <h5 class="card-title">صحن بيضاوي مقطع</h5>
-                      <p class="card-text"> 50 <i class="fa-solid fa-shekel-sign"></i></p>
-                      <button type="button" class="btn ">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
-                    </div>
-                  </div>
-                  <div class="col-md-2 card" style="width: 15rem;">
-                    <img src="img/صحن بيضاوي مقطع .jpg" class="card-img-top" alt="...">
-                    <div class="card-body row">
-                      <h5 class="card-title">صحن بيضاوي مقطع</h5>
-                      <p class="card-text"> 50 <i class="fa-solid fa-shekel-sign"></i></p>
-                      <button type="button" class="btn ">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
-                    </div>
-                  </div>
-                  <div class="col-md-2 card" style="width: 15rem;">
-                    <img src="img/صحن بيضاوي مقطع .jpg" class="card-img-top" alt="...">
-                    <div class="card-body row">
-                      <h5 class="card-title">صحن بيضاوي مقطع</h5>
-                      <p class="card-text"> 50 <i class="fa-solid fa-shekel-sign"></i></p>
-                      <button type="button" class="btn ">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
-                    </div>
-                  </div>
-                  <div class="col-md-2 card" style="width: 15rem;">
-                    <img src="img/صحن بيضاوي مقطع .jpg" class="card-img-top" alt="...">
-                    <div class="card-body row">
-                      <h5 class="card-title">صحن بيضاوي مقطع</h5>
-                      <p class="card-text"> 50 <i class="fa-solid fa-shekel-sign"></i></p>
-                      <button type="button" class="btn ">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
-                    </div>
-                  </div>
-                  <div class="col-md-2 card" style="width: 15rem;">
-                    <img src="img/صحن بيضاوي مقطع .jpg" class="card-img-top" alt="...">
-                    <div class="card-body row">
-                      <h5 class="card-title">صحن بيضاوي مقطع</h5>
-                      <p class="card-text"> 50 <i class="fa-solid fa-shekel-sign"></i></p>
-                      <button type="button" class="btn ">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
-                    </div>
-                  </div>
-                  <div class="col-md-2 card" style="width: 15rem;">
-                    <img src="img/صحن بيضاوي مقطع .jpg" class="card-img-top" alt="...">
-                    <div class="card-body row">
-                      <h5 class="card-title">صحن بيضاوي مقطع</h5>
-                      <p class="card-text"> 50 <i class="fa-solid fa-shekel-sign"></i></p>
-                      <button type="button" class="btn ">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
-                    </div>
-                  </div>
-                  <div class="col-md-2 card" style="width: 15rem;">
-                    <img src="img/صحن بيضاوي مقطع .jpg" class="card-img-top" alt="...">
-                    <div class="card-body row">
-                      <h5 class="card-title">صحن بيضاوي مقطع</h5>
-                      <p class="card-text"> 50 <i class="fa-solid fa-shekel-sign"></i></p>
-                      <button type="button" class="btn ">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
-                    </div>
-                  </div>
-                  <div class="col-md-2 card" style="width: 15rem;">
-                    <img src="img/صحن بيضاوي مقطع .jpg" class="card-img-top" alt="...">
-                    <div class="card-body row">
-                      <h5 class="card-title">صحن بيضاوي مقطع</h5>
-                      <p class="card-text"> 50 <i class="fa-solid fa-shekel-sign"></i></p>
-                      <button type="button" class="btn ">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
-                    </div>
-                  </div>
-                  <div class="col-md-2 card" style="width: 15rem;">
-                    <img src="img/صحن بيضاوي مقطع .jpg" class="card-img-top" alt="...">
-                    <div class="card-body row">
-                      <h5 class="card-title">صحن بيضاوي مقطع</h5>
-                      <p class="card-text"> 50 <i class="fa-solid fa-shekel-sign"></i></p>
-                      <button type="button" class="btn ">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
-                    </div>
-                  </div>
-                  <div class="col-md-2 card" style="width: 15rem;">
-                    <img src="img/صحن بيضاوي مقطع .jpg" class="card-img-top" alt="...">
-                    <div class="card-body row">
-                      <h5 class="card-title">صحن بيضاوي مقطع</h5>
-                      <p class="card-text"> 50 <i class="fa-solid fa-shekel-sign"></i></p>
-                      <button type="button" class="btn ">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
-                    </div>
-                  </div>
-                  <div class="col-md-2 card" style="width: 15rem;">
-                    <img src="img/صحن بيضاوي مقطع .jpg" class="card-img-top" alt="...">
-                    <div class="card-body row">
-                      <h5 class="card-title">صحن بيضاوي مقطع</h5>
-                      <p class="card-text"> 50 <i class="fa-solid fa-shekel-sign"></i></p>
-                      <button type="button" class="btn ">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
-                    </div>
-                  </div>
-                  <div class="col-md-2 card" style="width: 15rem;">
-                    <img src="img/صحن بيضاوي مقطع .jpg" class="card-img-top" alt="...">
-                    <div class="card-body row">
-                      <h5 class="card-title">صحن بيضاوي مقطع</h5>
-                      <p class="card-text"> 50 <i class="fa-solid fa-shekel-sign"></i></p>
-                      <button type="button" class="btn ">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
-                    </div>
-                  </div>
-                  <div class="col-md-2 card" style="width: 15rem;">
-                    <img src="img/صحن بيضاوي مقطع .jpg" class="card-img-top" alt="...">
-                    <div class="card-body row">
-                      <h5 class="card-title">صحن بيضاوي مقطع</h5>
-                      <p class="card-text"> 50 <i class="fa-solid fa-shekel-sign"></i></p>
-                      <button type="button" class="btn ">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
-                    </div>
-                  </div>
-                  <div class="col-md-2 card" style="width: 15rem;">
-                    <img src="img/صحن بيضاوي مقطع .jpg" class="card-img-top" alt="...">
-                    <div class="card-body row">
-                      <h5 class="card-title">صحن بيضاوي مقطع</h5>
-                      <p class="card-text"> 50 <i class="fa-solid fa-shekel-sign"></i></p>
-                      <button type="button" class="btn ">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
-                    </div>
-                  </div>
-                  <div class="col-md-2 card" style="width: 15rem;">
-                    <img src="img/صحن بيضاوي مقطع .jpg" class="card-img-top" alt="...">
-                    <div class="card-body row">
-                      <h5 class="card-title">صحن بيضاوي مقطع</h5>
-                      <p class="card-text"> 50 <i class="fa-solid fa-shekel-sign"></i></p>
-                      <button type="button" class="btn ">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
-                    </div>
-                  </div>
-                  
-            
-                </div>
 
-          </div>
-          </div>
+ <div class="stores" id="stores">
+      <?php
+        $id=$_GET['id'];
+        $getStores = "SELECT * FROM stores where id=$id";
+        $getAllStores = mysqli_query($conn,$getStores);
+        $stores=mysqli_fetch_all($getAllStores,MYSQLI_ASSOC);
+      ?>
+       <div class="container">
 
-         <!--end stores page-->
+        <div class="row description ">
+         <?php
+         foreach($stores as $stores):
+         ?>
+         <div class="img-descr col-md-3 "> 
+            <img src="img/store/<?=$stores['img']?>" width="200px"> 
+         </div>
+         <div class=" descr col-md-8 " >
+             <p class="name-store"><?=$stores['name']?></p>
+             <p><?=$stores['desc']?></p>
+             <p>العنوان : <?=$stores['address']?></p>
+          </div>
+          <div class="links col-md-1">
+               <ul>
+               <a href="<?=$stores['instagram']?>"><i class="fa-brands fa-instagram"></i></a>
+               <a href="<?=$stores['facebook']?>" ><i class="fa-brands fa-facebook-f"></i></a>
+             </ul>
+          </div>
+          <?php endforeach ?>
+        </div>
+       </div>
+
+       <div class="row">
+        <div class="col-2 sort">
+         <div class="accordion accordion-flush" id="accordionFlushExample">
+          <div class="accordion-item">
+           <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              فرز المنتجات حسب السعر
+            </button>
+           </h2>
+           <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+             <form action="stores.php" method="post">
+              <div>
+               <div class="form-check form-check-reverse form-check-inline w-100">
+                <select class="form-select d-block" aria-label="Default select example">
+                 <option selected value="1">من الاعلى للاقل</option>
+                 <option value="2">من الاقل للاعلى</option>
+                </select>
+                <input class="btn sort_btn"  type="submit" value="تنفيذ" name="citySort">
+               </div>
+              </div>
+             </form>
+            </div>
+           </div>
+          </div>
+        </div>
+        <form action="">
+        <input class="btn  date"  type="submit" value="فرز المنتجات من الاحدث" name="citySort">
+        </form>
+        </div>
+
+        <div class="col-10 store_product">    
+         <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy-example-2 w-100" tabindex="0">
+           <?php
+            $id=$_GET['id'];
+            $getProducts = "SELECT * FROM products where sto_id=$id";
+            $getAllProducts = mysqli_query($conn,$getProducts);
+            $products=mysqli_fetch_all($getAllProducts,MYSQLI_ASSOC);
+           ?>
+          <div class="row">
+           <?php
+           foreach($products as $index=>$product):
+           ?>
+          <div class="col-md-3 card" style="width: 14rem;">
+           <a href="product.php?pro_id=<?=$product['id']?>&sto_id=<?=$product['sto_id']?>">
+            <img src="img/<?=$id?>/<?=$product['img']?>" class="card-img-top" alt="...">
+            <div class="card-body row">
+             <h5 class="card-title"><?=$product['name']?></h5>
+             <p class="card-text"> <?=$product['price']?> <i class="fa-solid fa-shekel-sign"></i></p>
+             <button type="button" class="btn ">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
+            </div>
+           </a>
+          </div>
+           <?php endforeach ?>
+          </div>
+         </div>
+        </div>
+       </div>
+ </div>
+     <!--end stores page-->
 
 
   <!--start footer-->
