@@ -251,6 +251,7 @@
 .chose a .card h5{
   font-size: 20px;
   color: var(--dullBlack);
+  width: 100%;
 }
 h5.card-title{
   color: var(--dullBlack);
@@ -511,7 +512,6 @@ p.card-text i{
   transition: all 0.5s;
 }
 
-
 .footer .fa-instagram:hover{
   background-color: rgb(219, 28, 156);
 }
@@ -592,7 +592,6 @@ p.card-text i{
   background-size: cover;
   height: 420px;
 }
-  
 .informations p {
     padding-top: 10%;
     padding-right: 5%;
@@ -621,7 +620,6 @@ p.card-text i{
   }
 /****************************************end marchant page**********************************/
 
-
 /***************************************start privacy and security page**********************************/
 .priv_sec{
   margin-top: 10%;
@@ -637,7 +635,6 @@ p.card-text i{
   color: var(--dullBlack);
 }
 /*******************************************end privacy and security page**********************************/
-
 
 /******************************************start about page**********************************/
 .about{
@@ -987,14 +984,14 @@ margin-bottom: 4%;
   margin-top: 15px;
   padding-right: 0px;
 }
-.product-details button {
+.product-details a {
   color: rgb(111, 111, 111);
   border-color: var(--back);
   border-radius: 50%;
   transition: all 0.5s;
 
 }
-.product-details button:hover {
+.product-details a:hover {
   background-color: var(--greyWhite);
   border-color: var(--greyWhite);  
 }
@@ -1025,6 +1022,9 @@ margin-bottom: 4%;
 .cart .price p{
   font-size: 15px;
   margin-top: 10px;
+}
+.cart .price p i{
+  font-size: 12px;
 }
 .cart .price a{
   background-color: var(--red);

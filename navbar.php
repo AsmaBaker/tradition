@@ -1,3 +1,4 @@
+  
   <div class="container-fluid">
     <img src="img/logo.png" alt="logo">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,7 +12,7 @@
         <li class="nav-item position-relative">
             <a class="nav-link position-relative" href="cart.php"><i class="fa-solid fa-cart-shopping"></i></a>
             <span class="position-absolute  translate-middle badge rounded-pill " style="background-color: #dddd; color: #BE1622; left: 100%; top: 3px;">
-              4
+              <?=count(array_unique($_SESSION['cart']))?>
               <span class="visually-hidden">unread messages</span>
             </span>
         </li>
