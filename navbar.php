@@ -13,11 +13,9 @@
             <a class="nav-link position-relative" href="cart.php"><i class="fa-solid fa-cart-shopping"></i></a>
             <span class="position-absolute  translate-middle badge rounded-pill " style="background-color: #dddd; color: #BE1622; left: 100%; top: 3px;">
               <?php
-               if(!empty($_session['cart'])){
-                 echo count(array_unique($_SESSION['cart']));
-                 }else{
-                  echo 0;
-                 }
+               
+                 echo (count(array_unique($_SESSION['cart'])));
+
                  ?>
               <span class="visually-hidden">unread messages</span>
             </span>

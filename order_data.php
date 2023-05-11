@@ -1,6 +1,7 @@
 <?php
-session_start();
-?>
+include("connection_db.php");
+  session_start();
+ ?>
 <!doctype html>
 <html dir="rtl">
   <head>
