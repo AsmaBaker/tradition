@@ -376,6 +376,7 @@ p.card-text i{
   background-color: var(--back);
   margin-right: 60px;
   margin-top: 5px;
+  border-color: var(--back);
 }
 .Section-name{
   background-color: var(--red);
@@ -1061,6 +1062,17 @@ margin-bottom: 4%;
   height: 50px;
   margin-top: 30px;
   margin-right: 30%;
+}
+.order-data .error img{
+  width: 250px;
+  margin-right: 35%;
+  margin-top: 50px;
+}
+.order-data .error p{
+  font-size: 40px;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 70px;
 }
 @media (max-width: 1100px) { 
   .order-data {

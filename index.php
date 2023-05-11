@@ -114,7 +114,7 @@
         </div>
         -->
     </div>
-  </div>
+   </div>
   </div>
   <!--end chose-->
 
@@ -144,6 +144,13 @@
           <form action="index.php#store" method="post">
           <div>
             <h5>تصفية حسب المدينة:</h5>
+            <div class="form-check form-check-reverse form-check-inline">
+            <input class="form-check-input" type="radio" value="all" id="reverseCheck1" name="city">
+              <label class="form-check-label" for="reverseCheck1">
+              جميع المتاجر
+              </label>
+            </div>
+              <br>
             <?php
             $getCities = "SELECT * FROM cities where is_exists ";
             $getAllCities = mysqli_query($conn,$getCities);
@@ -162,9 +169,15 @@
             <input class="btn d-block sort_btn btn_index"  type="submit" value="تنفيذ" name="citySort">
           </div>
           </form>
-          <form action="index.php" method="post">
+          <form action="index.php#store" method="post">
            <div>
             <h5>تصفية حسب طبيعة التواجد:</h5>
+                <div class="form-check form-check-reverse form-check-inline">
+              <input class="form-check-input" type="radio" name="on" value="all" id="reverseCheck1">
+              <label class="form-check-label" for="reverseCheck1">
+              جميع المتاجر
+              </label>             
+            </div>   
             <div class="form-check form-check-reverse form-check-inline">
               <input class="form-check-input" type="radio" name="on" value="online" id="reverseCheck1">
               <label class="form-check-label" for="reverseCheck1">
@@ -177,7 +190,7 @@
               المحال التجارية
               </label>             
             </div>    
-            <input class="btn_index d-block sort_btn"  type="submit" value="تنفيذ" name="online"> 
+            <input class="btn d-block sort_btn btn_index"  type="submit" value="تنفيذ" name="online"> 
            </div>
           </form>
         </div>
@@ -192,22 +205,40 @@
           <div class="Section-name ">
             <h2 id="2"><?= $cat['name'] ?></h2>
           </div>
-           <div class="row">
+          <div class="row">
           <?php
           $catId=$cat['id'];
-          if(isset($_POST['citySort'])){
-             if($_POST['citySort'] != null){
-             $city_id=$_POST['city'];
-             $getStores = "SELECT * FROM stores where cat_id = $catId and city = $city_id";
-             $getAllStores = mysqli_query($conn,$getStores);
-             $stores=mysqli_fetch_all($getAllStores,MYSQLI_ASSOC);
-             }
-          }else{
-            $getStores = "SELECT * FROM stores where cat_id = $catId";
-            $getAllStores = mysqli_query($conn,$getStores);
-            $stores=mysqli_fetch_all($getAllStores,MYSQLI_ASSOC);
+         if(isset($_POST['citySort'])){
+             if($_POST['city'] == "all"){  
+               $getStores = "SELECT * FROM stores where cat_id = $catId";
+               $getAllStores = mysqli_query($conn,$getStores);
+               $stores=mysqli_fetch_all($getAllStores,MYSQLI_ASSOC);
+              }else if($_POST['citySort'] =! null){
+               $city_id=$_POST['city'];
+               $getStores = "SELECT * FROM stores where cat_id = $catId and city = $city_id";
+               $getAllStores = mysqli_query($conn,$getStores);
+               $stores=mysqli_fetch_all($getAllStores,MYSQLI_ASSOC);
+              }
+             }else if(isset($_POST['online'])){
+             if($_POST['on']=="online"){
+               $getStores = "SELECT * FROM stores where cat_id = $catId and city=19";
+               $getAllStores = mysqli_query($conn,$getStores);
+               $stores=mysqli_fetch_all($getAllStores,MYSQLI_ASSOC);
+             }else if($_POST['on']=="market"){
+               $getStores = "SELECT * FROM stores where cat_id = $catId and city != 19";
+               $getAllStores = mysqli_query($conn,$getStores);
+               $stores=mysqli_fetch_all($getAllStores,MYSQLI_ASSOC);
+             }else if($_POST['on']=="all"){
+              $getStores = "SELECT * FROM stores where cat_id = $catId";
+              $getAllStores = mysqli_query($conn,$getStores);
+              $stores=mysqli_fetch_all($getAllStores,MYSQLI_ASSOC);
+            }
+            }else {
+              $getStores = "SELECT * FROM stores where cat_id = $catId";
+              $getAllStores = mysqli_query($conn,$getStores);
+              $stores=mysqli_fetch_all($getAllStores,MYSQLI_ASSOC);
           }
-          foreach($stores as $index=>$store):
+           foreach($stores as $index=>$store):
            ?>
             <div class="store-content  col-2">
               <img src="img/store/<?=$store['img']?>" width="90%" alt="">

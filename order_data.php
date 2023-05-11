@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!doctype html>
 <html dir="rtl">
   <head>
@@ -14,9 +17,18 @@
   <!--start order-data-->
   <div class="order-data">
     <div class="container">
-      <div class="alert alert-success" role="alert">
-        تم التسجيل بنجاح
-      </div>
+      <?php
+    if(isset($_SESSION['sign'])){
+      $sign=$_SESSION['sign'];
+       if(!empty($sign)){
+        ?>
+        <p class="alert alert-success">
+        <?=$sign ?>
+        </p>
+        <?php
+        session_destroy();
+         ?>
+
       <form action="">
         <p>تعبئة بيانات الطلب</p>
         <div class="form-floating mb-3">
@@ -73,11 +85,22 @@
         <div class="pay">
           <select class="form-select" aria-label="Default select example">
             <option value="selected">الدفع عند الاستلام</option>
-      
         </select>
         </div>
         <input type="submit" class="btn submit" value="الشراء الان">
       </form>
+      <?php
+      }
+    }else{
+      ?>
+      <div class="error">
+      <img src="img/error.png" alt="">
+      <p>عذرا! لا يمكنك الوصول الى هذه الصفحة , قم بتسجيل الدخول اولا.</p>
+      </div>
+      <?php
+    }
+      ?>
+      
     </div>
   </div>
   <!--end order-data-->

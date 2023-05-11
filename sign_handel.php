@@ -1,9 +1,9 @@
 <?php
   include("connection_db.php");
-session_start();
-extract($_POST);
-$errors=[];
-$passwordLen = strlen($password);
+  session_start();
+  extract($_POST);
+  $errors=[];
+  $passwordLen = strlen($password);
 
 if($submit=="signIn"){
     //email validation
@@ -31,6 +31,8 @@ else{
         $errors[]="البريد الاكتروني او كلمة المرور خطأ";
         header("location:sign.php");
     }else{
+      $sign="تم التسجيل بنجاح";
+      $_SESSION['sign']=$sign;
         header("location:order_data.php");
     }
     if(!empty($errors)){
@@ -84,7 +86,7 @@ else{
          $_SESSION['errors']=$errors;
          header("location:sign.php");
       }else{
-         $_SESSION['sign']="done";
+         $_SESSION['sign']="تم التسجيل بنجاح";
          header("location:order_data.php");
       }
       
