@@ -98,7 +98,7 @@
           <div class="card-body row">
             <h5 class="card-title"><?=$chosen['name']?></h5>
             <p class="card-text"> <?=$chosen['price']?><i class="fa-solid fa-shekel-sign"></i></p>
-            <button type="button" class="btn">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
+            <a href="cart.php?pro_id=<?=$chosen['id']?>" target="_blank" class="btn add">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </a>
           </div>
           </a>
         </div>

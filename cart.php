@@ -1,3 +1,18 @@
+<?php
+  include("connection_db.php");
+  session_start();
+  if(isset($_GET['pro_id'])){
+
+   if(!isset($_SESSION['cart'])){
+     $_SESSION['cart']=array();
+    $_SESSION['cart'][]=$_GET['pro_id'];
+   }else{
+    $_SESSION['cart'][]=$_GET['pro_id'];
+   }
+  $where_in=implode(',',$_SESSION['cart']);
+
+  }
+?>
 <!doctype html>
 <html dir="rtl">
   <head>
@@ -12,119 +27,51 @@
   </nav>
   <!-- end navbar-->
 
-
   <!--start cart-->
  <div class="cart">
     <div class="cart-head">
     <h2>سلة المشتريات</h2>
     </div>
   <div class="cart-body">
-    <!--<div class="cart-embty">
-      <img src="img/cart.png" width="30%" alt="">
-      <p>سلة المشتريات الخاصة بك فارغة </p>
-      <a  class="btn" href="index.html">التسوق الان</a>
-     </div>
-    -->
+    <?php
+  if(!empty($where_in)){
+    ?>
     <div class="container">
     <div class="row">
       <div class="products col-md-7">
-         <div class="product-details">
-        <div class="row">
-          <div class="col-2">
-            <img src="img/صحن بيضاوي مقطع .jpg" width="100%" alt="">
+           <?php
+           
+            $getProducts = "SELECT * FROM products where id in ($where_in)";
+            $getAllProducts = mysqli_query($conn,$getProducts);
+            $products=mysqli_fetch_all($getAllProducts,MYSQLI_ASSOC);
+            
+           foreach($products as $index=>$product):
+           ?>
+        <div class="product-details">
+         <div class="row">
+          <div class="col-3">
+            <img src="img/<?=$product['sto_id']?>/<?=$product['img']?>" width="100%" alt="">
           </div>
           <div class="col-4">
             <ul>
-              <li>صحن بيضاوي مقطع</li>
-              <li>50 <i class="fa-solid fa-shekel-sign"></i></li>
+              <li><?=$product['name']?></li>
+              <li class="pr"><?=$product['price']?> <i class="fa-solid fa-shekel-sign"></i></li>
               <li>   
                 <label for="quantity">الكمية:</label>
-                <input class="quantity" type="number" id="quantity" min="1" max="10" value="1">
+                <input class="quantity" type="number" id="quantity" min="1" max="<?=$product['total']?>" value="1">
               </li>
             </ul>
           </div>
-          <div class="col-5">
+          <div class="col-4">
           </div>
           <div class="col-1">
             <ul>
               <li><button class="btn"><i class="fa-solid fa-trash"></i></button></li>
             </ul>
           </div>
-        </div>
-         </div>
-         <div class="product-details">
-          <div class="row">
-            <div class="col-2">
-              <img src="img/صحن بيضاوي مقطع .jpg" width="100%" alt="">
-            </div>
-            <div class="col-4">
-              <ul>
-                <li>صحن بيضاوي مقطع</li>
-                <li>50 <i class="fa-solid fa-shekel-sign"></i></li>
-                <li>   
-                  <label for="quantity">الكمية:</label>
-                  <input class="quantity" type="number" id="quantity" min="1" max="10" value="1">
-                </li>
-              </ul>
-            </div>
-            <div class="col-5">
-            </div>
-            <div class="col-1">
-              <ul>
-                <li><button class="btn"><i class="fa-solid fa-trash"></i></button></li>
-              </ul>
-            </div>
           </div>
-           </div>
-           <div class="product-details">
-            <div class="row">
-              <div class="col-2">
-                <img src="img/صحن بيضاوي مقطع .jpg" width="100%" alt="">
-              </div>
-              <div class="col-4">
-                <ul>
-                  <li>صحن بيضاوي مقطع</li>
-                  <li>50 <i class="fa-solid fa-shekel-sign"></i></li>
-                  <li>   
-                    <label for="quantity">الكمية:</label>
-                    <input class="quantity" type="number" id="quantity" min="1" max="10" value="1">
-                  </li>
-                </ul>
-              </div>
-              <div class="col-5">
-              </div>
-              <div class="col-1">
-                <ul>
-                  <li><button class="btn"><i class="fa-solid fa-trash"></i></button></li>
-                </ul>
-              </div>
-            </div>
-             </div>
-             <div class="product-details">
-              <div class="row">
-                <div class="col-2">
-                  <img src="img/صحن بيضاوي مقطع .jpg" width="100%" alt="">
-                </div>
-                <div class="col-4">
-                  <ul>
-                    <li>صحن بيضاوي مقطع</li>
-                    <li>50 <i class="fa-solid fa-shekel-sign"></i></li>
-                    <li>   
-                      <label for="quantity">الكمية:</label>
-                      <input class="quantity" type="number" id="quantity" min="1" max="10" value="1">
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-5">
-                </div>
-                <div class="col-1">
-                  <ul>
-                    <li><button class="btn"><i class="fa-solid fa-trash"></i></button></li>
-                  </ul>
-                </div>
-              </div>
-               </div>
-      
+        </div>    
+        <?php endforeach;?>
       </div>
       <div class="col-md-1"></div>
       <div class="price col-md-4">
@@ -134,12 +81,20 @@
         <a href="sign.php"  class="btn keep">
           اتمام عملية الشراء
         </a>
-        <a href="order_data.php">الخطوة التالية بعد تسجيل الحساب</a>
-        
-       
+        <a href="order_data.php">الخطوة التالية بعد تسجيل الحساب</a>  
       </div>
     </div>
     </div>
+    <?php
+       }else{
+            ?>
+          <div class="cart-embty">
+           <img src="img/cart.png" width="30%" alt="">
+           <p>سلة المشتريات الخاصة بك فارغة </p>
+           <a  class="btn " href="index.php#store">التسوق الان</a>
+          </div>
+          <?php
+        } ?>  
   </div>
 </div>
   <!--end cart-->

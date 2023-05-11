@@ -78,7 +78,10 @@
         ?>
     </p>
   <form action="sign_handel.php" method="post">     
-     
+   <div class="form-floating">
+       <input type="text" class="form-control" id="userName" name="userName" placeholder="userName">
+       <label for="userName">اسم المستخدم</label>
+     </div>
      <div class="form-floating">
        <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
        <label for="email">البريد الالكتروني</label>

@@ -39,7 +39,7 @@
                 <p class="price"><?=$product['price']?><i class="fa-solid fa-shekel-sign"></i></p>
                 <label for="quantity">الكمية:</label>
                 <input class="quantity" type="number" id="quantity" min="1" max="<?=$product['total']?>" value="1">
-                <button type="button" class="btn ">اضافة الى السلة  <i class="fa-solid fa-cart-shopping"></i></button>
+                <a href="cart.php?pro_id=<?=$product['id']?>" target="_blank" class="btn add">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </a>
             </div>
             <?php endforeach ?>
         </div>
@@ -70,7 +70,7 @@
           <div class="card-body row">
             <h5 class="card-title"><?=$product['name']?></h5>
             <p class="card-text"> <?=$product['price']?><i class="fa-solid fa-shekel-sign"></i></p>
-            <button type="button" class="btn">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
+            <a href="cart.php?pro_id=<?=$product['id']?>" target="_blank" class="btn add">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </a>
           </div>
           </a>
           </div>

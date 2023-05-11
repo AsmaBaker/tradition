@@ -1,5 +1,7 @@
 <?php
    include("connection_db.php");
+   session_start();
+
 ?>
 <!doctype html>
 <html dir="rtl">
@@ -75,7 +77,7 @@
           </div>
         </div>
         <form action="">
-        <input class="btn  date"  type="submit" value="فرز المنتجات من الاحدث" name="citySort">
+         <input class="btn  date"  type="submit" value="فرز المنتجات من الاحدث" name="citySort">
         </form>
         </div>
 
@@ -91,15 +93,20 @@
            <?php
            foreach($products as $index=>$product):
            ?>
+           
           <div class="col-md-3 card" style="width: 14rem;">
-           <a href="product.php?pro_id=<?=$product['id']?>&sto_id=<?=$product['sto_id']?>">
+          <form action="cart.php" method="$_GET">
+           <a href="product.php?pro_id=<?=$product['id']?>&sto_id=<?=$product['sto_id']?>" target="_blank">
             <img src="img/<?=$id?>/<?=$product['img']?>" class="card-img-top" alt="...">
             <div class="card-body row">
              <h5 class="card-title"><?=$product['name']?></h5>
              <p class="card-text"> <?=$product['price']?> <i class="fa-solid fa-shekel-sign"></i></p>
-             <button type="button" class="btn ">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </button>
+             <a href="cart.php?pro_id=<?=$product['id']?>" target="_blank" class="btn add">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </a>
             </div>
            </a>
+           
+
+           </form>
           </div>
            <?php endforeach ?>
           </div>
