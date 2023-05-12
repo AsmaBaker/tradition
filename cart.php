@@ -5,12 +5,10 @@
     if(isset($_GET['delete'])){
      foreach (array_keys($_SESSION['cart'], $_GET['delete'], true) as $key) {
       unset($_SESSION['cart'][$key]);
-  }}  
-  if(isset($_GET['pro_id'])){
-
-   if(!isset($_SESSION['cart'])){
+     }}  
      $_SESSION['cart']=array();
-   }
+
+  if(isset($_GET['pro_id'])){
     $_SESSION['cart'][]=$_GET['pro_id'];
   }
   $where_in=implode(',',$_SESSION['cart']);
