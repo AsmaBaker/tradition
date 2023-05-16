@@ -208,33 +208,24 @@
          if(isset($_POST['citySort'])){
              if($_POST['city'] == "all"){  
                $getStores = "SELECT * FROM stores where cat_id = $catId";
-               $getAllStores = mysqli_query($conn,$getStores);
-               $stores=mysqli_fetch_all($getAllStores,MYSQLI_ASSOC);
               }else if($_POST['citySort'] =! null){
                $city_id=$_POST['city'];
                $getStores = "SELECT * FROM stores where cat_id = $catId and city = $city_id";
-               $getAllStores = mysqli_query($conn,$getStores);
-               $stores=mysqli_fetch_all($getAllStores,MYSQLI_ASSOC);
               }
              }else if(isset($_POST['online'])){
              if($_POST['on']=="online"){
                $getStores = "SELECT * FROM stores where cat_id = $catId and city=19";
-               $getAllStores = mysqli_query($conn,$getStores);
-               $stores=mysqli_fetch_all($getAllStores,MYSQLI_ASSOC);
+ 
              }else if($_POST['on']=="market"){
                $getStores = "SELECT * FROM stores where cat_id = $catId and city != 19";
-               $getAllStores = mysqli_query($conn,$getStores);
-               $stores=mysqli_fetch_all($getAllStores,MYSQLI_ASSOC);
              }else if($_POST['on']=="all"){
               $getStores = "SELECT * FROM stores where cat_id = $catId";
-              $getAllStores = mysqli_query($conn,$getStores);
-              $stores=mysqli_fetch_all($getAllStores,MYSQLI_ASSOC);
             }
             }else {
               $getStores = "SELECT * FROM stores where cat_id = $catId";
-              $getAllStores = mysqli_query($conn,$getStores);
-              $stores=mysqli_fetch_all($getAllStores,MYSQLI_ASSOC);
           }
+          $getAllStores = mysqli_query($conn,$getStores);
+          $stores=mysqli_fetch_all($getAllStores,MYSQLI_ASSOC);
            foreach($stores as $index=>$store):
            ?>
             <div class="store-content  col-2">

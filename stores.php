@@ -1,7 +1,6 @@
 <?php
    include("connection_db.php");
    session_start();
-
 ?>
 <!doctype html>
 <html dir="rtl">
@@ -20,7 +19,8 @@
   <!--start stores page-->
  <div class="stores" id="stores">
       <?php
-        $id=$_GET['id'];
+        $_SESSION['id']=$_GET['id'];
+        $id=$_SESSION['id'];
         $getStores = "SELECT * FROM stores where id=$id";
         $getAllStores = mysqli_query($conn,$getStores);
         $stores=mysqli_fetch_all($getAllStores,MYSQLI_ASSOC);
@@ -29,7 +29,7 @@
 
         <div class="row description ">
          <?php
-         foreach($stores as $stores):
+          foreach($stores as $stores):
          ?>
          <div class="img-descr col-md-3 "> 
             <img src="img/store/<?=$stores['img']?>" width="200px"> 
@@ -48,31 +48,66 @@
           <?php endforeach ?>
         </div>
        <div class="sortS row">
-        <div class="col-3">
-        <h4>فرز المنتجات حسب:</h3>
-        </div>
         <div class="col-2">
-       <select class="form-select" aria-label="Default select example">
+         <h4>فرز المنتجات حسب:</h4>
+        </div>
+       <form action="stores.php?id=<?=$id?>" method="post" class="col-3">
+       <div class="row">
+
+        <div class="col-6">
+       <select class="form-select" aria-label="Default select example" name="sort_p">
         <option selected>السعر</option>
         <option value="1">من الاقل الى الاعلى</option>
         <option value="2">من الاعلى الى الاقل </option>
         <option value="3">تراجع عن الفرز</option>
        </select>
        </div>
-       <div class="col-1"></div>
-        <div class="col-2">
-       <select class="form-select" aria-label="Default select example">
+       <div class="col-1">
+        <input type="submit" name="sort_price" class="btn bg-light" value="فرز حسب السعر"  >
+       </div>
+       </div>
+        </form>
+        <form action="stores.php?id=<?=$id?>" method="post" class="col-3">
+       <div class="row">
+       <div class="col-6">
+       <select class="form-select" aria-label="Default select example" name="sort_d">
         <option selected>الاحدث</option>
-        <option value="1">من الاقدم للاحدث</option>
-        <option value="2">من الاحدث للاقدم</option>
-
+        <option value="1">من الاقدم الى الاحدث</option>
+        <option value="2">من الاحدث الى الاقدم</option>
+        <option value="3">تراجع عن الفرز</option>
        </select>
        </div>
+       <div class="col-6">
+        <input type="submit" name="sort_date" class="btn bg-light" value="فرز حسب الاحدث"  >
        </div>
-        <div class="store_product">    
+       </div>
+        </form>
+        </div>
+
+       <div class="store_product">    
            <?php
-            $id=$_GET['id'];
-            $getProducts = "SELECT * FROM products where sto_id=$id";
+            if(isset($_POST['sort_price'])){
+       
+              if($_POST['sort_p'] == 1){
+               $getProducts = "SELECT * FROM products where sto_id=$id ORDER BY `products`.`price` ASC";
+              }else if ($_POST['sort_p'] ==2){
+               $getProducts = "SELECT * FROM products where sto_id=$id ORDER BY `products`.`price` DESC";
+              }else if ($_POST['sort_p'] ==3){
+               $getProducts = "SELECT * FROM products where sto_id=$id";
+              }
+            }else if(isset($_POST['sort_date'])){
+
+              if($_POST['sort_d'] ==1){
+                $getProducts = "SELECT * FROM products where sto_id=$id ORDER BY `products`.`created_at` ASC";
+               }else if ($_POST['sort_d']==2){
+                $getProducts = "SELECT * FROM products where sto_id=$id ORDER BY `products`.`created_at` DESC";
+               }else if ($_POST['sort_d']==3){
+                $getProducts = "SELECT * FROM products where sto_id=$id";
+               }
+            }else{ 
+    
+              $getProducts = "SELECT * FROM products where sto_id=$id";
+              }
             $getAllProducts = mysqli_query($conn,$getProducts);
             $products=mysqli_fetch_all($getAllProducts,MYSQLI_ASSOC);
            ?>
@@ -80,7 +115,6 @@
            <?php
            foreach($products as $index=>$product):
            ?>
-           
           <div class="col-md-3 card" style="width: 14rem;">
           <form action="cart.php" method="$_GET">
            <a href="product.php?pro_id=<?=$product['id']?>&sto_id=<?=$product['sto_id']?>" target="_blank">
@@ -91,8 +125,6 @@
              <a href="cart.php?pro_id=<?=$product['id']?>" target="_blank" class="btn add">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </a>
             </div>
            </a>
-           
-
            </form>
           </div>
            <?php endforeach ?>
