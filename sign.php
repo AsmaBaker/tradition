@@ -74,6 +74,8 @@
         echo"<br>";
         }
       }
+      session_unset();
+
         } 
         ?>
     </p>
@@ -98,9 +100,7 @@
    </div>
   </div>
 </div>
-<?php
-  session_destroy();
-?>
+
   <!--start footer-->
   <div class="footer" id="footer">
    <?php include('footer.php')?>

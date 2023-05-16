@@ -13,7 +13,7 @@
   .sign{
     height: 100vh;
   }
-  .sign_content{
+  .sign_content , .req_content , .order-data{
     width: 40%;
     margin-right: 30%;
     margin-top: 3%;
@@ -22,7 +22,7 @@
     padding: 50px;
     margin-bottom: 5%;
   }
- .sign button {
+ .sign button ,.req button{
     background-color: var(--red);
     border-color: var(--red);
     color: white;
@@ -31,12 +31,28 @@
     transition: all 0.5s;
     font-size: 19px;
   }
-  .sign input{
+  .sign input ,.req input {
     margin-top: 20px;
+  }
+  .req h3{
+    text-align: center;
+    color: var(--red);
+  }
+  .req select{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 55px;
+  }
+  .req .city{
+    margin-top: 38px;
   }
   .modal-footer{
     margin-left:200px;
     margin-top: 20px;
+  }
+  .req button{
+    width: 100px;
+    font-size: 25px;
   }
   .sign button:hover{
     background-color: var(--red);
@@ -48,7 +64,6 @@
     margin-top: 10px;
     margin-bottom: 50px;
   }
-
   .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     color: white;
     background-color: var(--red);
@@ -563,7 +578,7 @@ p.card-text i{
 
 /****************************************start marchant page**********************************/
 .definition{
-  margin-top: 10%;
+  margin-top: 5%;
   margin-bottom: 8%;
 }
 .definition h3{
@@ -600,7 +615,7 @@ p.card-text i{
     width: 45%;
     margin-bottom: 3%;
   }
-  .informations button{
+  .informations a{
     background-color: var(--red);
     color: white;
    border-radius: 5px;
@@ -611,8 +626,9 @@ p.card-text i{
   margin-right: 5%;
   text-decoration: none;
   transition: all 0.5s;
+  width: 170px;
   }
-  .informations button:hover{
+  .informations a:hover{
     background-color: var(--red);
     box-shadow: 2px 2px 10px var(--dullBlack);
     border-color: var(--red);
@@ -829,6 +845,8 @@ margin-bottom: 4%;
 .del ul li{
   padding: 17px;
 }
+
+
 /***********************************************start stores page******************/
 .stores{
   margin-top: 5%;
@@ -839,7 +857,7 @@ margin-bottom: 4%;
   padding: 2%;
   font-size: 24px;
   color: var(--dullBlack);
-  margin-bottom: 8%;
+  margin-bottom: 5%;
   background-color: var(--back);
   border-radius: 7px;
 }
@@ -867,25 +885,9 @@ margin-bottom: 4%;
   margin: 7px;
 }
 .store_product{
-  overflow: auto;
-  height: 100vh;
   padding-right: 35px;
 }
 
-.stores .sort{
-  padding-right: 20px;
-  text-align: center;
-  padding-top: 70px;
-}
-.stores .sort .sort_btn{
-  background-color: var(--back);
-  margin-right: 10px;
-  margin-top: 5px;
-  width: 150px;
-}
-.stores .sort select , .stors .btn{
-  display: inline;
-}
 .stores .card img{
   width: 85%;
   height: 50%;
@@ -902,25 +904,7 @@ margin-bottom: 4%;
   display: inline-block;
   margin-right: 0px;
 }
-.sort .accordion-button {
-  background-color: var(--back);
-  margin-right: 0px;
-  margin-top: 5px;
-}
-.sort .accordion-button:hover{
-  background-color: #e4e4e4;
-}
-.sort .date{
-   padding-left: 50px;
-   background-color: var(--back);
-   margin-top: 20px;
-   padding: 12px 30px;
-   width: 220px;
-}
-.sort .date:hover{
-  background-color: #e4e4e4;
-  border: #e4e4e4;
-}
+
 /**************************************** start cart page ****************************************/
 .cart-head{
   margin-right: 44%;
@@ -1212,5 +1196,18 @@ margin-bottom: 4%;
   padding-bottom: 20px;
 }
 /****************************************end suggestion ****************************************/
+/****************************************start done_order ****************************************/
+  .done_order img{
+    margin-right: 35%;
+    margin-top: 100px;
+  }
+  .done_order p{
+    margin-right: 30%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    font-size: 30px;
+  }
+/****************************************end done_order ****************************************/
+
 
 

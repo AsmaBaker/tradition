@@ -1,17 +1,19 @@
 <?php
   include("connection_db.php");
   session_start();
-
     if(isset($_GET['delete'])){
      foreach (array_keys($_SESSION['cart'], $_GET['delete'], true) as $key) {
       unset($_SESSION['cart'][$key]);
      }}  
+     if(!isset($_SESSION['cart'])){
      $_SESSION['cart']=array();
+     }
 
-  if(isset($_GET['pro_id'])){
-    $_SESSION['cart'][]=$_GET['pro_id'];
-  }
-  $where_in=implode(',',$_SESSION['cart']);
+    if(isset($_GET['pro_id'])){
+     $_SESSION['cart'][]=$_GET['pro_id'];
+    }
+    $where_in=implode(',',$_SESSION['cart']);
+    $_SESSION['where_in']=$where_in;
 ?>
 <!doctype html>
 <html dir="rtl">
@@ -34,9 +36,7 @@
     </div>
   <div class="cart-body">
   
-    <?php
-  if(!empty($where_in)){
-    ?>
+    <?php if(!empty($where_in)){?>
     <div class="container">
     <div class="row">
       <div class="products col-md-7">
@@ -44,6 +44,7 @@
             $getProducts = "SELECT * FROM products where id in ($where_in)";
             $getAllProducts = mysqli_query($conn,$getProducts);
             $products=mysqli_fetch_all($getAllProducts,MYSQLI_ASSOC);
+            $_SESSION['products']=$products;
            foreach($products as $index=>$product):
             $pricee[]=$product['price'];
            ?>
@@ -75,13 +76,21 @@
       </div>
       <div class="col-md-1"></div>
       <div class="price col-md-4">
-        <h3>المبلغ الاجمالي:</h3>
+        <h3>المبلغ الاجمالي للمنتجات :</h3>
         <span><?=array_sum($pricee)?> <i class="fa-solid fa-shekel-sign"></i></span>
-        <p>تتراوح تكلفة التوصيل من 20- 50 <i class="fa-solid fa-shekel-sign"></i>  يتم تحديدها عند اتمام الطلب وتحديد مكان السكن</p>
-        <a href="sign.php"  class="btn keep">
+        <p>تكلفة التوصيل: 20         <i class="fa-solid fa-shekel-sign"></i>
+         مدن الضفة الغربية  ,40  
+         <i class="fa-solid fa-shekel-sign"></i>
+         مدن الداخل الفلسطيني المحتل    
+         ,
+         70 
+         <i class="fa-solid fa-shekel-sign"></i>
+
+          مدن قطاع غزة .
+          </p>
+        <a href="order_data.php?price=<?=array_sum($pricee)?>" class="btn keep">
           اتمام عملية الشراء
         </a>
-        <a href="order_data.php">الخطوة التالية بعد تسجيل الحساب</a>  
       </div>
     </div>
     </div>

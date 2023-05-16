@@ -76,7 +76,14 @@
    </div>
   </div>
   <!--end  header-->
-
+            <?php
+             if(isset($_SESSION['order'])){
+            ?>
+            <p class="alert alert-success mt-3 fs-5"><?=$_SESSION['order']?></p>
+            <?php
+              session_unset();
+             }
+            ?>
   <!--start chose-->
   <div class="chose">
     <div class="container">
@@ -103,16 +110,6 @@
           </a>
         </div>
        <?php endforeach ?>
-       <!--
-       <div class="col-md-2 card more" style="width: 15rem;">
-          <a href="more.php">
-          <div class="more-content">
-          <i class="fa-solid fa-arrow-left"></i>
-          </div>
-          <a href="">عرض المزيد</a>
-          </div>
-        </div>
-        -->
     </div>
    </div>
   </div>
@@ -244,7 +241,7 @@
               <img src="img/store/<?=$store['img']?>" width="90%" alt="">
               <div class="store-name">
                 <h3><?=$store['name']?></h3>
-                <a href="stores.php?id=<?=$store['id']?>">تسوق الان</a>
+                <a href="stores.php?id=<?=$store['id']?>" target="_blank">تسوق الان</a>
               </div>
             </div>
            <?php 

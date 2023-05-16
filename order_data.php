@@ -1,6 +1,9 @@
 <?php
 include("connection_db.php");
   session_start();
+  if(isset($_GET['price'])){
+    $_SESSION['price']=($_GET['price']);
+  }
  ?>
 <!doctype html>
 <html dir="rtl">
@@ -18,89 +21,60 @@ include("connection_db.php");
   <!--start order-data-->
   <div class="order-data">
     <div class="container">
-      <?php
-    if(isset($_SESSION['sign'])){
-      $sign=$_SESSION['sign'];
-       if(!empty($sign)){
-        ?>
-        <p class="alert alert-success">
-        <?=$sign ?>
-        </p>
-        <?php
-        session_destroy();
-         ?>
-
-      <form action="">
+  
+      <form action="order_data_handel.php" method="post">
         <p>تعبئة بيانات الطلب</p>
+        <?php
+             if(isset($_SESSION['errors'])){
+             $errors = $_SESSION['errors'];
+              foreach($errors as $index=>$error):
+            ?>
+            <p class="alert alert-danger mt-3 fs-5"><?=$error?></p>
+            <?php
+             
+             endforeach ;
+             session_unset();
+
+              }
+            ?>
         <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
-          <label for="floatingInput">الاسم الثلاثي</label>
+          <input type="text" class="form-control" id="name" name="name"  placeholder="name@example.com">
+          <label for="name">الاسم الثلاثي</label>
         </div>
+        
         <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
-          <label for="floatingInput">رقم الهاتف</label>
+          <input type="text" class="form-control" id="phone" name="phone" placeholder="name@example.com">
+          <label for="phone">رقم الهاتف</label>
         </div>
         <div class="row">
-          <div class="col-md-3">
-            <select class="form-select" aria-label="Default select example">
-              <option value="selected">المدينة</option>
-              <option value="">نابلس </option>
-              <option value="">القدس </option>
-              <option value="">رام الله </option>
-              <option value="">رفح  </option>
-              <option value="">غزة  </option>
-              <option value=""> بيت لحم  </option>
-              <option value="">الخليل  </option>
-              <option value="">خان يونس  </option>
-              <option value="">اريحا  </option>
-              <option value="">قلقيلية  </option>
-              <option value="">جنين  </option>
-              <option value="">الرملة  </option>
-              <option value="">يافا  </option>
-              <option value="">الناصرة  </option>
-              <option value="">طولكرم  </option>
-              <option value="">الجليل  </option>
-              <option value="">اللد  </option>
-              <option value="">بئر السبع  </option>
-          </select>
+          <div class="col-md-4">
+          <select class="form-select city" aria-label="Default select example" id="city" name="city">
+               <option value="selected">المدينة</option>
+               <?php
+                $getCities = "SELECT * FROM cities where id != 19";
+                $getAllCities = mysqli_query($conn,$getCities);
+                $cities=mysqli_fetch_all($getAllCities,MYSQLI_ASSOC);
+                foreach($cities as $index=>$city):
+                ?>
+           
+               <option value="<?=$city['id']?>"> <?=$city['name']?> </option>
+               <?php endforeach ?>
+            </select>
           </div>
-          <div class="col-md-1"></div>
           <div class="col-md-8">
              <div class="form-floating mb-3">
-             <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
-             <label for="floatingInput">الشارع/البلدة/القرية</label>
+             <input type="text" class="form-control" id="address" name="address" placeholder="name@example.com">
+             <label for="address">الشارع/البلدة/القرية</label>
              </div>
           </div>
         </div>
-        <div class="gender">
-          <span>الجنس:</span>
-        <div class="form-check form-check-inline">
-          <label class="form-check-label" for="inlineRadio1">ذكر</label>
-          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-        </div>
-        <div class="form-check form-check-inline me-5">
-          <label class="form-check-label" for="inlineRadio2">انثى</label>
-          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-        </div>
-        </div>
-        <div class="pay">
+        <div class="payI">
           <select class="form-select" aria-label="Default select example">
             <option value="selected">الدفع عند الاستلام</option>
-        </select>
+          </select>
         </div>
-        <input type="submit" class="btn submit" value="الشراء الان">
+        <input type="submit" class="btn submit" name="submit" value="الشراء الان" >
       </form>
-      <?php
-      }
-    }else{
-      ?>
-      <div class="error">
-      <img src="img/error.png" alt="">
-      <p>عذرا! لا يمكنك الوصول الى هذه الصفحة , قم بتسجيل الدخول اولا.</p>
-      </div>
-      <?php
-    }
-      ?>
       
     </div>
   </div>
