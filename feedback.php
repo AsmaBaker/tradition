@@ -1,3 +1,9 @@
+<?php
+  include("connection_db.php");
+  session_start();
+?>
+
+
 <!doctype html>
 <html dir="rtl">
   <head>
@@ -16,17 +22,49 @@
   <div class="container">
     <div class="feedback">
         <h3>  الآراء والشكاوي:</h3>
+
         <div class="text_box">
+        <?php
+       //طباعة الاخطاء 
+        if(isset($_SESSION['errors'])){
+           $errors=$_SESSION['errors'];
+         if(!empty($errors)){
+        ?>
+        <p class="alert alert-danger">
+        <?php     
+        foreach($errors as $error){
+        echo $error;
+        echo"<br>";
+        }
+        }
+        } 
+        ?>
+         </p>
+         <?php
+        if(isset($_SESSION['sent'])){
+          $sent=$_SESSION['sent'];
+          ?>
+          <p class="alert alert-success">
+            <?php echo $sent;
+         ?>
+            <?php
+          session_unset();
+        }
+      
+        ?>
         <p>كيف كانت تجربتك في موقعنا؟
             هل واجهت اي مشكلة؟ اطلعنا عليها..</p>
-            <div class="form_feed">
+           <form action="feedback_handel.php" method="post">
+           <div class="form_feed">
             <textarea name="subj" placeholder="رسالتك.." style="padding: 10px; font-size: 20px; " ></textarea>
-         
-        </div>
-        <input type="submit" value="ارسال">
+           </div>
+           <input type="submit" value="ارسال" name="sent">
+          </form>
+        
     </div>
     </div>
   </div>
+
 <!--end fedback page-->
 
         <!--start footer-->
