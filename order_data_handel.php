@@ -6,6 +6,7 @@
 
   function price($conn){
      $price = $_SESSION['price'];
+    
      $city = $_POST['city'];
      $getdel = "SELECT delivery_price FROM cities where id = $city";
      $getAlldel = mysqli_query($conn,$getdel);
@@ -20,7 +21,7 @@
    //input validate
      if(empty($name)){
         $errors[]="الاسم  مطلوب";
-      }else if(!preg_match ("/^[a-zA-z ]*$/", $name)){
+      }else if(!preg_match ("/^[a-zA-zا-ي ]*$/", $name)){
         $errors[]="يجب ان يحتوي الاسم على احرف فقط";
       }else if(strlen($name)<9){
         $errors[]="لا يمكن ان يكون الاسم الثلاثي بهذا الطول";
@@ -57,13 +58,17 @@
              }
            endforeach;
          }else{
+          $price = $_SESSION['price'];
+
             $errors[]="حدث خطأ حاول مرة اخرى ";
             $_SESSION['errors']=$errors;
-            header("location:order_data.php");
+            header("location:order_data.php?price=$price");
          }
       }else{
+        $price = $_SESSION['price'];
+
        $_SESSION['errors']=$errors;
-       header("location:order_data.php");
+       header("location:order_data.php?price=$price");
       }
   }
 ?>

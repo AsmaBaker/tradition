@@ -59,7 +59,7 @@
               <li class="pr"><?=$product['price']?> <i class="fa-solid fa-shekel-sign"></i></li>
               <li>   
                 <label for="quantity">الكمية:</label>
-                <input class="quantity" type="number" id="quantity" min="1" max="<?=$product['total']?>" value="1">
+                <input class="quantity" type="number" id="quantity" name="quan" min="1" max="<?=$product['total']?>" value="1">
               </li>
             </ul>
           </div>
@@ -109,14 +109,14 @@
   <!--end cart-->
   
    <!--start footer-->
-   <div class="footer" id="footer">
+  <div class="footer" id="footer">
    <?php include('footer.php')?>
   </div>
   <!--end footer-->
 
   <!--start copy-right-->
   <div class="copy-right">
-  <?php include('copy_right.php')?>
+    <?php include('copy_right.php')?>
   </div>
   <!--end copy-right-->
 

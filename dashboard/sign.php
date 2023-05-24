@@ -14,7 +14,7 @@
   <div class="sign_content">
    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
   <li class="nav-item" role="presentation">
-    <button class="nav-link fs-3" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">تسجيل دخول بحساب ادمن</button>
+    <p class="nav-link fs-3">تسجيل دخول بحساب ادمن</p>
   </li>
 
    </ul>
@@ -35,7 +35,9 @@
         echo"<br>";
         }
       }
+      session_unset();
         } 
+        
         ?>
     </p>
    <form action="sign_handel.php" method="post">     
@@ -55,9 +57,7 @@
    </div>
   </div>
 </div>
-<?php
-  session_destroy();
-?>
+
 
   <!--start copy-right-->
   <div class="copy-right">

@@ -33,7 +33,7 @@ include("connection_db.php");
             <?php
              
              endforeach ;
-             session_unset();
+             unset($_SESSION['errors']);
 
               }
             ?>

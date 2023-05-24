@@ -6,7 +6,7 @@
 <html dir="rtl">
   <head>
     <title>تراثيات | الرئيسية</title>
-    <?php include('head.php')?>
+    <?php include('./head.php')?>
   </head>
   <body>
    
@@ -57,12 +57,12 @@
    </div>
    <div class="main-page">
       <div class="row imgs ">
-        <div class="img-1 h-img col-md-2" style="width: 250px;">
+        <div class="img-1 h-img col-2">
         <a href="stores.php?id=11103">
           <img src="img/header/6.jpeg">
         </a>
         </div>
-        <div class="img-2 h-img col-md-2">
+        <div class="img-2 h-img col-2">
           <a href="stores.php?id=22201">
           <img src="img/header/7.png">
           </a>
@@ -76,14 +76,7 @@
    </div>
   </div>
   <!--end  header-->
-            <?php
-             if(isset($_SESSION['order'])){
-            ?>
-            <p class="alert alert-success mt-3 fs-5"><?=$_SESSION['order']?></p>
-            <?php
-              session_unset();
-             }
-            ?>
+
   <!--start chose-->
   <div class="chose">
     <div class="container">
@@ -200,7 +193,7 @@
           ?>
           <div id="item-<?php echo $index; ?>">
           <div class="Section-name ">
-            <h2 id="2"><?= $cat['name'] ?></h2>
+            <h2 id="2"><?= $cat['name']?></h2>
           </div>
           <div class="row">
           <?php
@@ -220,7 +213,7 @@
                $getStores = "SELECT * FROM stores where cat_id = $catId and city != 19";
              }else if($_POST['on']=="all"){
               $getStores = "SELECT * FROM stores where cat_id = $catId";
-            }
+             }
             }else {
               $getStores = "SELECT * FROM stores where cat_id = $catId";
           }

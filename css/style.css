@@ -8,12 +8,9 @@
 *{
   font-family: 'Markazi Text', serif;
  }
-  /****************************************start home page****************************************/
-  /*start sign*/
-  .sign{
-    height: 100vh;
-  }
-  .sign_content , .req_content , .order-data{
+  /*start forms*/
+
+  .req_content , .order-data{
     width: 40%;
     margin-right: 30%;
     margin-top: 3%;
@@ -22,7 +19,7 @@
     padding: 50px;
     margin-bottom: 5%;
   }
- .sign button ,.req button{
+ .req button{
     background-color: var(--red);
     border-color: var(--red);
     color: white;
@@ -31,7 +28,7 @@
     transition: all 0.5s;
     font-size: 19px;
   }
-  .sign input ,.req input {
+  .req input {
     margin-top: 20px;
   }
   .req h3{
@@ -54,34 +51,11 @@
     width: 100px;
     font-size: 25px;
   }
-  .sign button:hover{
-    background-color: var(--red);
-    border-color: var(--red);
-    color: white;
-  }
-  .sign ul {
-    margin-right: 20px;
-    margin-top: 10px;
-    margin-bottom: 50px;
-  }
-  .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-    color: white;
-    background-color: var(--red);
-  }
-  .btn-check:focus+.btn, .btn:focus {
-    color: white;
-    background-color: var(--red);
-    border-color: var(--red);
-    outline: 0;
-  }
-  .sign .nav-link {
-    color: var(--red);
-    margin-bottom: 30px;
-    margin-right: 50px;
-  }
-  /*end sign*/
-  /*start navbar*/
+  
+  /*end forms*/
+  /****************************************start home page****************************************/
 
+  /*start navbar*/
   .navbar{
     background-color: var(--red);
     padding-top: 10px;
@@ -168,8 +142,6 @@
 
   /*end menu-bar*/
 
-  
-
   /*start header*/
   .carousel {
     width: 1200PX;
@@ -188,6 +160,7 @@
     margin-right: 12%;
     */
   }
+
   .main-page{
     width: 90%;
     margin-top: 2%;
@@ -198,6 +171,9 @@
   .imgs img{
     box-shadow: 0px 0px 20px rgb(204, 204, 204);
     border-radius: 20px;
+  }
+  .img-1{
+    width: 250px
   }
   .img-1 img ,.img-2 img{
     width: 230px;
@@ -227,6 +203,7 @@
     height: 40px;
     width: 40px;
   }
+
 /*end header*/
 
 /*start chose*/
@@ -262,6 +239,7 @@
   justify-content: center;
   margin-top: 15px;
   margin-right: 20px;
+  border-radius: 10px;
 }
 .chose a .card h5{
   font-size: 20px;
@@ -435,6 +413,10 @@ p.card-text i{
   text-decoration: none;
   font-weight:bolder;
 }
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+  background-color: var(--red);
+  
+}
 /*end store*/
 
 /*start dealer*/
@@ -526,7 +508,6 @@ p.card-text i{
   margin-right: 15px;
   transition: all 0.5s;
 }
-
 .footer .fa-instagram:hover{
   background-color: rgb(219, 28, 156);
 }
@@ -540,6 +521,7 @@ p.card-text i{
   background-color: rgb(240, 0, 0);
 }
 /*end footer*/
+
 /*start copy-right*/
 .copy-right{
   background-color: var(--red);
@@ -573,7 +555,6 @@ p.card-text i{
   box-shadow: #4B4B4B 0px 0px 10px 0;
 }
 /*end up*/
-
 /****************************************end home page****************************************/
 
 /****************************************start marchant page**********************************/
@@ -618,15 +599,15 @@ p.card-text i{
   .informations a{
     background-color: var(--red);
     color: white;
-   border-radius: 5px;
-   padding: 8px;
-   padding-left: 20px;
-   padding-right: 20px;
-  font-size: 26px;
-  margin-right: 5%;
-  text-decoration: none;
-  transition: all 0.5s;
-  width: 170px;
+    border-radius: 5px;
+    padding: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 26px;
+    margin-right: 5%;
+    text-decoration: none;
+    transition: all 0.5s;
+    width: 170px;
   }
   .informations a:hover{
     background-color: var(--red);
@@ -673,7 +654,6 @@ p.card-text i{
   font-size: 30px;
   color: var(--red);
 }
-
 .founders{
   margin-top: 4%;
   margin-bottom: 5%;
@@ -708,7 +688,6 @@ p.card-text i{
   text-align: center;
   margin-top: 6%;
 }
-
 .reveal{
   position: relative;
   transform: translateY(150px);
@@ -755,8 +734,7 @@ p.card-text i{
 list-style-type: none;
 color: var(--dullBlack);
 padding-bottom: 12px;
-font-size: 25x;
-
+font-size: 25px;
 
 }
 .ways-pay ul li i{
@@ -766,8 +744,6 @@ font-size: 25x;
 .img-pay{
 margin-right: 10%;
 margin-bottom: 4%;
-
-
 }
 /*************************************start feedback page******************************/
 .feedback{
@@ -794,7 +770,6 @@ margin-bottom: 4%;
   height: 100px;
   border-radius: 9px;
 }
-
 .text_box input{
   margin-top: 2%;
   padding-left: 3%;
@@ -807,8 +782,6 @@ margin-bottom: 4%;
   padding-bottom: 3px;
   border-color: var(--red);
   transition: all 0.5s;
-
-
 }
 .text_box input:hover{
   box-shadow: 2px 2px 10px var(--dullBlack);
@@ -840,12 +813,10 @@ margin-bottom: 4%;
 .del ul {
   list-style-type: none;
   font-size: 22px;
- 
 }
 .del ul li{
   padding: 17px;
 }
-
 
 /***********************************************start stores page******************/
 .stores{
@@ -887,7 +858,6 @@ margin-bottom: 4%;
 .store_product{
   padding-right: 35px;
 }
-
 .stores .card img{
   width: 85%;
   height: 50%;
@@ -1118,7 +1088,7 @@ margin-bottom: 4%;
   border-radius: 20px 20px;
 }
 .product .data{
-  padding-top: 5%;
+  padding-top: 3%;
   line-height: 35px;
   border: 2px solid var(--greyWhite);
   padding-right: 30px;
@@ -1146,6 +1116,7 @@ margin-bottom: 4%;
   display: block;
   width: 200px;
 }
+
 .product .btn:hover{
   background-color: var(--red);
   color: white;
@@ -1176,6 +1147,7 @@ margin-bottom: 4%;
     margin-bottom: 10px;
     font-size: 12px;
   }
+
 }
 /****************************************end product-details ****************************************/
 
@@ -1194,6 +1166,13 @@ margin-bottom: 4%;
   background-color: var(--back);
   padding-top: 20px;
   padding-bottom: 20px;
+}
+.same-store .card img{
+  width: 85%;
+  height: 85%;
+  justify-content: center;
+  margin-top: 15px;
+  margin-right: 20px;
 }
 /****************************************end suggestion ****************************************/
 /****************************************start done_order ****************************************/

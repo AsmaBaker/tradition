@@ -15,17 +15,17 @@ if($submit=="signIn"){
       $getUser="SELECT * FROM admins where email='$email'";
       $userData = mysqli_query($conn, $getUser);
       $user=mysqli_fetch_all($userData,MYSQLI_ASSOC);
-
        if (empty($user)){
-        $errors[]="البريد الالكتروني الذي قمت بادخاله لا ينتمي لاي حساب";
-        header("location:sign.php");
+         $errors[]="البريد الالكتروني او كلمة المرور خطأ";
+         header("location:sign.php");
        }else if($password != $user[0]['password']){
-        $errors[]="البريد الاكتروني او كلمة المرور خطأ";
+        $errors[]="البريد الالكتروني او كلمة المرور خطأ";
         header("location:sign.php");
        }else{
-       $sign="تم التسجيل بنجاح";
-       $_SESSION['sign']="done";
-        header("location:index.php");
+        $status=$user[0]['status'];
+         $sign="تم التسجيل بنجاح";
+         $_SESSION['sign']="done";
+          header("location:index.php?status=$status");
        }
        if(!empty($errors)){
        $_SESSION['errors']=$errors;
@@ -35,7 +35,5 @@ if($submit=="signIn"){
      if(!empty($errors)){
       $_SESSION['errors']=$errors;
       header("location:sign.php");
-      }
-}
-
+      }}
 ?>

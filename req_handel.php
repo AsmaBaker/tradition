@@ -29,7 +29,7 @@
       }
       if(empty($errors)){
          $newReq = "INSERT INTO `requests`( `name`, `phone`, `city`, `cat_id`, `description`)
-          VALUES ('$name','$phone','$city','$cats','$desc')";
+          VALUES ('$name','$phone','$city','$cat','$desc')";
          if ($conn->query($newReq) === TRUE) {
             $_SESSION['done']="تم ارسال الطلب بنجاح وسوف نتواصل معك في اقرب وقت ممكن .";
             header("location:merchant.php");
