@@ -1,9 +1,15 @@
 <?php
+<<<<<<< HEAD
   include("connection_db.php");
   session_start();
 ?>
 
 
+=======
+include("connection_db.php");
+  session_start();
+ ?>
+>>>>>>> 0305fb7a1dd2219810e8e5b5e9be37c832028643
 <!doctype html>
 <html dir="rtl">
   <head>

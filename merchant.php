@@ -1,3 +1,7 @@
+<?php
+include("connection_db.php");
+  session_start();
+ ?>
 <!doctype html>
 <html dir="rtl">
   <head>
@@ -16,88 +20,23 @@
     <div class="img_store">
       <div class="informations">
       <p>سعيدون جداً برغبتك بالانضمام الى عائلتنا، يمكنك الاطلاع على التفاصيل ومن ثم تعبئة الطلب.</p>
-      <button type="button" class="btn butt nav-link"  data-bs-target="#mer" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      <a  class="btn butt nav-link" href="req.php">
         تقديم طلب
-      </button>
-      <!-- Modal -->
-      <div class="modal fade" id="mer" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-       <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="application-form">
-            <form action="">
-          <div class="tab-content" id="pills-tabContent">
-            <h3>تعبئة الطلب</h3>
-            <div class="row">
-            <div class="form-floating mb-3 col-6">
-             <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
-             <label for="floatingInput">الاسم الاول</label>
-            </div>
-            <div class="form-floating col-6">
-             <input type="text" class="form-control" id="floatingPassword" placeholder="Password">
-             <label for="floatingPassword">الاسم الاخير</label>
-            </div>
-            </div>
-            <div class="form-floating ">
-              <input type="text" class="form-control" id="floatingPassword" placeholder="Password">
-              <label for="floatingPassword">رقم الهاتف</label>
-             </div>
-             <div class="row">
-              <div class="col-6">
-             <select class="form-select" aria-label="Default select example">
-              <option value="selected">المدينة</option>
-              <option value="">نابلس </option>
-              <option value="">القدس </option>
-              <option value="">رام الله </option>
-              <option value="">رفح  </option>
-              <option value="">غزة  </option>
-              <option value=""> بيت لحم  </option>
-              <option value="">الخليل  </option>
-              <option value="">خان يونس  </option>
-              <option value="">اريحا  </option>
-              <option value="">قلقيلية  </option>
-              <option value="">جنين  </option>
-              <option value="">الرملة  </option>
-              <option value="">يافا  </option>
-              <option value="">الناصرة  </option>
-              <option value="">طولكرم  </option>
-              <option value="">الجليل  </option>
-              <option value="">اللد  </option>
-              <option value="">بئر السبع  </option>
-             </select>
-             </div>
-             <div class="form-floating col-6 mt-3">
-              <input type="text" class="form-control" id="floatingPassword" placeholder="Password">
-              <label for="floatingPassword">عنوان المتجر/اونلاين</label>
-             </div>
-             </div>
-             <select class="form-select" aria-label="Default select example">
-              <option value="selected">القسم</option>
-              <option value="">مطرزات</option>
-              <option value="">خزف وفخاريات</option>
-              <option value="">انتيك ونحاسيات</option>
-             </select>
-             <div class="form-floating">
-              <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-              <label for="floatingTextarea2">نبذة عن المتجر والمنتجات والبضائع التي يقدمها</label>
-            </div>
-            <div class="modal-footer">
-             <button type="button" class="btn send">ارسال </button>
-            </div>
-           </div> 
-           </form>
-          </div>
-          </div>
-        </div>
-       </div>
-       </div>
+      </a>
+      
       </div>
+      
     </div>
 
     <div class="container">
+            <?php
+             if(isset($_SESSION['done'])){
+            ?>
+            <p class="alert alert-success mt-3 fs-5"><?=$_SESSION['done']?></p>
+            <?php
+              session_unset();
+             }
+            ?>
         <div class="definition ">
     
             <h3> عند انضمامك لمتجر تراثيات كتاجر نقدم لك العديد من الامتيازات: </h3>

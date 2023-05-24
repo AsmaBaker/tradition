@@ -1,4 +1,8 @@
-<!doctype html>
+<?php
+include("connection_db.php");
+  session_start();
+ ?>
+  <!doctype html>
 <html dir="rtl">
   <head>
     <title>عن الموقع </title>

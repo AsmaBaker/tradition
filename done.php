@@ -1,33 +1,30 @@
 <?php
-include("connection_db.php");
+  include("connection_db.php");
   session_start();
- ?>
+?>
 <!doctype html>
 <html dir="rtl">
   <head>
-    <title>الخصوصية والأمان</title>
+    <title>تراثيات | الرئيسية</title>
     <?php include('head.php')?>
   </head>
   <body>
-
- <!-- start navbar-->
+  <!-- start navbar-->
   <nav class="navbar navbar-expand-lg ">
     <?php include('navbar.php') ?>
   </nav>
   <!-- end navbar-->
 
-  
-  <!--start privecy page-->
-  <div class="container">
-  <div class="priv_sec">
-    <h3>الخصوصية والأمان:</h3>
-    <p>- في موقع تراثيات نضمن لك سرية بياناتك ومعلوماتك بحيث لا يمكن لاحد الاطلاع عليها غيرك.</p>
-    <p>- تعتبر الصور والمعلومات في موقعنا ملكية خاصة له وللمتاجر التي يحتويها الموقع وإن اي عملية سرقة او نسب لهذه المنتجات لك سيعرضك للمسائلة القانونية.</p>
-  </div>
-</div>
-    <!--end privecy page-->
-
-
+    <?php
+     if (isset($_SESSION['order'])){
+     ?>
+      <div class="done_order">
+        <img src="img/done.png" width="20%" alt="">
+        <p><?=$_SESSION['order']?></p>
+      </div>
+      <?php
+     }
+    ?>
 
   <!--start footer-->
   <div class="footer" id="footer">
@@ -37,7 +34,7 @@ include("connection_db.php");
 
   <!--start copy-right-->
   <div class="copy-right">
-  <?php include('copy_right.php')?>
+    <?php include('copy_right.php')?>
   </div>
   <!--end copy-right-->
 
@@ -59,8 +56,8 @@ include("connection_db.php");
       document.documentElement.scrollTop = 0;
      }
   </script>
-
     <!-- bootstrap 5 -->
-    <script src="js/bootstrap.bundle.min.js"></script>
+ <script src="js/bootstrap.bundle.min.js"></script>
+
   </body>
 </html>

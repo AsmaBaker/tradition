@@ -1,6 +1,7 @@
 <?php
-   include("connection_db.php");
-?>
+include("connection_db.php");
+  session_start();
+ ?>
 <!doctype html>
 <html dir="rtl">
   <head>
@@ -37,8 +38,15 @@
                 <p class="name"><?=$product['name']?></p>
                 <p class="desc"><?=$product['desc']?></p>
                 <p class="price"><?=$product['price']?><i class="fa-solid fa-shekel-sign"></i></p>
-                <label for="quantity">الكمية:</label>
-                <input class="quantity" type="number" id="quantity" min="1" max="<?=$product['total']?>" value="1">
+                <form action="product.php" method="post">
+                 <label for="quantity">الكمية:</label>
+                 <input class="quantity" type="number" id="quantity" name="quantity" min="1" max="<?=$product['total']?>" value="1">
+                </form>
+                <?php
+                if(isset($_POST['quantity'])){
+                  echo $_POST['quantity'] ;
+                }
+                ?>
                 <a href="cart.php?pro_id=<?=$product['id']?>" target="_blank" class="btn add">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </a>
             </div>
             <?php endforeach ?>
