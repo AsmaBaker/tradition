@@ -1,23 +1,8 @@
 <?php
-<<<<<<< HEAD
-<<<<<<< HEAD
   include("connection_db.php");
   session_start();
 ?>
 
-
-=======
-include("connection_db.php");
-  session_start();
- ?>
->>>>>>> 0305fb7a1dd2219810e8e5b5e9be37c832028643
-=======
-  include("connection_db.php");
-  session_start();
-?>
-
-
->>>>>>> 523e4258f52b919a2f9127540558f3001e3ee0e5
 <!doctype html>
 <html dir="rtl">
   <head>

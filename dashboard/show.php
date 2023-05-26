@@ -17,10 +17,10 @@ include '../connection_db.php';
     </div>
     <div class="col-7"></div>
     <div class="col-2">
-      <a class="navbar-brand" href='loginDB.php?action="logout"'> خروج </a>
+      <a class="navbar-brand" href='log_out_handel.php?action="logout"'> خروج <i class="fa-solid fa-right-from-bracket fa-rotate-180 fa-sm"></i></a>
     </div>
    </div>
-</div>
+  </div>
   <div class="container">
   <?php
   if(isset($_GET['no'])){
@@ -69,7 +69,17 @@ include '../connection_db.php';
       <td><?= $admin['name'] ?></td>
       <td><?= $admin['email'] ?></td>
       <td><?= $admin['password'] ?></td>
-      <td><?= $admin['status'] ?></td>
+      <?php
+      if($admin['status']==0){
+        ?>
+      <td>مسؤول</td>
+      <?php
+      }else if($admin['status']==1){
+        ?>
+      <td> مسؤول رئيسيي</td>
+      <?php
+      }
+      ?>
       <td><?= $admin['created_at'] ?></td>
       <td><a class="btn btn-warning" href="update_admin.php?id=<?= $admin['id'] ?>">تعديل</a></td>
       <td><a class="btn btn-danger" href="admin_handel.php?id=<?=$admin['id'] ?>& del=deleteAd">حذف</a></td>
@@ -86,7 +96,6 @@ include '../connection_db.php';
   <div class="content">
     <div class="container">
       <td><a class="btn btn-secondary" href="index.php?status=<?=$_SESSION['status']?>">عودة الى الصفحة الرئيسية</a></td> 
-      <td><a class="btn btn-danger" href="req_handel.php?del=deleteAll" >حذف الكل</a></td>
       <?php
       //طباعة  
     if(isset($_SESSION['action'])){
@@ -135,11 +144,29 @@ include '../connection_db.php';
       }
       ?>
       <?php
-               $getStores = "SELECT * FROM stores";
-               $getAllStores = mysqli_query($conn,$getStores);
-               $stores=mysqli_fetch_all($getAllStores,MYSQLI_ASSOC);
-              ?>
-        <?php
+      $id=$city['id'];
+       $getStores = "SELECT * FROM stores where city=$id";
+       $getAllStores = mysqli_query($conn,$getStores);
+       $stores=mysqli_fetch_all($getAllStores,MYSQLI_ASSOC);
+       if(empty($stores)){
+
+        $upCit = "UPDATE `cities`
+        SET `is_exists`='0' WHERE id=$id";
+        if ($conn->query($upCit) === TRUE) {
+        } else {
+         $errors[]=" حدث خطا ما , حاول مرة اخرى";
+         echo mysqli_error($conn);
+        }
+       }else{
+        $upCit = "UPDATE `cities`
+        SET `is_exists`='1' WHERE id=$id";
+        if ($conn->query($upCit) === TRUE) {
+        } else {
+         $errors[]=" حدث خطا ما , حاول مرة اخرى";
+         echo mysqli_error($conn);
+        }
+       }
+       
       if($city['is_exists']==0){
         ?>
       <td>لا تضم متاجر</td>
@@ -528,8 +555,8 @@ include '../connection_db.php';
             <a href="order.php?id=<?=$id?>">
            <h3 class="">طلبية <?= $orderN['id']?></h3>
          
-              <p>طلبية جديدة</p>
-           
+            <p>طلبية جديدة</p>
+            <td><a class="btn btn-warning" href="order_handel.php?id=<?= $order['id'] ?> & edit=deli">تعديل الحالة</a></td>           
             </a>
           </div>
          <?php
