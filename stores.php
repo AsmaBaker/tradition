@@ -96,7 +96,6 @@
                $getProducts = "SELECT * FROM products where sto_id=$id";
               }
             }else if(isset($_POST['sort_date'])){
-
               if($_POST['sort_d'] ==1){
                 $getProducts = "SELECT * FROM products where sto_id=$id ORDER BY `products`.`created_at` ASC";
                }else if ($_POST['sort_d']==2){
@@ -105,9 +104,8 @@
                 $getProducts = "SELECT * FROM products where sto_id=$id";
                }
             }else{ 
-    
               $getProducts = "SELECT * FROM products where sto_id=$id";
-              }
+            }
             $getAllProducts = mysqli_query($conn,$getProducts);
             $products=mysqli_fetch_all($getAllProducts,MYSQLI_ASSOC);
            ?>
@@ -122,12 +120,20 @@
             <div class="card-body row">
              <h5 class="card-title"><?=$product['name']?></h5>
              <p class="card-text"> <?=$product['price']?> <i class="fa-solid fa-shekel-sign"></i></p>
+             <?php
+              if($product['sto_id']==11101 ||$product['sto_id']==11104 ){
+                ?>
+                <a href="<?=$stores['facebook']?>" target="_blank" class="btn add">الطلب من المطعم<i class="fa-brands fa-facebook-f"></i></a>
+                <?php
+              }else{
+             ?>
              <a href="cart.php?pro_id=<?=$product['id']?>" target="_blank" class="btn add">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </a>
+             <?php } ?>
             </div>
            </a>
            </form>
           </div>
-           <?php endforeach ?>
+          <?php endforeach ?>
           </div>
          </div>
         </div>

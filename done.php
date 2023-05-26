@@ -23,7 +23,10 @@
         <p><?=$_SESSION['order']?></p>
       </div>
       <?php
+        unset($_SESSION['cart']);
+
      }
+     
     ?>
 
   <!--start footer-->

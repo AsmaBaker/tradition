@@ -15,10 +15,18 @@ include("connection_db.php");
   </nav>
   <!-- end navbar-->
 
-
   <!-- start product-->
   <div class="product">
     <?php
+     $sto_id=$_GET['sto_id'];
+     $getProducts = "SELECT * FROM products  where sto_id=$sto_id limit 10";
+     $getProductsData = mysqli_query($conn,$getProducts);
+     $products=mysqli_fetch_all($getProductsData,MYSQLI_ASSOC);
+
+     $getStores = "SELECT * FROM stores  where id=$sto_id";
+     $getStoresData = mysqli_query($conn,$getStores);
+     $stores=mysqli_fetch_all($getStoresData,MYSQLI_ASSOC);
+
     $pro_id=$_GET['pro_id'];
     
     $getProduct = "SELECT * FROM products  where id=$pro_id";
@@ -38,17 +46,26 @@ include("connection_db.php");
                 <p class="name"><?=$product['name']?></p>
                 <p class="desc"><?=$product['desc']?></p>
                 <p class="price"><?=$product['price']?><i class="fa-solid fa-shekel-sign"></i></p>
-                <form action="product.php" method="post">
-                 <label for="quantity">الكمية:</label>
-                 <input class="quantity" type="number" id="quantity" name="quantity" min="1" max="<?=$product['total']?>" value="1">
-                </form>
+                <p class="size">الحجم: <?=$product['size']?></p>
+
                 <?php
                 if(isset($_POST['quantity'])){
                   echo $_POST['quantity'] ;
                 }
                 ?>
-                <a href="cart.php?pro_id=<?=$product['id']?>" target="_blank" class="btn add">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </a>
-            </div>
+             <?php
+              if($product['sto_id']==11101 ||$product['sto_id']==11104 ){
+                ?>
+                <a href="<?=$store['facebook']?>" target="_blank" class="btn add">الطلب من المطعم<i class="fa-brands fa-facebook-f"></i></a>
+                <?php
+              }else{
+             ?>
+             
+             <label for="quantity">الكمية:</label>
+                 <input class="quantity" type="number" id="quantity" name="quantity" min="1" max="<?=$product['total']?>" value="1">
+             <a href="cart.php?pro_id=<?=$product['id']?>" target="_blank" class="btn add">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </a>
+             <?php } ?>           
+             </div>
             <?php endforeach ?>
         </div>
     </div>
@@ -61,12 +78,11 @@ include("connection_db.php");
     <div class="same-store">
         <div class="container">
         <?php 
-        $sto_id=$_GET['sto_id'];
-            $getProducts = "SELECT * FROM products  where sto_id=$sto_id limit 10";
-            $getProductsData = mysqli_query($conn,$getProducts);
-            $products=mysqli_fetch_all($getProductsData,MYSQLI_ASSOC);
+       
+            foreach($stores as $store):
         ?>
-      <h4>منتجات مشابهة لدى فلاحي:</h4>
+      <h4>منتجات مشابهة لدى <?=$store['name']?>:</h4>
+      <?php endforeach ?>
       <div class="row">
     
         <?php
@@ -115,7 +131,7 @@ include("connection_db.php");
        up.style.display = "none";
        }
      }
-     function upFunction(){
+    function upFunction(){
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
      }
