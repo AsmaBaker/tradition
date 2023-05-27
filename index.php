@@ -25,6 +25,8 @@
     </ul>
   </div>  
   <!--end menu-bar-->
+  
+ 
 
   <!--start header-->
   <div class="header">
@@ -76,7 +78,7 @@
    </div>
   </div>
   <!--end  header-->
-
+ <!--lama-->
   <!--start chose-->
   <div class="chose">
     <div class="container">
