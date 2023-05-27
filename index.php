@@ -92,7 +92,7 @@
         <?php
         foreach($chose as $index=>$chosen):
         ?>
-        <div class="col-md-3 card" style="width: 15rem;">
+        <div class="col-md-3 card">
           <a href="product.php?pro_id=<?=$chosen['id']?>&sto_id=<?=$chosen['sto_id']?>">
           <img src="img/<?=$chosen['sto_id']?>/<?=$chosen['img']?>" class="card-img-top" alt="...">
           <div class="card-body row">
@@ -221,8 +221,8 @@
           $stores=mysqli_fetch_all($getAllStores,MYSQLI_ASSOC);
            foreach($stores as $index=>$store):
            ?>
-            <div class="store-content  col-2">
-              <img src="img/store/<?=$store['img']?>" width="90%" alt="">
+            <div class="store-content  col-6 col-sm-2 ">
+              <img src="img/store/<?=$store['img']?>" alt="">
               <div class="store-name">
                 <h3><?=$store['name']?></h3>
                 <a href="stores.php?id=<?=$store['id']?>" target="_blank">تسوق الان</a>

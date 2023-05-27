@@ -22,16 +22,41 @@ font-family: 'Markazi Text', serif;
   padding: 50px;
   margin-bottom: 5%;
 }
-.sign button {
+.req_content , .order-data{
+  width: 40%;
+  margin-right: 30%;
+  margin-top: 3%;
+  padding: 50px;
+  margin-bottom: 5%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgb(204, 204, 204);
+  padding: 50px;
+}
+.req button{
   background-color: var(--red);
   border-color: var(--red);
   color: white;
-  margin-right: 50px;
-  margin-top: 20px;
   transition: all 0.5s;
   font-size: 19px;
+  margin-right: 100px;
 }
-.sign input{
+.req input {
+  margin-top: 20px;
+}
+.req h3{
+  color: var(--red);
+  width: 100px;
+  font-size: 25px;
+  margin-right: 35%;
+}
+.req select{
+  margin-top: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+.req .modal-footer{
+  margin-left:240px;
   margin-top: 20px;
 }
 .modal-footer{
@@ -163,8 +188,6 @@ width: 150px;
 
 /*end menu-bar*/
 
-
-
 /*start header*/
 .carousel {
   width: 1200PX;
@@ -258,8 +281,6 @@ span.carousel-control-prev-icon , span.carousel-control-next-icon{
     border-radius: 6px;
     margin-right: 5%;
     margin-top: 7px;
-    
-    
   }
   .img-3{
     display: none;
@@ -284,16 +305,12 @@ span.carousel-control-prev-icon , span.carousel-control-next-icon{
     margin-bottom: 5px;
     box-shadow: none;
     border-radius: 6px;
-   
-   
   }
   .img-1 img:hover, .img-2 img:hover{
     width: 180px;
     height: 180px;
   }
-
 }
- 
 /*end header*/
 
 
@@ -818,19 +835,20 @@ height: 420px;
 .text p{
   text-align: center;
 }
-.informations button{
+.informations a{
   background-color: var(--red);
   color: white;
  border-radius: 5px;
  padding: 8px;
  padding-left: 20px;
  padding-right: 20px;
-font-size: 26px;
-margin-right: 5%;
-text-decoration: none;
-transition: all 0.5s;
+ font-size: 26px;
+ margin-right: 5%;
+ text-decoration: none;
+ width: 150px;
+ transition: all 0.5s;
 }
-.informations button:hover{
+.informations a:hover{
   background-color: var(--red);
   box-shadow: 2px 2px 10px var(--dullBlack);
   border-color: var(--red);
@@ -851,7 +869,7 @@ transition: all 0.5s;
     width: 60%;
     margin-bottom: 1%;
   }
-  .informations button{
+  .informations a{
    padding-top: 2px;
    padding-bottom: 2px;
    padding-left: 9px;
@@ -860,6 +878,7 @@ transition: all 0.5s;
   margin-right: 4%;
   text-decoration: none;
   transition: all 0.5s;
+  width: 100px;
   }
   .definition .text{
     margin-right: 20px;
@@ -1598,6 +1617,13 @@ text-decoration: none;
 background-color: var(--back);
 padding-top: 20px;
 padding-bottom: 20px;
+}
+.same-store .card img{
+  width: 85%;
+  height: 85%;
+  justify-content: center;
+  margin-top: 15px;
+  margin-right: 20px;
 }
 /****************************************end suggestion ****************************************/
 

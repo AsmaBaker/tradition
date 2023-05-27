@@ -113,7 +113,7 @@
            <?php
            foreach($products as $index=>$product):
            ?>
-          <div class="col-md-3 card" style="width: 14rem;">
+          <div class="col-sm-3 col-6 card">
           <form action="cart.php" method="$_GET">
            <a href="product.php?pro_id=<?=$product['id']?>&sto_id=<?=$product['sto_id']?>" target="_blank">
             <img src="img/<?=$id?>/<?=$product['img']?>" class="card-img-top" alt="...">
