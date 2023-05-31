@@ -1599,7 +1599,7 @@ margin-bottom: 70px;
 @media (max-width: 1100px) { 
   .order-data {
     width: 94%;
-    height: 610px;
+    height: 685px;
     margin-right: 3%;
   }
   .order-data .form-select{
@@ -1613,7 +1613,7 @@ margin-bottom: 70px;
     font-size: 20px;
     width: 140px;
     height: 50px;
-    margin-top: 30px;
+    margin-top: 20px;
     margin-right: 21%;
   }
  
@@ -1660,7 +1660,7 @@ margin-top: 20px;
   padding-top: 3%;
   line-height: 35px;
   border: 2px solid var(--greyWhite);
-  padding-right: 30px;
+  padding-right: 20px;
   border-radius: 20px 20px;
   }
   .product .name{
@@ -1676,6 +1676,10 @@ margin-top: 20px;
   }
   .product p.price{
   font-size: 35px;
+  height: 30px;
+  }
+  .data .desc{
+    width: 630px;
   }
   .product p.price i{
   font-size: 20px;
@@ -1686,7 +1690,7 @@ margin-top: 20px;
   font-size: 18px;
   display: block;
   width: 200px;
-  margin-top: 45px;
+  margin-top: 38px;
   margin-right: 12px;
   }
   
@@ -1736,6 +1740,9 @@ margin-top: 20px;
     margin-top: 10px;
     margin-bottom: 10px;
     font-size: 12px;
+  }
+  .data .desc{
+   width: 334px;
   }
   .product p.price{
     font-size: 30px;
