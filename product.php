@@ -60,10 +60,13 @@ include("connection_db.php");
                 <?php
               }else{
              ?>
-             
-             <label for="quantity">الكمية:</label>
-                 <input class="quantity" type="number" id="quantity" name="quantity" min="1" max="<?=$product['total']?>" value="1">
-             <a href="cart.php?pro_id=<?=$product['id']?>" target="_blank" class="btn add">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </a>
+             <div class="row pro">
+             <label for="quantity" class="col-1">الكمية:</label>
+                
+            <input class="quantity col-1" type="number" id="quantity" name="quantity" min="1" max="<?=$product['total']?>" value="1">
+            <div class="col-8"></div>
+             <a href="cart.php?pro_id=<?=$product['id']?>" target="_blank" class="btn add col-2">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </a>
+             </div>
              <?php } ?>           
              </div>
             <?php endforeach ?>
@@ -88,7 +91,7 @@ include("connection_db.php");
         <?php
         foreach($products as $index=>$product):
         ?>
-        <div class="col-md-3 card" style="width: 15rem;">
+        <div class="col-3 card">
         <a href="product.php?pro_id=<?=$product['id']?>&sto_id=<?=$product['sto_id']?>">
           <img src="img/<?=$sto_id?>/<?=$product['img']?>" class="card-img-top" alt="...">
           <div class="card-body row">

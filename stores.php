@@ -32,7 +32,7 @@
           foreach($stores as $stores):
          ?>
          <div class="img-descr col-md-3 "> 
-            <img src="img/store/<?=$stores['img']?>" width="200px"> 
+            <img src="img/store/<?=$stores['img']?>"> 
          </div>
          <div class=" descr col-md-8 " >
              <p class="name-store"><?=$stores['name']?></p>
@@ -47,11 +47,11 @@
           </div>
           <?php endforeach ?>
         </div>
-       <div class="sortS row">
+        <div class="sortS row">
         <div class="col-2">
          <h4>فرز المنتجات حسب:</h4>
         </div>
-       <form action="stores.php?id=<?=$id?>" method="post" class="col-3">
+       <form action="stores.php?id=<?=$id?>" method="post" class="form-one col-3">
        <div class="row">
 
         <div class="col-6">
@@ -67,7 +67,7 @@
        </div>
        </div>
         </form>
-        <form action="stores.php?id=<?=$id?>" method="post" class="col-3">
+        <form action="stores.php?id=<?=$id?>" method="post" class="form-two col-3">
        <div class="row">
        <div class="col-6">
        <select class="form-select" aria-label="Default select example" name="sort_d">
@@ -84,7 +84,8 @@
         </form>
         </div>
 
-       <div class="store_product">    
+
+        <div class="store_product">    
            <?php
             if(isset($_POST['sort_price'])){
        
@@ -113,7 +114,7 @@
            <?php
            foreach($products as $index=>$product):
            ?>
-          <div class="col-sm-3 col-6 card">
+          <div class="col-3 card" >
           <form action="cart.php" method="$_GET">
            <a href="product.php?pro_id=<?=$product['id']?>&sto_id=<?=$product['sto_id']?>" target="_blank">
             <img src="img/<?=$id?>/<?=$product['img']?>" class="card-img-top" alt="...">
@@ -139,8 +140,6 @@
         </div>
  </div>
       
- 
-  <!--end stores page-->
 
   <!--start footer-->
   <div class="footer" id="footer">

@@ -57,13 +57,13 @@
             <ul>
               <li><?=$product['name']?></li>
               <li class="pr"><?=$product['price']?> <i class="fa-solid fa-shekel-sign"></i></li>
-              <li>   
+              <li class="qua">   
                 <label for="quantity">الكمية:</label>
                 <input class="quantity" type="number" id="quantity" name="quan" min="1" max="<?=$product['total']?>" value="1">
               </li>
             </ul>
           </div>
-          <div class="col-4">
+          <div class="col-4 none">
           </div>
           <div class="col-1">
             <ul>
@@ -98,7 +98,7 @@
        }else{
             ?>
           <div class="cart-embty">
-           <img src="img/cart.png" width="30%" alt="">
+           <img src="img/cart.png"  alt="">
            <p>سلة المشتريات الخاصة بك فارغة </p>
            <a  class="btn " href="index.php#store">التسوق الان</a>
           </div>
