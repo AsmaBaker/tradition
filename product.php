@@ -46,7 +46,6 @@ include("connection_db.php");
                 <p class="name"><?=$product['name']?></p>
                 <p class="desc"><?=$product['desc']?></p>
                 <p class="price"><?=$product['price']?><i class="fa-solid fa-shekel-sign"></i></p>
-                <p class="size">الحجم: <?=$product['size']?></p>
 
                 <?php
                 if(isset($_POST['quantity'])){
@@ -56,11 +55,12 @@ include("connection_db.php");
              <?php
               if($product['sto_id']==11101 ||$product['sto_id']==11104 ){
                 ?>
-                <a href="<?=$store['facebook']?>" target="_blank" class="btn add">الطلب من المطعم<i class="fa-brands fa-facebook-f"></i></a>
+                <a href="<?=$store['facebook']?>" target="_blank" class="btn add mt-5">الطلب من المطعم<i class="fa-brands fa-facebook-f"></i></a>
                 <?php
               }else{
              ?>
              <div class="row pro">
+           
              <label for="quantity" class="col-1">الكمية:</label>
                 
             <input class="quantity col-1" type="number" id="quantity" name="quantity" min="1" max="<?=$product['total']?>" value="1">
