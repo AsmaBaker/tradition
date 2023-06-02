@@ -1,19 +1,8 @@
 <?php
   include("connection_db.php");
   session_start();
-    if(isset($_GET['delete'])){
-     foreach (array_keys($_SESSION['cart'], $_GET['delete'], true) as $key) {
-      unset($_SESSION['cart'][$key]);
-     }}  
-     if(!isset($_SESSION['cart'])){
-     $_SESSION['cart']=array();
-     }
-
-    if(isset($_GET['pro_id'])){
-     $_SESSION['cart'][]=$_GET['pro_id'];
-    }
-    $where_in=implode(',',$_SESSION['cart']);
-    $_SESSION['where_in']=$where_in;
+    $where_in= $_SESSION['where_in'];
+    $pro_qua=$_SESSION['pro_qua'];
 ?>
 <!doctype html>
 <html dir="rtl">
@@ -35,7 +24,6 @@
     <h2>سلة المشتريات</h2>
     </div>
   <div class="cart-body">
-  
     <?php if(!empty($where_in)){?>
     <div class="container">
     <div class="row">
@@ -59,7 +47,10 @@
               <li class="pr"><?=$product['price']?> <i class="fa-solid fa-shekel-sign"></i></li>
               <li class="qua">   
                 <label for="quantity">الكمية:</label>
-                <input class="quantity" type="number" id="quantity" name="quan" min="1" max="<?=$product['total']?>" value="1">
+                <?php
+                $pro_id=$product['id'];
+                ?>
+                <span><?= $_SESSION['qua'][$pro_id]?> </span>
               </li>
             </ul>
           </div>
@@ -67,7 +58,7 @@
           </div>
           <div class="col-1">
             <ul>
-              <li><a href="cart.php?delete=<?=$product['id']?>" class="btn"><i class="fa-solid fa-trash"></i></a></li>
+              <li><a href="cart_handel.php?delete=<?=$product['id']?>" class="btn"><i class="fa-solid fa-trash"></i></a></li>
             </ul>
           </div>
           </div>

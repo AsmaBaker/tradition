@@ -100,8 +100,12 @@
           <div class="card-body row">
             <h5 class="card-title"><?=$chosen['name']?></h5>
             <p class="card-text"> <?=$chosen['price']?><i class="fa-solid fa-shekel-sign"></i></p>
-            <a href="cart.php?pro_id=<?=$chosen['id']?>" target="_blank" class="btn add">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </a>
-          </div>
+            <form action="cart_handel.php" method = "GET">
+             <input class="quantity" value="1" type="hidden" name="quantity">
+            <input type="hidden" value= "<?= $product['id']?>" name="pro_id">
+             <input type="submit" class="btn add" value="اضافة الى السلة">
+             </form>          
+            </div>
           </a>
         </div>
        <?php endforeach ?>

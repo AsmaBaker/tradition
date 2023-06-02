@@ -128,7 +128,11 @@
                 <?php
               }else{
              ?>
-             <a href="cart.php?pro_id=<?=$product['id']?>" target="_blank" class="btn add">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </a>
+            <form action="cart_handel.php" method = "GET">
+             <input class="quantity" value="1" type="hidden" name="quantity">
+             <input type="hidden" value= "<?= $product['id']?>" name="pro_id">
+             <input type="submit" class="btn add" value="اضافة الى السلة">
+            </form>            
              <?php } ?>
             </div>
            </a>

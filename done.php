@@ -19,14 +19,12 @@
      if (isset($_SESSION['order'])){
      ?>
       <div class="done_order">
-        <img src="img/done.png" width="20%" alt="">
+        <img src="img/done.png" width="40%" alt="">
         <p><?=$_SESSION['order']?></p>
       </div>
       <?php
         unset($_SESSION['cart']);
-
      }
-     
     ?>
 
   <!--start footer-->
