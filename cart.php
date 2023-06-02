@@ -79,10 +79,10 @@
         <h3>المبلغ الاجمالي للمنتجات :</h3>
         <span><?=array_sum($pricee)?> <i class="fa-solid fa-shekel-sign"></i></span>
         <p>تكلفة التوصيل: 20         <i class="fa-solid fa-shekel-sign"></i>
-         مدن الضفة الغربية  ,40  
+         مدن الضفة الغربية ،  40  
          <i class="fa-solid fa-shekel-sign"></i>
          مدن الداخل الفلسطيني المحتل    
-         ,
+         ،
          70 
          <i class="fa-solid fa-shekel-sign"></i>
 
