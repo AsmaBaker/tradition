@@ -34,6 +34,7 @@ include("connection_db.php");
     $product=mysqli_fetch_all($getProductData,MYSQLI_ASSOC);
     ?>
     <div class="container">
+    
         <div class="row">
           <?php
            foreach($product as $product):
@@ -59,13 +60,14 @@ include("connection_db.php");
                 <?php
               }else{
              ?>
-             <div class="row pro">
-           
+             <div class=" pro">
+             <form class="row" action="cart_handel.php" method = "GET">
              <label for="quantity" class="col-1">الكمية:</label>
-                
-            <input class="quantity col-1" type="number" id="quantity" name="quantity" min="1" max="<?=$product['total']?>" value="1">
+             <input class="quantity col-1" type="number" id="quantity" name="quantity" min="1" max="<?=$product[`total`]?>" value="1">
+              <input type="hidden" value= "<?= $product['id']?>" name="pro_id">
             <div class="col-8"></div>
-             <a href="cart.php?pro_id=<?=$product['id']?>" target="_blank" class="btn add col-2">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </a>
+             <input type="submit" class="btn add col-2" value="اضافة الى السلة">
+             </form>
              </div>
              <?php } ?>           
              </div>
@@ -97,7 +99,11 @@ include("connection_db.php");
           <div class="card-body row">
             <h5 class="card-title"><?=$product['name']?></h5>
             <p class="card-text"> <?=$product['price']?><i class="fa-solid fa-shekel-sign"></i></p>
-            <a href="cart.php?pro_id=<?=$product['id']?>" target="_blank" class="btn add">اضافة الى السلة<i class="fa-solid fa-cart-shopping"></i> </a>
+            <form action="cart_handel.php" method = "GET">
+             <input class="quantity" value="1" type="hidden" name="quantity">
+            <input type="hidden" value= "<?= $product['id']?>" name="pro_id">
+             <input type="submit" class="btn add" value="اضافة الى السلة">
+             </form>
           </div>
           </a>
           </div>

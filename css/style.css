@@ -358,7 +358,6 @@ span.carousel-control-prev-icon , span.carousel-control-next-icon{
 
 /*end header*/
 
-
 /*start chose*/
 .chose{
 padding-top: 3%;
@@ -389,7 +388,7 @@ width: 15rem;
 }
 .chose .card img{
 width: 85%;
-height: 85%;
+height: 50%;
 justify-content: center;
 margin-top: 15px;
 margin-right: 20px;
@@ -410,15 +409,16 @@ font-size: 25px;
 p.card-text i{
 font-size: 16px;
 }
-.card  a.add{
+.card  input.add{
 text-align: center;
 color: var(--red);
 background-color: white;
 transition: all 0.5s;
 border-color: var(--red);
 font-size: 20px;
+width: 190px;
 }
-.card a.add:hover{
+.card input.add:hover{
 border-color: var(--red);
 background-color: var(--red);
 color: white; 
@@ -475,9 +475,13 @@ color: var(--red);
   }
   .chose .card img{
     width: 90%;
-    height: 90%;
+    height: 40%;
     margin-right: 6px;
   }
+  .card  input.add{
+
+    width: 120px;
+    }
   .card .card-body .btn i{
     font-size: 14px;
   }
@@ -602,8 +606,6 @@ font-weight:bolder;
 }
 .sort .btn_index:hover{
 background-color: var(--red);
-width: 70px;
-font-size: 17px;
 border-color: var(--back);
 color: white;
 }
@@ -1763,7 +1765,7 @@ margin-top: 20px;
   }
   .same-store .card .card-img-top{
     width: 95%;
-    height: 95%;
+    height: 45%;
     margin-right: 5px;
   }
   .product .btn{
@@ -1784,9 +1786,7 @@ padding-bottom: 40px;
 color: var(--dullBlack);
 padding-top: 20px;
 }
-.suggestion a{
-text-decoration: none;
-}
+
 .same-store{
 background-color: var(--back);
 padding-top: 20px;
@@ -1794,11 +1794,21 @@ padding-bottom: 20px;
 }
 .same-store .card img{
   width: 85%;
-  height: 85%;
+  height: 50%;
   justify-content: center;
   margin-top: 15px;
   margin-right: 20px;
 }
 /****************************************end suggestion ****************************************/
 
+/****************************************start done ****************************************/
+.done_order{
+  margin-right: 40%;
+  height: 500px;
+}
+.done_order p{
+  margin-right: px;
+  font-size: 25px;
+}
+/****************************************end done ****************************************/
 
