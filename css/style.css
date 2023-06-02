@@ -475,9 +475,13 @@ color: var(--red);
   }
   .chose .card img{
     width: 90%;
-    height: 90%;
+    height: 40%;
     margin-right: 6px;
   }
+  .card  input.add{
+
+    width: 120px;
+    }
   .card .card-body .btn i{
     font-size: 14px;
   }
@@ -1761,7 +1765,7 @@ margin-top: 20px;
   }
   .same-store .card .card-img-top{
     width: 95%;
-    height: 95%;
+    height: 45%;
     margin-right: 5px;
   }
   .product .btn{
