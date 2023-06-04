@@ -409,7 +409,7 @@ font-size: 25px;
 p.card-text i{
 font-size: 16px;
 }
-.card  input.add{
+.card  button{
 text-align: center;
 color: var(--red);
 background-color: white;
@@ -418,7 +418,7 @@ border-color: var(--red);
 font-size: 20px;
 width: 190px;
 }
-.card input.add:hover{
+.card button.add:hover{
 border-color: var(--red);
 background-color: var(--red);
 color: white; 
