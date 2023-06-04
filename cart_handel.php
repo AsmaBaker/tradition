@@ -13,7 +13,7 @@ include("connection_db.php");
     $_SESSION['cart']=array();
     }
 
-   if(isset($_GET['pro_id'])){
+  if(isset($_GET['pro_id'])){
     $_SESSION['cart'][]=$_GET['pro_id'];
 
    }

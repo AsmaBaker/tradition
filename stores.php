@@ -83,8 +83,7 @@
        </div>
         </form>
         </div>
-
-
+    
         <div class="store_product">    
            <?php
             if(isset($_POST['sort_price'])){
@@ -115,7 +114,6 @@
            foreach($products as $index=>$product):
            ?>
           <div class="col-3 card" >
-          <form action="cart.php" method="$_GET">
            <a href="product.php?pro_id=<?=$product['id']?>&sto_id=<?=$product['sto_id']?>" target="_blank">
             <img src="img/<?=$id?>/<?=$product['img']?>" class="card-img-top" alt="...">
             <div class="card-body row">
@@ -131,12 +129,12 @@
             <form action="cart_handel.php" method = "GET">
              <input class="quantity" value="1" type="hidden" name="quantity">
              <input type="hidden" value= "<?= $product['id']?>" name="pro_id">
-             <button class="btn add" name="submit"> اضافة الى السلة <i class="fa-solid fa-shekel-sign"></i></button>
-            </form>            
+             <button class="btn add" name="submit" value="add"> اضافة الى السلة <i class="fa-solid fa-shekel-sign"></i></button>
+            </form>   
+            
              <?php } ?>
             </div>
            </a>
-           </form>
           </div>
           <?php endforeach ?>
           </div>

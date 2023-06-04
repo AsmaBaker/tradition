@@ -7,6 +7,7 @@
     <!-- font awesome 6 -->
     <link rel="stylesheet" href="css/all.min.css">
     <!-- bootstrap 5 -->
+    
     <link rel="stylesheet" href="css/bootstrap.min.css" >
     <!-- custom css -->
     <link rel="stylesheet" href="css/style.css">

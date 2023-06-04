@@ -11,7 +11,7 @@
         </div>
         <div class="services col-2">
           <h5>الخدمات</h5>
-          <a href="pay.php">الدفع</a>
+          <a href="pay.php">الدفع</a>           
           <a class="d" href="delivery.php">التوصيل</a>
         </div>
         <div class="col-2">

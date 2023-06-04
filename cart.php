@@ -1,8 +1,12 @@
 <?php
   include("connection_db.php");
   session_start();
+  if(isset($_SESSION['where_in'])){
     $where_in= $_SESSION['where_in'];
+  }
+  if(isset($_SESSION['pro_qua'])){
     $pro_qua=$_SESSION['pro_qua'];
+  }
 ?>
 <!doctype html>
 <html dir="rtl">
@@ -24,17 +28,20 @@
     <h2>سلة المشتريات</h2>
     </div>
   <div class="cart-body">
-    <?php if(!empty($where_in)){?>
+    <?php if(!empty($where_in)){
+      $where_inD=trim($where_in, ",");
+      echo(trim($where_in ,","));
+      echo $where_inD;
+    ?>
     <div class="container">
     <div class="row">
       <div class="products col-md-7">
            <?php
-            $getProducts = "SELECT * FROM products where id in ($where_in)";
+            $getProducts = "SELECT * FROM products where id in ($where_inD)";
             $getAllProducts = mysqli_query($conn,$getProducts);
             $products=mysqli_fetch_all($getAllProducts,MYSQLI_ASSOC);
             $_SESSION['products']=$products;
            foreach($products as $index=>$product):
-            $pricee[]=$product['price'];
            ?>
         <div class="product-details">
          <div class="row">
@@ -44,7 +51,6 @@
           <div class="col-4">
             <ul>
               <li><?=$product['name']?></li>
-              <li class="pr"><?=$product['price']?> <i class="fa-solid fa-shekel-sign"></i></li>
               <li class="qua">   
                 <label for="quantity">الكمية:</label>
                 <?php
@@ -52,6 +58,10 @@
                 ?>
                 <span><?= $_SESSION['qua'][$pro_id]?> </span>
               </li>
+              <li class="pr"><?=$product['price']*$_SESSION['qua'][$pro_id]?> <i class="fa-solid fa-shekel-sign"></i></li>
+              <?php
+              $pricee[]=$product['price']*$_SESSION['qua'][$pro_id];
+              ?>
             </ul>
           </div>
           <div class="col-4 none">
@@ -63,7 +73,7 @@
           </div>
           </div>
         </div>    
-        <?php endforeach;?>
+        <?php endforeach; ?>
       </div>
       <div class="col-md-1"></div>
       <div class="price col-md-4">
