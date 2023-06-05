@@ -49,8 +49,9 @@
               $pro_name=$product['name'];
               $pro_price=$product['price'];
               $sto_id=$product['sto_id'];
+              $qua=$_SESSION['qua'][$pro_id];
               $newOrder = "INSERT INTO `carts`(`pro_id`, `ord_id`, `quantity`, `pro_name`, `pro_price`, `store_id`) 
-               VALUES ('$pro_id','$ord_id','quantity','$pro_name','$pro_price','$sto_id')";
+               VALUES ('$pro_id','$ord_id','$qua','$pro_name','$pro_price','$sto_id')";
                if ($conn->query($newOrder) === TRUE) {
                 echo"done";
                 $_SESSION['order']="تم اتمام الطلب بنجاح , سيصلك في غضون 3 ايام ";
