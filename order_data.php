@@ -56,7 +56,6 @@ include("connection_db.php");
                 $cities=mysqli_fetch_all($getAllCities,MYSQLI_ASSOC);
                 foreach($cities as $index=>$city):
                 ?>
-           
                <option value="<?=$city['id']?>"> <?=$city['name']?> </option>
                <?php endforeach ?>
             </select>
@@ -74,8 +73,7 @@ include("connection_db.php");
           </select>
         </div>
         <input type="submit" class="btn submit" name="submit" value="الشراء الان" >
-      </form>
-      
+      </form>  
     </div>
   </div>
   <!--end order-data-->
