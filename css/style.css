@@ -388,10 +388,10 @@ width: 15rem;
 }
 .chose .card img{
 width: 85%;
-height: 50%;
+
 justify-content: center;
 margin-top: 15px;
-margin-right: 20px;
+margin-right: 15px;
 }
 .chose a .card h5{
 font-size: 20px;
@@ -416,7 +416,8 @@ background-color: white;
 transition: all 0.5s;
 border-color: var(--red);
 font-size: 20px;
-width: 190px;
+width: 206px;
+margin-right: -10px;
 }
 .card button.add:hover{
 border-color: var(--red);
@@ -470,17 +471,21 @@ color: var(--red);
   .card{
  
     margin-top: 20px;
-    margin-right: 10px;
+    margin-right:6px;
     width: 180px;
+  }
+  .chose{
+   
   }
   .chose .card img{
     width: 90%;
-    height: 40%;
+   
     margin-right: 6px;
   }
-  .card  input.add{
+  .card  button.add{
 
-    width: 120px;
+    width: 155px;
+    margin-right: -17px;
     }
   .card .card-body .btn i{
     font-size: 14px;
@@ -779,7 +784,7 @@ background-color: rgb(240, 0, 0);
   
   .row .services{
    padding-right: 20px;
-    width: 130px;
+    width: 125px;
   
   }
   .row .services a{
@@ -1282,10 +1287,10 @@ padding: 17px;
 }
 .stores .card img{
   width: 85%;
-  height: 50%;
+  
   justify-content: center;
   margin-top: 15px;
-  margin-right: 20px;
+  margin-right: 15px;
 }
 .stores .form-check-reverse {
   padding-right: 0px;
@@ -1342,14 +1347,11 @@ padding: 17px;
   .sortS .card{
     width: 14rem;
   }
+  
   .store_product{
     padding-right: 1px;
   }
-  .stores .card img{
-    width: 95%;
-    height: 50%;
-    margin-right: 5px;
-  }
+
   .card a.add{
     font-size: 17px;
   }
@@ -1683,6 +1685,7 @@ margin-top: 20px;
   .data .desc{
     width: 630px;
   }
+
   .product p.price i{
   font-size: 20px;
   }
@@ -1694,6 +1697,9 @@ margin-top: 20px;
   width: 200px;
   margin-top: 38px;
   margin-right: 12px;
+  }
+.data .space{
+  height: 90px;
   }
   
   .product .btn:hover{
@@ -1738,6 +1744,9 @@ margin-top: 20px;
   .pro .col-8{
     display: none;
   }
+  .data .space{
+display: none;
+  }
   .product .btn{
     margin-top: 10px;
     margin-bottom: 10px;
@@ -1763,6 +1772,11 @@ margin-top: 20px;
     margin-top: 0px;
   
   }
+  .product a.btn{
+   margin-right: 90px;
+   width: 175px;
+    margin-right: auto;
+  }
   .same-store .card .card-img-top{
     width: 95%;
     height: 45%;
@@ -1774,6 +1788,13 @@ margin-top: 20px;
     width: 160px;
     margin-top: auto;
     margin-bottom: 11px;
+  }
+  .product .add_btn{
+    font-size: 20px;
+    margin-right: 12%;
+    width: 160px;
+    margin-top: 0px;
+   
   }
   }
 /****************************************end product-details ****************************************/
@@ -1803,12 +1824,34 @@ padding-bottom: 20px;
 
 /****************************************start done ****************************************/
 .done_order{
-  margin-right: 40%;
+
   height: 500px;
 }
+.done_order img{
+  width: 280px;
+  margin-top: 50px;
+  margin-right: 40%;
+
+}
 .done_order p{
-  margin-right: px;
+  margin-right:37%;
+  margin-top: 10px;
   font-size: 25px;
+ 
+}
+@media(max-width :768px){
+  .done_order img{
+    width: 180px;
+    margin-right: 90px;
+    margin-top: 80px;
+  }
+  .done_order p{
+    margin-right: 40px;
+    font-size: 20px;
+  }
+  .done_order{
+    height: 470px;
+  }
 }
 /****************************************end done ****************************************/
 

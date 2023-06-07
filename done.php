@@ -14,19 +14,19 @@
     <?php include('navbar.php') ?>
   </nav>
   <!-- end navbar-->
-
+<div class="container">
     <?php
      if (isset($_SESSION['order'])){
      ?>
       <div class="done_order">
-        <img src="img/done.png" width="40%" alt="">
+        <img src="img/done.png" alt="">
         <p><?=$_SESSION['order']?></p>
       </div>
       <?php
         unset($_SESSION['cart']);
      }
     ?>
-
+</div>
   <!--start footer-->
   <div class="footer" id="footer">
    <?php include('footer.php')?>

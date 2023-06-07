@@ -53,7 +53,7 @@
                VALUES ('$pro_id','$ord_id','quantity','$pro_name','$pro_price','$sto_id')";
                if ($conn->query($newOrder) === TRUE) {
                 echo"done";
-                $_SESSION['order']="تم اتمام الطلب بنجاح , سيصلك في غضون 3 ايام ";
+                $_SESSION['order']="تم اتمام الطلب بنجاح ، سيصلك في غضون 3 ايام ";
                 header("location:done.php");
              }
            endforeach;

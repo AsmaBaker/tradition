@@ -56,7 +56,8 @@ include("connection_db.php");
              <?php
               if($product['sto_id']==11101 ||$product['sto_id']==11104 ){
                 ?>
-                <a href="<?=$store['facebook']?>" target="_blank" class="btn add mt-5">الطلب من المطعم<i class="fa-brands fa-facebook-f"></i></a>
+                <div class="space"></div>
+                <a href="<?=$store['facebook']?>" target="_blank" class="btn add mt-4">الطلب من المطعم<i class="fa-brands fa-facebook-f"></i></a>
                 <?php
               }else{
              ?>

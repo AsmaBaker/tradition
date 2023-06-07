@@ -115,7 +115,7 @@
            ?>
           <div class="col-3 card" >
            <a href="product.php?pro_id=<?=$product['id']?>&sto_id=<?=$product['sto_id']?>" target="_blank">
-            <img src="img/<?=$id?>/<?=$product['img']?>" class="card-img-top" alt="...">
+            <img  src="img/<?=$id?>/<?=$product['img']?>" class="card-img-top" alt="..." >
             <div class="card-body row">
              <h5 class="card-title"><?=$product['name']?></h5>
              <p class="card-text"> <?=$product['price']?> <i class="fa-solid fa-shekel-sign"></i></p>
