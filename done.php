@@ -5,7 +5,7 @@
 <!doctype html>
 <html dir="rtl">
   <head>
-    <title>تراثيات | الرئيسية</title>
+    <title>تراثيات | تم اتمام الطلب</title>
     <?php include('head.php')?>
   </head>
   <body>

@@ -15,7 +15,6 @@
     <?php include('head.php')?>
   </head>
   <body>
-
   <!-- start navbar-->
   <nav class="navbar navbar-expand-lg ">
     <?php include('navbar.php') ?>

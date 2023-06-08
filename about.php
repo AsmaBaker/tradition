@@ -1,22 +1,19 @@
 <?php
 include("connection_db.php");
   session_start();
-  
  ?>
   <!doctype html>
 <html dir="rtl">
   <head>
-    <title>عن الموقع </title>
+    <title>تراثيات|عن الموقع</title>
     <?php include('head.php')?>
   </head>
   <body>
-
  <!-- start navbar-->
  <nav class="navbar navbar-expand-lg ">
     <?php include('navbar.php') ?>
   </nav>
   <!-- end navbar-->
-
 
   <!-- start about us page-->
   <div class="container">
@@ -27,22 +24,18 @@ include("connection_db.php");
     <p>يستهدف تراثيات الحرفيين والتجار والمشاريع الصغيرة كخطوى اولى لتقديم الدعم والتسويق لهم .</p>
     <p>كما ويستهدف ايضاً الشعب الفلسطيني من خلال جذبه الى موقع يعتبر حاضنه للمشغولات التراثية الفلسطينية .</p>
     <section>
-      <p class="titlle">هذا الموقع من فكرة وتطبيق :</p></section>
-          <section>
-              <div class="container reveal">
-             
-      <div class="founders row">
-  
-      <div class="boxs col-md-5">
-      
-        <div class="box row">
+      <p class="titlle">هذا الموقع من فكرة وتطبيق :</p>
+    </section>
+    <section>
+      <div class="container reveal">    
+       <div class="founders row">
+         <div class="boxs col-md-5">
+         <div class="box row">
             <div class="info col-10">
             <p class="first-p">اسماء بكر سلمان</p>
             <p> التخصص: انظمة المعلومات الحاسوبية</p>
             <p>العمر :21 عام</p>
-        </div>
-        
-        
+             </div>
           <div class="contact_us col-1">
             <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
             <a href=""><i class="fa-regular fa-envelope"></i></a>
@@ -62,7 +55,6 @@ include("connection_db.php");
             <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
             <a href=""><i class="fa-regular fa-envelope"></i></a>
             <a href=""><i class="fa-brands fa-whatsapp"></i></a>
-           
           </div>
           </div>
         </div>
@@ -72,7 +64,6 @@ include("connection_db.php");
     <p>تم انشاء الموقع استكمالاً لمتطلبات البكالوريوس في تخصص انظمة المعلومات الحاسوبية في جامعة القدس المفتوحة.بأشراف الدكتور اسامة مرعي.</p>
     </div>
 </div>
-
 <!--end about us page-->
 
   <!--start footer-->

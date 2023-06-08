@@ -85,6 +85,7 @@ include("connection_db.php");
             ?>
             <div class="alert alert-success mt-5" role="alert">
              تم اضافة المنتج الى <a  href="cart.php" class="alert-link" target="_blank"> السلة</a>
+  
             </div>
             <?php
           }

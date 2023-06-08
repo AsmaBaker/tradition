@@ -5,7 +5,7 @@
 <!doctype html>
 <html dir="rtl">
   <head>
-    <title> تراثيات |ل</title>
+    <title> تراثيات|طلب الانضمام</title>
     <?php include('head.php')?>
   </head>
 
