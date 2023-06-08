@@ -129,7 +129,7 @@
             <form action="cart_handel.php" method = "GET">
              <input class="quantity" value="1" type="hidden" name="quantity">
              <input type="hidden" value= "<?= $product['id']?>" name="pro_id">
-             <button class="btn add" name="submit" value="add"> اضافة الى السلة <i class="fa-solid fa-shekel-sign"></i></button>
+             <button class="btn add" name="submit" value="add"> اضافة الى السلة <i class="fa-solid fa-cart-shopping"></i></button>
             </form>   
             
              <?php } ?>
