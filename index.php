@@ -19,14 +19,13 @@
   <!--start menu-bar-->
   <div class="menu-bar" dir="rtl">
     <ul>
+      <li><a href="#chose">مختارات</a></li>
       <li><a href="#store">الاقسام والمتاجر </a></li>
       <li><a href="#dealer">انشئ متجرك </a></li>
       <li><a href="#footer">روابط مهمة</a></li>
     </ul>
   </div>  
   <!--end menu-bar-->
-  
- 
 
   <!--start header-->
   <div class="header">
@@ -80,10 +79,11 @@
   <!--end  header-->
  <!--lama-->
   <!--start chose-->
-  <div class="chose">
+  <div class="chose" id="chose">
     <div class="container">
       <div class="chose-title">
         <h2>اخترنا لك</h2>
+        
         <?php
          $getChose = "SELECT * FROM products  where id=111028  or id=222018 or id =444011 or id=333014 or id=666011";
          $getAllChose = mysqli_query($conn,$getChose);
@@ -91,9 +91,20 @@
         ?>
        </div>
        <div class="row">
+       <?php
+          if(isset($_GET['add'])){
+            ?>
+            <div class="alert alert-success mt-5" role="alert">
+             تم اضافة المنتج الى <a  href="cart.php" class="alert-link" target="_blank"> السلة</a>
+           </div>
+            <?php
+            unset($_GET['add']);
+          }
+          ?> 
         <?php
         foreach($chose as $index=>$chosen):
         ?>
+        
         <div class="col-md-3 card">
           <a href="product.php?pro_id=<?=$chosen['id']?>&sto_id=<?=$chosen['sto_id']?>">
           <img src="img/<?=$chosen['sto_id']?>/<?=$chosen['img']?>" class="card-img-top" alt="...">
@@ -103,7 +114,7 @@
             <form action="cart_handel.php" method = "GET">
              <input class="quantity" value="1" type="hidden" name="quantity">
             <input type="hidden" value= "<?= $chosen['id']?>" name="pro_id">
-            <button class="btn add" name="submit"> اضافة الى السلة <i class="fa-solid fa-cart-shopping"></i></button>
+            <button class="btn add" name="submit" value="chose"> اضافة الى السلة <i class="fa-solid fa-cart-shopping"></i></button>
              </form>          
             </div>
           </a>

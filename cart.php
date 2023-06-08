@@ -30,8 +30,6 @@
   <div class="cart-body">
     <?php if(!empty($where_in)){
       $where_inD=trim($where_in, ",");
-      echo(trim($where_in ,","));
-      echo $where_inD;
     ?>
     <div class="container">
     <div class="row">
@@ -62,6 +60,7 @@
               <?php
               $pricee[]=$product['price']*$_SESSION['qua'][$pro_id];
               ?>
+
             </ul>
           </div>
           <div class="col-4 none">

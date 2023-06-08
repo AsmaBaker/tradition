@@ -18,7 +18,11 @@ include("connection_db.php");
   <!-- start product-->
   <div class="product">
     <?php
-     $sto_id=$_GET['sto_id'];
+     $_SESSION['store_id']=$_GET['sto_id'];
+     $sto_id=$_SESSION['store_id'];
+     echo $_SESSION['store_id'];
+     
+
      $getProducts = "SELECT * FROM products  where sto_id=$sto_id limit 10";
      $getProductsData = mysqli_query($conn,$getProducts);
      $products=mysqli_fetch_all($getProductsData,MYSQLI_ASSOC);
@@ -27,7 +31,8 @@ include("connection_db.php");
      $getStoresData = mysqli_query($conn,$getStores);
      $stores=mysqli_fetch_all($getStoresData,MYSQLI_ASSOC);
 
-    $pro_id=$_GET['pro_id'];
+    $_SESSION['pro_id']=$_GET['pro_id'];
+    $pro_id=$_SESSION['pro_id'];
     
     $getProduct = "SELECT * FROM products  where id=$pro_id";
     $getProductData = mysqli_query($conn,$getProduct);
@@ -67,7 +72,7 @@ include("connection_db.php");
              <input class="quantity col-1" type="number" id="quantity" name="quantity" min="1" max="<?=$product[`total`]?>" value="1">
               <input type="hidden" value= "<?= $product['id']?>" name="pro_id">
             <div class="col-8"></div>
-             <input type="submit" class="btn add col-2" value="اضافة الى السلة">
+            <button class="btn add" id="add" name="submit" value="product"> اضافة الى السلة <i class="fa-solid fa-shekel-sign"></i></button>
              </form>
              </div>
              <?php } ?>           
@@ -79,13 +84,12 @@ include("connection_db.php");
   <!-- end product-->
 
   <!--start suggestion-->
-  <div class="suggestion">
+  <div class="suggestion">  
     
     <div class="same-store">
         <div class="container">
         <?php 
-       
-            foreach($stores as $store):
+        foreach($stores as $store):
         ?>
       <h4>منتجات مشابهة لدى <?=$store['name']?>:</h4>
       <?php endforeach ?>
@@ -103,7 +107,7 @@ include("connection_db.php");
             <form action="cart_handel.php" method = "GET">
              <input class="quantity" value="1" type="hidden" name="quantity">
              <input type="hidden" value= "<?= $product['id']?>" name="pro_id">
-             <button class="btn add" name="submit"> اضافة الى السلة <i class="fa-solid fa-shekel-sign"></i></button>
+             <button class="btn add" name="submit" value="product"> اضافة الى السلة <i class="fa-solid fa-shekel-sign"></i></button>
              </form>
           </div>
           </a>

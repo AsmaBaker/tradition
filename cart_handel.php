@@ -1,14 +1,22 @@
 <?php
 include("connection_db.php");
   session_start();
+
+
   if(isset($_GET['delete'])){
     foreach (array_keys($_SESSION['cart'], $_GET['delete'], true) as $key) {
      unset($_SESSION['cart'][$key]);
     } 
     unset($_SESSION['qua'][$_GET['delete']]);
+    $where_in=implode(',',$_SESSION['cart']);
+    $_SESSION['where_in']=$where_in;
+ 
+    header("location:cart.php");
     }
-    
 
+
+
+if(isset($_GET['submit'])){
   if(!isset($_SESSION['cart'])){
     $_SESSION['cart']=array();
     }
@@ -30,9 +38,18 @@ include("connection_db.php");
      $pro_qua=$_GET['quantity'];
 
      $_SESSION['qua'][$pro_id]=$pro_qua;
-   }
+   }else{
       $_SESSION['pro_qua']=$pro_qua;
-
-   header('location:cart.php?add=t');
-
+   }
+  if($_GET['submit']=="product"){
+    $sto=$_SESSION['store_id'];
+    $pro=$_SESSION['pro_id'];
+   header("location:product.php?pro_id=$pro&sto_id=$sto");
+  }else if($_GET['submit']=="stores"){
+   $id=$_SESSION['id'];
+   header("location:stores.php?add=t&id=$id");
+  }else if($_GET['submit']=="chose"){
+    header("location:index.php?add=t");
+  }
+}
 ?>

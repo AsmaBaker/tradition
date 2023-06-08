@@ -27,7 +27,7 @@
       ?>
        <div class="container">
 
-        <div class="row description ">
+        <div class="row description">
          <?php
           foreach($stores as $stores):
          ?>
@@ -84,7 +84,16 @@
         </form>
         </div>
     
-        <div class="store_product">    
+        <div class="store_product">   
+          <?php
+          if(isset($_GET['add'])){
+            ?>
+            <div class="alert alert-success mt-5" role="alert">
+             تم اضافة المنتج الى <a  href="cart.php" class="alert-link" target="_blank"> السلة</a>
+            </div>
+            <?php
+          }
+          ?> 
            <?php
             if(isset($_POST['sort_price'])){
        
@@ -129,7 +138,7 @@
             <form action="cart_handel.php" method = "GET">
              <input class="quantity" value="1" type="hidden" name="quantity">
              <input type="hidden" value= "<?= $product['id']?>" name="pro_id">
-             <button class="btn add" name="submit" value="add"> اضافة الى السلة <i class="fa-solid fa-shekel-sign"></i></button>
+             <button class="btn add" id="add" name="submit" value="stores"> اضافة الى السلة <i class="fa-solid fa-shekel-sign"></i></button>
             </form>   
             
              <?php } ?>
@@ -140,7 +149,7 @@
           </div>
          </div>
         </div>
- </div>
+    </div>
       
 
   <!--start footer-->
@@ -158,22 +167,7 @@
    <div class="up">
      <?php include('up.php')?>
    </div>
-  <script>
-    let up= document.getElementById("up");
-    window.onscroll = function() {scrollFunction()};
-    function scrollFunction() {
-     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-       up.style.display = "block";
-       } else {
-       up.style.display = "none";
-       }
-     }
-     function upFunction(){
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
-     }
-  </script>
-
+  
     <!-- bootstrap 5 -->
     <script src="js/bootstrap.bundle.min.js"></script>
 

@@ -42,15 +42,4 @@
         $_SESSION['sent']="تم ارسال رسالتك بنجاح";
         header("location:feedback.php");
      }
-<<<<<<< HEAD
-
-   
-   
-=======
-   
-     
-   
-
->>>>>>> effad56b3cc31fdd4acbaf875837bcc02e2459d3
-
 ?>
