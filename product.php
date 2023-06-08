@@ -69,7 +69,10 @@ include("connection_db.php");
              <div class=" pro">
              <form class="row" action="cart_handel.php" method = "GET">
              <label for="quantity" class="col-1">الكمية:</label>
-             <input class="quantity col-1" type="number" id="quantity" name="quantity" min="1" max="<?=$product[`total`]?>" value="1">
+             <?php
+             $pro_q=$product['total'];
+             ?>
+             <input class="quantity col-1" type="number" id="quantity" name="quantity" min="1" max="<?=$pro_q?>" value="1">
               <input type="hidden" value= "<?= $product['id']?>" name="pro_id">
             <div class="col-8"></div>
             <button class="btn add" id="add" name="submit" value="product"> اضافة الى السلة <i class="fa-solid fa-shekel-sign"></i></button>
