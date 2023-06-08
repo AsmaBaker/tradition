@@ -406,6 +406,22 @@ background-color: var(--red);
 color: white; 
 
 }
+.card  a.add{
+  text-align: center;
+  color: var(--red);
+  background-color: white;
+  transition: all 0.5s;
+  border-color: var(--red);
+  font-size: 20px;
+  width: 206px;
+  margin-right: -10px;
+  }
+  .card a.add:hover{
+  border-color: var(--red);
+  background-color: var(--red);
+  color: white; 
+  
+  }
 .card .card-body .btn i{
 color: var(--red);
 font-size: 22px;
@@ -454,9 +470,6 @@ color: var(--red);
     margin-top: 20px;
     margin-right:6px;
     width: 180px;
-  }
-  .chose{
-   
   }
   .chose .card img{
     width: 90%;
