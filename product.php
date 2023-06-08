@@ -19,9 +19,7 @@ include("connection_db.php");
   <div class="product">
     <?php
      $_SESSION['store_id']=$_GET['sto_id'];
-     $sto_id=$_SESSION['store_id'];
-     echo $_SESSION['store_id'];
-     
+     $sto_id=$_SESSION['store_id'];     
 
      $getProducts = "SELECT * FROM products  where sto_id=$sto_id limit 10";
      $getProductsData = mysqli_query($conn,$getProducts);
@@ -43,19 +41,21 @@ include("connection_db.php");
         <div class="row">
           <?php
            foreach($product as $product):
+            
            ?>
+     
             <div class="col-md-1"></div>
             <div class="col-md-4 pic">
                 <img src="img/<?=$product['sto_id']?>/<?=$product['img']?>" alt="">
             </div>
             <div class="col-md-6 data">
+              
                 <p class="name"><?=$product['name']?></p>
                 <p class="desc"><?=$product['desc']?></p>
                 <p class="price"><?=$product['price']?><i class="fa-solid fa-shekel-sign"></i></p>
 
                 <?php
                 if(isset($_POST['quantity'])){
-                  echo $_POST['quantity'] ;
                 }
                 ?>
              <?php
@@ -75,9 +75,20 @@ include("connection_db.php");
             <button class="btn add" id="add" name="submit" value="product"> اضافة الى السلة <i class="fa-solid fa-shekel-sign"></i></button>
              </form>
              </div>
-             <?php } ?>           
+             <?php } ?>   
+                 
              </div>
+      
             <?php endforeach ?>
+            <?php
+          if(isset($_GET['add'])){
+            ?>
+            <div class="alert alert-success mt-5" role="alert">
+             تم اضافة المنتج الى <a  href="cart.php" class="alert-link" target="_blank"> السلة</a>
+            </div>
+            <?php
+          }
+          ?> 
         </div>
     </div>
   </div>
@@ -94,11 +105,13 @@ include("connection_db.php");
       <h4>منتجات مشابهة لدى <?=$store['name']?>:</h4>
       <?php endforeach ?>
       <div class="row">
+        
     
         <?php
         foreach($products as $index=>$product):
         ?>
         <div class="col-3 card">
+      
         <a href="product.php?pro_id=<?=$product['id']?>&sto_id=<?=$product['sto_id']?>">
           <img src="img/<?=$sto_id?>/<?=$product['img']?>" class="card-img-top" alt="...">
           <div class="card-body row">
@@ -107,7 +120,6 @@ include("connection_db.php");
             <form action="cart_handel.php" method = "GET">
              <input class="quantity" value="1" type="hidden" name="quantity">
              <input type="hidden" value= "<?= $product['id']?>" name="pro_id">
-=======
              <button class="btn add" name="submit" value="product"> اضافة الى السلة <i class="fa-solid fa-cart-shopping"></i></button>
              </form>
           </div>

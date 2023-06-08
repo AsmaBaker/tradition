@@ -44,7 +44,7 @@ if(isset($_GET['submit'])){
   if($_GET['submit']=="product"){
     $sto=$_SESSION['store_id'];
     $pro=$_SESSION['pro_id'];
-   header("location:product.php?pro_id=$pro&sto_id=$sto");
+   header("location:product.php?pro_id=$pro&sto_id=$sto&add=t");
   }else if($_GET['submit']=="stores"){
    $id=$_SESSION['id'];
    header("location:stores.php?add=t&id=$id");
