@@ -75,7 +75,7 @@ include("connection_db.php");
              <input class="quantity col-1" type="number" id="quantity" name="quantity" min="1" max="<?=$pro_q?>" value="1">
               <input type="hidden" value= "<?= $product['id']?>" name="pro_id">
             <div class="col-8"></div>
-            <button class="btn add" id="add" name="submit" value="product"> اضافة الى السلة <i class="fa-solid fa-shekel-sign"></i></button>
+            <button class="btn add" id="add" name="submit" value="product"> اضافة الى السلة <i class="fa-solid fa-cart-shopping"></i></button>
              </form>
              </div>
              <?php } ?>   
