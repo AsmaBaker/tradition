@@ -5,7 +5,7 @@ include("connection_db.php");
 <!doctype html>
 <html dir="rtl">
   <head>
-    <title> التوصيل </title>
+    <title> تراثيات |التوصيل</title>
     <?php include('head.php')?>
   </head>
   <body>
@@ -18,7 +18,6 @@ include("connection_db.php");
 
   <!--start delivery page-->
     <div class="container">
-        
           <div class="delivery">
             <h3> التوصيل</h3>
             <p>يقدم موقع تراثيات ميزة للمستخدمين تمكنهم من التسوق والشراء من العديد من المتاجر بعدة اصناف في طلبية واحدة بتكلفة توصيل واحدة.</p>
@@ -30,19 +29,15 @@ include("connection_db.php");
                   <li>- قطاع غزة.</li>
                   <li>- مدن الداخل الفلسطيني المحتل.</li>
                 </ul>
-              
                 <p>وتستغرق مدة التوصيل من يومين الى 5 ايام بناءًا على المدينة.</p>
                 <p class="packkag">نهتم في  تراثيات  بتغليف المنتجات بصورة امنة ومحكمة بحيث نضمن لك سلامتها من اي تلف او كسر. </p>
               </div>
               <div class="img-del col-md-2">
                 <img src="img/التوصيل/التوصيل.png" width="495x" > </div>
-
             </div>
-      
           </div>
      </div>
     
-
    <!--end delivery page-->
 
     <!--start footer-->

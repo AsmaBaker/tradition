@@ -6,7 +6,7 @@
 <!doctype html>
 <html dir="rtl">
   <head>
-    <title>الاراء والشكاوي </title>
+    <title>تراثيات |الاراء والشكاوي </title>
     <?php include('head.php')?>
   </head>
   <body>
@@ -21,7 +21,6 @@
   <div class="container">
     <div class="feedback">
         <h3>  الآراء والشكاوي:</h3>
-
         <div class="text_box">
         <?php
        //طباعة الاخطاء 
@@ -66,7 +65,7 @@
 
 <!--end fedback page-->
 
-        <!--start footer-->
+  <!--start footer-->
   <div class="footer" id="footer">
    <?php include('footer.php')?>
   </div>

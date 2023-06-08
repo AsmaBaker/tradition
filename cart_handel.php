@@ -1,8 +1,7 @@
 <?php
 include("connection_db.php");
   session_start();
-
-
+  //delete product
   if(isset($_GET['delete'])){
     foreach (array_keys($_SESSION['cart'], $_GET['delete'], true) as $key) {
      unset($_SESSION['cart'][$key]);
@@ -14,20 +13,18 @@ include("connection_db.php");
     header("location:cart.php");
     }
 
-
+  //add to cart
 
 if(isset($_GET['submit'])){
   if(!isset($_SESSION['cart'])){
     $_SESSION['cart']=array();
     }
-
   if(isset($_GET['pro_id'])){
     $_SESSION['cart'][]=$_GET['pro_id'];
 
    }
    $where_in=implode(',',$_SESSION['cart']);
    $_SESSION['where_in']=$where_in;
-
 
    if(!isset($_SESSION['qua'])){
     $_SESSION['qua']=array();
@@ -41,6 +38,7 @@ if(isset($_GET['submit'])){
    }else{
       $_SESSION['pro_qua']=$pro_qua;
    }
+   
   if($_GET['submit']=="product"){
     $sto=$_SESSION['store_id'];
     $pro=$_SESSION['pro_id'];

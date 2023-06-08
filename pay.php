@@ -5,7 +5,7 @@ include("connection_db.php");
 <!doctype html>
 <html dir="rtl">
   <head>
-    <title> الدفع </title>
+    <title> تراثيات |الدفع </title>
     <?php include('head.php')?>
 
   </head>

@@ -5,7 +5,7 @@
 <!doctype html>
 <html dir="rtl">
   <head>
-    <title>  المتجر</title>
+    <title> تراثيات | المتجر </title>
     <?php include('head.php')?>
   </head>
   
@@ -151,7 +151,6 @@
         </div>
     </div>
       
-
   <!--start footer-->
   <div class="footer" id="footer">
     <?php include('footer.php')?>
