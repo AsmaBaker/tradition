@@ -3,6 +3,7 @@ include("connection_db.php");
   session_start();
   //delete product
   if(isset($_GET['delete'])){
+    if($_SESSION['qua'][$_GET['delete']]==1){
     foreach (array_keys($_SESSION['cart'], $_GET['delete'], true) as $key) {
      unset($_SESSION['cart'][$key]);
     } 
@@ -11,7 +12,28 @@ include("connection_db.php");
     $_SESSION['where_in']=$where_in;
  
     header("location:cart.php");
+  }else{
+    $_SESSION['qua'][$_GET['delete']]=$_SESSION['qua'][$_GET['delete']]-1;
+    $where_in=implode(',',$_SESSION['cart']);
+    $_SESSION['where_in']=$where_in;
+    
+    header("location:cart.php");
+
+  }
     }
+
+  /*
+    if(isset($_GET['delete'])){
+      foreach (array_keys($_SESSION['cart'], $_GET['delete'], true) as $key) {
+       unset($_SESSION['cart'][$key]);
+      } 
+      unset($_SESSION['qua'][$_GET['delete']]);
+      $where_in=implode(',',$_SESSION['cart']);
+      $_SESSION['where_in']=$where_in;
+   
+      header("location:cart.php");
+      }
+  */
 
   //add to cart
 
