@@ -18,7 +18,7 @@ include '../connection_db.php';
      $getStore = "SELECT * FROM stores WHERE id= $id";
      $getStoreData = mysqli_query($conn,$getStore);
      $store=mysqli_fetch_all($getStoreData,MYSQLI_ASSOC);
-     print_r($store)
+     
     ?>
      <div class="update">
       <form class="row g-3 pt-5 align-center" method="POST" action="store_handel.php" enctype="multipart/form-data">

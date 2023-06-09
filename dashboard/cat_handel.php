@@ -10,7 +10,7 @@
       $errors[]="يجب ان يحتوي الحقل على ارقام فقط";
    }else{
       $getCat="SELECT * FROM categories where id='$id'";
-      $userCat= mysqli_query($conn, $getCat);
+      $catData= mysqli_query($conn, $getCat);
       $cat=mysqli_fetch_all($catData,MYSQLI_ASSOC);
 
        if (!empty($cat)){
@@ -77,7 +77,13 @@
       if(isset($_GET['del'])){
          if($_GET['del']=='delCat'){
             $id=$_GET['id'];
-
+      $getCat="SELECT * FROM categories where id='$id'";
+      $catData= mysqli_query($conn, $getCat);
+      $cats=mysqli_fetch_all($catData,MYSQLI_ASSOC);
+      if($cats[0]['store_total']>0){
+         $_SESSION['action']='لا يمكن حذف القسم الذي يحتوي على متاجر , قم بحذف المتاجر ثم القسم';
+         header('location:show.php?no=4');
+      }else{
         $deleteCat="DELETE FROM `categories` WHERE id=$id";
         if(mysqli_query($conn,$deleteCat)){
          $_SESSION['action']='تم حذف القسم';
@@ -86,6 +92,7 @@
          echo mysqli_error($conn);
         }
          }
+      }
       }
   
 ?>

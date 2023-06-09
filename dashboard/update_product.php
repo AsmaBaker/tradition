@@ -18,7 +18,6 @@ include '../connection_db.php';
      $getProduct = "SELECT * FROM products WHERE id= $id";
      $getProductData = mysqli_query($conn,$getProduct);
      $product=mysqli_fetch_all($getProductData,MYSQLI_ASSOC);
-     print_r($product)
     ?>
      <div class="update">
       <form class="row g-3 pt-5 align-center" method="POST" action="product_handel.php" enctype="multipart/form-data">
