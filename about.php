@@ -5,7 +5,7 @@ include("connection_db.php");
   <!doctype html>
 <html dir="rtl">
   <head>
-    <title>تراثيات|عن الموقع</title>
+    <title>تراثيات | عن الموقع</title>
     <?php include('head.php')?>
   </head>
   <body>
@@ -37,9 +37,9 @@ include("connection_db.php");
             <p>العمر :21 عام</p>
              </div>
           <div class="contact_us col-1">
-            <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://www.linkedin.com/in/asma-baker-a02b4823b"><i class="fa-brands fa-linkedin-in"></i></a>
             <a href=""><i class="fa-regular fa-envelope"></i></a>
-            <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://wa.me/qr/ZGSO2GT4BGJPK1"><i class="fa-brands fa-whatsapp"></i></a>
           </div>
           </div>
         </div>  
@@ -52,9 +52,9 @@ include("connection_db.php");
           <p>العمر :21 عام</p></div>
   
           <div class="contact_us col-1">
-            <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://www.linkedin.com/in/lama-mansour-0978b923a"><i class="fa-brands fa-linkedin-in"></i></a>
             <a href=""><i class="fa-regular fa-envelope"></i></a>
-            <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://wa.me/qr/JRMYZCF37OGTK1"><i class="fa-brands fa-whatsapp"></i></a>
           </div>
           </div>
         </div>

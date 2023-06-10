@@ -6,7 +6,7 @@
 <!doctype html>
 <html dir="rtl">
   <head>
-    <title>تراثيات |الاراء والشكاوي </title>
+    <title>تراثيات | الاراء والشكاوي </title>
     <?php include('head.php')?>
   </head>
   <body>

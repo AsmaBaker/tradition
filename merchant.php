@@ -5,7 +5,7 @@ include("connection_db.php");
 <!doctype html>
 <html dir="rtl">
   <head>
-    <title> تراثيات |الشروط والتفاصيل</title>
+    <title> تراثيات | الشروط والتفاصيل</title>
     <?php include('head.php')?>
   </head>
 

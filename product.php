@@ -54,10 +54,8 @@ include("connection_db.php");
                 <p class="desc"><?=$product['desc']?></p>
                 <p class="price"><?=$product['price']?><i class="fa-solid fa-shekel-sign"></i></p>
 
-                <?php
-                if(isset($_POST['quantity'])){
-                }
-                ?>
+       
+      
              <?php
               if($product['sto_id']==11101 ||$product['sto_id']==11104 ){
                 ?>

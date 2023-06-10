@@ -6,7 +6,7 @@
 <html dir="rtl">
   <head>
     <title>تراثيات | الرئيسية</title>
-    <?php include('./head.php')?>
+    <?php include('head.php')?>
   </head>
   <body>
    
@@ -58,17 +58,17 @@
    </div>
    <div class="main-page">
       <div class="row imgs ">
-        <div class="img-1 h-img col-2">
+        <div class="img-1  col-2">
         <a href="stores.php?id=11103">
           <img src="img/header/6.jpeg">
         </a>
         </div>
-        <div class="img-2 h-img col-2">
+        <div class="img-2  col-2">
           <a href="stores.php?id=22201">
           <img src="img/header/7.png">
           </a>
         </div>
-        <div class="img-3 h-img col-md-3">
+        <div class="img-3  col-md-3">
           <a href="">
           <img src="img/header/8.png">
           </a>
@@ -119,7 +119,7 @@
             </div>
           </a>
         </div>
-       <?php endforeach ?>
+       <?php endforeach ; ?>
     </div>
    </div>
   </div>

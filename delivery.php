@@ -5,7 +5,7 @@ include("connection_db.php");
 <!doctype html>
 <html dir="rtl">
   <head>
-    <title> تراثيات |التوصيل</title>
+    <title> تراثيات | التوصيل</title>
     <?php include('head.php')?>
   </head>
   <body>
@@ -30,7 +30,7 @@ include("connection_db.php");
                   <li>- مدن الداخل الفلسطيني المحتل.</li>
                 </ul>
                 <p>وتستغرق مدة التوصيل من يومين الى 5 ايام بناءًا على المدينة.</p>
-                <p class="packkag">نهتم في  تراثيات  بتغليف المنتجات بصورة امنة ومحكمة بحيث نضمن لك سلامتها من اي تلف او كسر. </p>
+                <p class="down_p">نهتم في  تراثيات  بتغليف المنتجات بصورة امنة ومحكمة بحيث نضمن لك سلامتها من اي تلف او كسر. </p>
               </div>
               <div class="img-del col-md-2">
                 <img src="img/التوصيل/التوصيل.png" width="495x" > </div>

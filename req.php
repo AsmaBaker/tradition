@@ -5,7 +5,7 @@
 <!doctype html>
 <html dir="rtl">
   <head>
-    <title> تراثيات|طلب الانضمام</title>
+    <title> تراثيات | طلب الانضمام</title>
     <?php include('head.php')?>
   </head>
 
@@ -59,6 +59,7 @@
             </div>
             <select class="form-select" aria-label="Default select example " name="cat">
               <option value="selected">القسم</option>
+              
               <?php
                $getCats = "SELECT * FROM categories";
                $getAllCats = mysqli_query($conn,$getCats);
